@@ -1,6 +1,6 @@
 require("dotenv").config();
 
-exports.config = {  
+exports.config = {
   services: ["selenium-standalone"],
   capabilities: [
     {
@@ -42,7 +42,7 @@ exports.config = {
     chai.Should();
 
     // create reporting folders
-    const fs = require('fs');
+    fs = require('fs');
     const mkdirSync = function (dirPath) {
       try {
         fs.mkdirSync(dirPath)
@@ -52,26 +52,59 @@ exports.config = {
     };
     mkdirSync("./reports/");
     mkdirSync("./reports/ErrorShots/");
+    var screendate = new Date();
+    let month = screendate.getMonth();
+    month = month + 1;
+    mkdirSync("./reports/" + screendate.getFullYear() + "_" + month + "_" + screendate.getDate() + "/");
+
 
     // declared globals
     country = "";
+    formcountry = "";
     siteSuffix = "";
     sitePrefix = "";
     referenceNumber = "";
-    envcol = "";
-    OMSUniqueID = "";
-    skuslist = [];
-    OMScheckReleased = false;
     site = "";
-    environment = "";
-    env = "";
 
+    shopperGroupID = 3;
+    cusSQLID = 0;
+    cusSQLID2 = 0;
+    emailaddress = "";
+    newPassword = "Pineapple77";
+    customerData = "";
+    First_name = "";
+    Last_name = "";
+    Phone = "";
+    Address_line1 = "";
+    Address_line2 = "";
+    City = "";
+    Region = "";
+    Postcode = "";
+    del_YorN = "";
+    del_address1 = "";
+    del_city = "";
+    del_region = "";
+    del_postcode = "";
+    del_country = "";
+
+    promotionID1 = "";
+    promotionID2 = "";
+    creditAmount = "";
+    staffPercent = "";
+    creditTimes = "";
+    giftcardCode1 = "";
+    giftcardPIN1 = "";
+    giftcardCode2 = "";
+    giftcardPIN2 = "";
+    giftcard_only = "";
+    giftCardUsed = "";
+    cusCredit = "";
+    
     // set specname global
     specname = String(specs);
     specname = specname.split("\\");
     let specnamelength = specname.length - 1;
     specname = specname[specnamelength];
-    console.log("Running file: " + specname);
 
     // set runStartTime global
     var screendate = new Date();

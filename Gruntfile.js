@@ -8,12 +8,12 @@ module.exports = function(grunt) {
         let path = "";
         if (grunt.option("feature") !== undefined) {
             feature = grunt.option("feature");
-            path = "./Superdry_Website/**/" + feature + ".js";
+            path = "./Test/**/" + feature + ".js";
         } else if (grunt.option("folder") !== undefined) {
             folder = grunt.option("folder");
-            path = "./Superdry_Website/**/" + folder + "/*.js";
+            path = "./Test/**/" + folder + "/*.js";
         } else {
-            path = "./Superdry_Website/**/*.js";
+            path = "./Test/**/*.js";
         }
         return path;
     })());

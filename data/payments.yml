@@ -1,0 +1,37 @@
+---
+paypal:
+    email: "rob.wi_1344499904_per@supergroup.co.uk"
+    password: "344499834"
+creditCard:
+    name: "Test"
+    number: "4111111111111111"
+    exp: "10/2020"
+    cvv: "737"
+giropay:
+    giroAccName: "Test DE Bank"
+    giroAccNumber: "1234567890"
+    giroIBAN: "DE36444488881234567890"
+sofort:
+    Bankname: "TestBank" 
+    Account: "88888888"
+klarna:
+    klarnaStreet: "Hellersbergstraße"
+    klarnaHouseNumber: "14"
+    klarnafirstName: "Testperson-de"
+    klarnalastName: "Approved"
+    klarnagender: "1"
+    klarnadateOfBirthDayOfMonth: "07"
+    klarnadateOfBirthMonth: "07"
+    klarnadateOfBirthYear: "1960"
+    klarnatelephoneNumber: "01522113356"
+afterpay:
+    afterpayStreet: "K.R. Poststraat"
+    afterpayHouseNumber: "90"
+    afterpayfirstName: "Test"
+    afterpaymiddleName: "T"
+    afterpaylastName: "Acceptance"
+    afterpaygender: "1"
+    afterpaydateOfBirthDayOfMonth: "01"
+    afterpaydateOfBirthMonth: "01"
+    afterpaydateOfBirthYear: "1990"
+    afterpaytelephoneNumber: "0513744112"
