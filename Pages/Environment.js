@@ -7,6 +7,12 @@ class Environment extends Page {
     browser.deleteCookies();
     browser.url('/');
     site = browser.getUrl();
+    environment = browser.getUrl();
+    envcol = environment;
+    envcol = envcol.split("-");
+    envcol = envcol[1];
+    envcol = envcol.split(".");
+    envcol = envcol[0];
     browser.pause(2000);
     let cookieConsentExist = this.cookieConsent.isDisplayed();
     if (cookieConsentExist === true) {
@@ -20,7 +26,9 @@ class Environment extends Page {
     browser.pause(2000);
     this.country();
   }
-
+  openURL(site) {
+    browser.url(site);
+  }
   country() {
     browser.pause(3000);
     let currentURL = browser.getUrl();

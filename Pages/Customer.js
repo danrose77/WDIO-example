@@ -68,7 +68,7 @@ class Customer extends Page {
       Postcode = customerData["Postcode"];
       shopperGroupID = shopperGroupIDfunc.pick();
 
-      this.signIn();
+      this.signIn(email);
       let logOutButtonExist = this.signOutButton.isExisting();
       if (logOutButtonExist === false) {
         this.registerButton.click();

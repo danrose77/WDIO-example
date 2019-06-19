@@ -2,10 +2,10 @@ import Page from './Page'
 import {expect} from 'chai';
 import Screenshot from '../functions/Screenshot';
 import objectLength from "../functions/objectLength";
+import Navigation from "./Navigation";
 
 class ShoppingBag extends Page {
     get closeBasket()       {return $('div.close-basket > a > i');}
-    get MyBag()             {return $('#main-menu > div.account-actions.banner-column > div > ul > li:nth-child(3) > a > span');}
     get Quantity()          {return $$('[class|=item-qty] span');}
     get DecreaseQtyCtrl()   {return $$("button.decrease.control i");}
     get IncreaseQtyCtrl()   {return $$("button.increase.control i");}
@@ -13,10 +13,7 @@ class ShoppingBag extends Page {
     get basketEmpty()       {return $('#basket-empty');}
 
 removeShoppingBagItems(numberToRemove) {
-    let basketOpen = this.closeBasket.isDisplayed();
-    if (basketOpen === false) {
-        this.MyBag.click();
-    }
+    Navigation.openShoppingBasket();
     browser.pause(1000);
     let quantityItem1 = this.Quantity[1];
     let quantityVal1 = quantityItem1.getHTML(false);
@@ -37,10 +34,7 @@ removeShoppingBagItems(numberToRemove) {
   }
 
 increaseShoppingBagItems(numberToAdd) {
-    let basketOpen = this.closeBasket.isDisplayed();
-    if (basketOpen === false) {
-        this.MyBag.click();
-    }
+    Navigation.openShoppingBasket();
     browser.pause(1000);
     let quantityItem1 = this.Quantity[1];
     let quantityVal1 = quantityItem1.getHTML(false);
@@ -60,10 +54,7 @@ increaseShoppingBagItems(numberToAdd) {
     Screenshot.viewport();
 }
 removeAllShoppingBagItems() {
-    let basketOpen = this.closeBasket.isDisplayed();
-    if (basketOpen === false) {
-        this.MyBag.click();
-    }
+    Navigation.openShoppingBasket();
     browser.pause(1000);
     let control = this.RemoveCtrl[0];
     let controlExists = control.isDisplayed();
@@ -79,12 +70,10 @@ removeAllShoppingBagItems() {
     let basketEmpty = this.basketEmpty.getAttribute('style');
     console.log(basketEmpty);
     expect(basketEmpty).to.not.equal("display: none;");
+    this.closeBasket.click();
 }
 expectShoppingBagItemNumberToBe(numberExpected) {
-    let basketOpen = this.closeBasket.isDisplayed();
-    if (basketOpen === false) {
-        this.MyBag.click();
-    }
+    Navigation.openShoppingBasket();
     browser.pause(1000);
     let numberOfLines = objectLength.element(this.Quantity);
     console.log(numberOfLines);

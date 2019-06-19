@@ -1,4 +1,5 @@
 require("dotenv").config();
+let timeout = 90 * 1000;
 
 exports.config = {
   services: ["selenium-standalone"],
@@ -27,7 +28,7 @@ exports.config = {
   mochaOpts: {
     ui: "bdd",
     compilers: ["js:babel-register"],
-    timeout: 60 * 1000
+    timeout: timeout
   },
 
   // Gets executed before all workers get launched.
@@ -64,7 +65,18 @@ exports.config = {
     siteSuffix = "";
     sitePrefix = "";
     referenceNumber = "";
+    exchangeOrderNumber = "";
     site = "";
+    environment = "";
+    envcol = "";
+    skuslist = [];
+    OMScheckReleased = false;
+    SHIPNODE_KEY = "";
+    PRIME_LINE_NO = "";
+    SHIP_ADVICE_NO = "";
+    resolvedHolds = false;
+    appliedHolds = false;
+    OMSquantitiesRecorded = false;
 
     shopperGroupID = 3;
     cusSQLID = 0;

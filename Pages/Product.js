@@ -33,85 +33,79 @@ class Product extends Page {
   get sizeDropdownContainer()     {return $('div[class|=size-dropdown]');}
   get sizeBoxContainer()          {return $('div[class|=size-box]');}
 
-
-
-  checkPageElements() {
-    expect(this.ProductTitle).to.exist;
-    expect(this.ProductPrice).to.exist;
-    expect(this.FreeDelAndRetLink).to.exist;
-    expect(this.ModelDetails).to.exist;
-    expect(this.SizeContainer).to.exist;
-    expect(this.AddToBagButton).to.exist;
-    expect(this.WishListButton).to.exist;
-    expect(this.ProductDescription).to.exist;
-    expect(this.YouMightAlsoLike).to.exist;
-    expect(this.SocialLinks).to.exist;
-    expect(this.ProductInfo).to.exist;
-    expect(this.ProductImages).to.exist;
-
-    Screenshot.viewport();
+  skuObject(No, Quantity, SHIPNODE_KEY, PRIME_LINE_NO, SHIP_ADVICE_NO) {
+    this.No = No;
+    this.Quantity = Quantity;
+    this.SHIPNODE_KEY = SHIPNODE_KEY;
+    this.PRIME_LINE_NO = PRIME_LINE_NO;
+    this.SHIP_ADVICE_NO = SHIP_ADVICE_NO;
   }
 
-  SelectASizeAndAddTo(addTo, numberToAdd) {
+  logUsedSKU(SKU) {
+    skuslist[skuslist.length] = new this.skuObject(SKU,"","","","");
+  }
+
+  SelectASizeAndAddTo(addTo, numberToAdd, OMS) {
     // Size check
     this.ProductTitle.waitForDisplayed();
-
-    let ATBmodalDetector = this.atbSizeSelectorModal.getAttribute('class');
-    let WLmodalDetector = this.wlSizeSelectorModal.getAttribute('class');
-    if (ATBmodalDetector === 'modal fade size-select-modal show') {
-      let AddToBagDD = this.ATBSizeSelectorDD.isExisting();
-      if (AddToBagDD === true) {
-        try {
-          GetRandom.selectByIndex(this.ATBSizeSelectorDD, this.ATBSizeSelectorDDoptions)
-        } catch (e) {
-        }
-      } else {
-        GetRandom.sizeBox(this.ATBSizeBoxValid);
-      }
-    } else if (WLmodalDetector === 'modal fade size-select-modal show') {
-      let WishListDD = this.wlSizeSelectorDD.isExisting();
-      if (WishListDD === true) {
-        try {
-          GetRandom.selectByIndex(this.wlSizeSelectorDD, this.wlSizeSelectorDDoptions)
-        } catch (e) {
-        }
-      } else {
-        GetRandom.sizeBox(this.WLSizeBoxValid);
-      }
-    } else {
-      let DDContainerClass = this.sizeDropdownContainer.getAttribute('class');
-      let BoxContainerClass = this.sizeBoxContainer.getAttribute('class');
-      DDContainerClass=DDContainerClass.replace(/ /g,"");
-      BoxContainerClass=BoxContainerClass.replace(/ /g,"");
-
-      if (BoxContainerClass === 'size-box-container') {
-        GetRandom.sizeBox(this.SizeBoxValid);
-      } else if (DDContainerClass === 'size-dropdown-container') {
-        try {
-          GetRandom.selectByIndex(this.SizeSelectorDD, this.SizeSelectorDDoptions)
-        } catch (e) {
-        }
-      } else {
-      }
-      // ATB
-      if (addTo === 'Bag') {
-        let ATBbutton = this.AddToBagButtons;
-        if (numberToAdd === undefined) {
-          ATBbutton[0].click();
-        } else {
-          let counter = 1;
-          while (counter <= numberToAdd) {
-            ATBbutton[0].click();
-            counter = counter + 1;
-            browser.pause(1200);
-            ShoppingBag.closeBasket.click();
-            browser.pause(1200);
+  let ATBmodalDetector = this.atbSizeSelectorModal.getAttribute('class');
+  let WLmodalDetector = this.wlSizeSelectorModal.getAttribute('class');
+    if ((OMS === false)||(OMS === undefined)) {
+      if (ATBmodalDetector === 'modal fade size-select-modal show') {
+        let AddToBagDD = this.ATBSizeSelectorDD.isExisting();
+        if (AddToBagDD === true) {
+          try {
+            GetRandom.selectByIndex(this.ATBSizeSelectorDD, this.ATBSizeSelectorDDoptions)
+          } catch (e) {
           }
+        } else {
+          GetRandom.sizeBox(this.ATBSizeBoxValid);
         }
-      } else if (addTo === 'Wishlist') {
-        let WLbutton = this.WishListButton;
-        WLbutton.click();
+      } else if (WLmodalDetector === 'modal fade size-select-modal show') {
+        let WishListDD = this.wlSizeSelectorDD.isExisting();
+        if (WishListDD === true) {
+          try {
+            GetRandom.selectByIndex(this.wlSizeSelectorDD, this.wlSizeSelectorDDoptions)
+          } catch (e) {
+          }
+        } else {
+          GetRandom.sizeBox(this.WLSizeBoxValid);
+        }
+      } else {
+        let DDContainerClass = this.sizeDropdownContainer.getAttribute('class');
+        let BoxContainerClass = this.sizeBoxContainer.getAttribute('class');
+        DDContainerClass = DDContainerClass.replace(/ /g, "");
+        BoxContainerClass = BoxContainerClass.replace(/ /g, "");
+
+        if (BoxContainerClass === 'size-box-container') {
+          GetRandom.sizeBox(this.SizeBoxValid);
+        } else if (DDContainerClass === 'size-dropdown-container') {
+          try {
+            GetRandom.selectByIndex(this.SizeSelectorDD, this.SizeSelectorDDoptions)
+          } catch (e) {
+          }
+        } else {
+        }
       }
+    }
+    // ATB
+    if (addTo === 'Bag') {
+      let ATBbutton = this.AddToBagButtons;
+      if (numberToAdd === undefined) {
+        ATBbutton[0].click();
+      } else {
+        let counter = 1;
+        while (counter <= numberToAdd) {
+          ATBbutton[0].click();
+          counter = counter + 1;
+          browser.pause(1200);
+          ShoppingBag.closeBasket.click();
+          browser.pause(1200);
+        }
+      }
+    } else if (addTo === 'Wishlist') {
+      let WLbutton = this.WishListButton;
+      WLbutton.click();
     }
     browser.pause(1000);
     if (ATBmodalDetector === 'modal fade size-select-modal show') {

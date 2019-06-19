@@ -23,7 +23,6 @@ class GetRandom extends Page {
       try{element.click()} catch (e) {console.log(e)}
       browser.pause(1000);
       if (successElement !== undefined) {
-        if (successElement !== 'none') {
           // successElement set to none will skip success check
           let elementConfirmed = false;
           let counter = 0;
@@ -39,10 +38,6 @@ class GetRandom extends Page {
               success = true;
             }
           }
-        } else if (successElement === 'none') {
-          console.log("No element to confirm");
-          success = true;
-        }
       } else {
         success = true;
       }
