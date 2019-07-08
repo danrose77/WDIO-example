@@ -11,7 +11,7 @@ let Qty4 = 4;
 let Qty5 = 5;
 let Qty6 = 6;
 
-describe('Shopping_Bag.js - A product can be removed from the shopping bag', () => {
+describe(specname+' - A product can be removed from the shopping bag', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });
@@ -25,7 +25,7 @@ describe('Shopping_Bag.js - A product can be removed from the shopping bag', () 
     });
 });
 
-describe('Shopping_Bag.js - A product can be added from the shopping bag', () => {
+describe(specname+' - A product can be added from the shopping bag', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });
@@ -39,7 +39,7 @@ describe('Shopping_Bag.js - A product can be added from the shopping bag', () =>
     });
 });
 
-describe('Shopping_Bag.js - All products can be removed from the shopping bag', () => {
+describe(specname+' - All products can be removed from the shopping bag', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });
@@ -58,7 +58,7 @@ describe('Shopping_Bag.js - All products can be removed from the shopping bag', 
     });
 });
 
-describe('Shopping_Bag.js - 20+ products can be added to the shopping bag', () => {
+describe(specname+' - 20+ products can be added to the shopping bag', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });

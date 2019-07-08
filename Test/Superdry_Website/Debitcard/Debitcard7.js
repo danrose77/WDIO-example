@@ -8,7 +8,7 @@ import AdminPortal from "../../../Pages/AdminPortal";
 
 let username = 'danrosetest+DCandCCuser@gmail.com';
 
-describe('Debit card and Customer credit payment from an existing user', () => {
+describe(specname+' - Debit card and Customer credit payment from an existing user', () => {
     it('Set up a customer account', () => {
         Environment.openBaseURL();
         Customer.setUpNewAccount(username);

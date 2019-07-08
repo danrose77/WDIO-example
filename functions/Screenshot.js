@@ -14,12 +14,10 @@ class Screenshot extends Page {
     const screendate = new Date();
     let month = screendate.getMonth();
     month = month + 1;
-    mkdirSync("./reports/");
     mkdirSync("./reports/" + screendate.getFullYear() + "_" + month + "_" + screendate.getDate() + "/");
-    mkdirSync("./reports/" + screendate.getFullYear() + "_" + month + "_" + screendate.getDate() + "/" + specname + "/");
 
-    var screenshotFolder = "./reports/" + screendate.getFullYear() + "_" + month + "_" + screendate.getDate() + "/" + specname + "/";
-    var screenshotpath = screenshotFolder+screendate.getTime()+".png";
+    var screenshotFolder = "./reports/" + screendate.getFullYear() + "_" + month + "_" + screendate.getDate() + "/";
+    var screenshotpath = screenshotFolder+screendate.getTime()+" - "+specname+" - "+platform+".png";
     browser.saveScreenshot(screenshotpath);
   }
 }

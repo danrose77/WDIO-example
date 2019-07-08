@@ -4,7 +4,7 @@ import Search from '../../../Pages/Search.js';
 import Navigation from '../../../Pages/Navigation.js';
 import Checkout from "../../../Pages/Checkout";
 
-describe('Debit card payment from a guest user', () => {
+describe(specname+' - Klarna payment from a guest user', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });
@@ -13,7 +13,7 @@ describe('Debit card payment from a guest user', () => {
         Search.PickRandomProduct();
         Product.SelectASizeAndAddTo('Bag');
     });
-    it('Go to the checkout as a guest and pay by card', () => {
+    it('Go to the checkout as a guest and pay by Klarna', () => {
         Navigation.GoToCheckout();
         Checkout.fillTheDeliveryFields();
         Checkout.payByKlarna();

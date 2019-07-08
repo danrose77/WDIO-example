@@ -4,12 +4,14 @@ import Product from "./Product";
 import fillObject from "../functions/fillObject";
 import * as yaml from "js-yaml";
 import objectLength from "../functions/objectLength";
+import Navigation from "./Navigation";
+import Screenshot from "../functions/Screenshot";
 
 class Search extends Page {
-  get SearchBox()             {return $('input[class="search-input js-open-search"]');}
+  get SearchBox()             {return $('input[id="main-search-term"]');}
   get SortByDD()              {return $('span.filter-option.pull-left');}
-  get sortListElements()          {return $$('ul[class$="dropdown-menu inner"]>li>a');}
-  get ResultsLinks()          {return $$('a.product-details__name');}
+  get sortListElements()      {return $$('ul[class$="dropdown-menu inner"]>li>a');}
+  get ResultsLinks()          {return $$('img.photo');}
   get ResultsItemImage01()    {return $('.row.product div:nth-child(1) a:nth-child(1) > img.photo.lazy');}
   get allFacets()             {return $$('div[id$=FacetGroup] div[class$=sm]');}
   get generic_colour()        {return $('div[id$=generic_colourFacetGroup]');}
@@ -38,6 +40,8 @@ class Search extends Page {
       }
     }
     //end translate
+    Navigation.hamburger.click();
+    browser.pause(500);
     fillObject.element(this.SearchBox, searchItem);
     browser.keys('Enter');
     this.ResultsItemImage01.waitForExist(30000);
@@ -113,7 +117,6 @@ class Search extends Page {
         FirstItemPrice = FirstItemPrice[0];
         FirstItemPrice = FirstItemPrice.split("£");
         FirstItemPrice = parseInt(FirstItemPrice[1]);
-
         LastItemPrice = LastItemPrice.split(".");
         LastItemPrice = LastItemPrice[0];
         LastItemPrice = LastItemPrice.split("£");
@@ -153,7 +156,8 @@ class Search extends Page {
     browser.pause(1000);
   }
   PickRandomProduct() {
-    GetRandom.element(this.ResultsLinks,Product.ProductPrice,20)
+    GetRandom.element(this.ResultsLinks);
+    Screenshot.viewport();
   }
 }
 

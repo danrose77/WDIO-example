@@ -4,7 +4,7 @@ import Search from "../../Pages/Search";
 import Product from "../../Pages/Product";
 import Wishlist from "../../Pages/Wishlist";
 
-describe('Wishlist.js - A product can be added to the wishlist', () => {
+describe(specname+' - A product can be added to the wishlist', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });
@@ -19,7 +19,7 @@ describe('Wishlist.js - A product can be added to the wishlist', () => {
     });
 });
 
-describe('Wishlist.js - A product can be added to the wishlist and moved to the shopping bag', () => {
+describe(specname+' - A product can be added to the wishlist and moved to the shopping bag', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });
@@ -41,7 +41,7 @@ describe('Wishlist.js - A product can be added to the wishlist and moved to the 
 });
 
 /*
-describe('Wishlist.js - A product can be added to the wishlist and the wishlist can be shared', () => {
+describe(specname+' - A product can be added to the wishlist and the wishlist can be shared', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });
@@ -51,7 +51,7 @@ describe('Wishlist.js - A product can be added to the wishlist and the wishlist 
     });
 });
 
-describe('Wishlist.js - A product can be added to the wishlist as a logged in customer and the account wishlist contains the item', () => {
+describe(specname+' - A product can be added to the wishlist as a logged in customer and the account wishlist contains the item', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });

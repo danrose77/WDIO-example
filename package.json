@@ -4,7 +4,8 @@
   "description": "framework for testing using node and webdriverio",
   "main": "wdio.conf.js",
   "scripts": {
-    "test": "node_modules/.bin/wdio config/wdio.conf.local.js"
+    "test": "node_modules/.bin/wdio config/wdio.conf.local.js",
+    "lighthouse_SDcom": "lighthouse 'https://www.superdry.com/' --emulated-form-factor=desktop --output-path=./reports/lighthouse/SD_desktop.html"
   },
   "dependencies": {
     "@wdio/browserstack-service": "^5.4.11",
@@ -43,5 +44,9 @@
     "url": "https://danrose77@bitbucket.org/superdryteam/webdriverio_v5.git"
   },
   "author": "Dan Rose",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "lighthouse": "^5.1.0",
+    "lighthouse-batch": "^5.0.1"
+  }
 }

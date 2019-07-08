@@ -5,7 +5,7 @@ import Navigation from '../../../Pages/Navigation.js';
 import Checkout from "../../../Pages/Checkout";
 import Customer from "../../../Pages/Customer";
 
-describe('Debit card payment from a new user', () => {
+describe(specname+' - Debit card payment from a new user', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });
@@ -16,7 +16,7 @@ describe('Debit card payment from a new user', () => {
         Navigation.randomSection();
         Search.PickRandomProduct();
         Product.SelectASizeAndAddTo('Bag');
-    });
+    }, 3);
     it('Go to the checkout as a guest and pay by card', () => {
         Navigation.GoToCheckout();
         Checkout.payByCard();

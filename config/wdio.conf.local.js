@@ -1,10 +1,10 @@
 const master = require("../wdio.conf");
 
 exports.config = Object.assign(master.config, {
-  specs: ["Superdry_Website/**/*.js"],
+  specs: ["Test/**/*.js"],
   logLevel: 'error',
   reporters: ["spec"],
-  maxInstances: 1,
+  maxInstances: 5,
   capabilities: [
     {
       "browserName": "chrome",

@@ -28,7 +28,7 @@ class Checkout extends Page {
   get billing_first_name()      {return $("input[id|='billing_first_name']");}
   get billing_last_name()       {return $("input[id|='billing_last_name']");}
   get shipping_address_manual()  {return $("#checkout-section-delivery-options > div > div > div > p > a");}
-  get billing_address_manual()  {return $$("#checkout-section-billing-address > div > div > div > div > p > a");}
+  get billing_address_manual()  {return $(".address-finder-toggle");}
   get billing_country()         {return $("select[id|='checkout-billing-country-select']");}
   get billing_address_1()       {return $("input[id|='billing_address_1']");}
   get billing_city()            {return $("input[id|='billing_city']");}
@@ -42,7 +42,8 @@ class Checkout extends Page {
   get buy_now_button()            {return $("#submit");}
   get staffdiscountconfirm()      {return $("//*[@id='staff-discount-confirm']");}
   get staffdiscountsubmit()       {return $("//*[@id='staff-discount-submit']");}
-  get order_reference()           {return $("//span[@class='order-number']");}
+  get order_reference()           {return $(".order-number");}
+  get view_order()            {return $(".btn-light");}
 
   get delivery_type_domestic()           {return $("//a[@id='delivery-type-domestic']");}
 
@@ -67,9 +68,6 @@ class Checkout extends Page {
 
   get paypal_button()     {return $('//label[@data-template="checkout/payment/paypal"]');}
   get thankyou_order_placed()     {return $("//div[@class='row wrapper checkout_thankyou']");}
-  get order_reference()           {return $("//span[@class='order-number']");}
-  get staffdiscountconfirm()      {return $("//*[@id='staff-discount-confirm']");}
-  get staffdiscountsubmit()       {return $("//*[@id='staff-discount-submit']");}
   get paypal_checkout_button()    {return $("//*[@id='paypal-animation-content']/div[1]/div[1]/img[1]");}
   get paypal_haveaccount()        {return $("//a[@class='btn full ng-binding']");}
   get paypal_email()              {return $("//input[@id='email']");}
@@ -82,7 +80,32 @@ class Checkout extends Page {
   get deliverySpeedOptions()             {return $$("div[class='col-sm-3 col-6 bold'] > div > div");}
   get deliveryTypeOptions()             {return $$("div[class='deliveryTypes row'] > div > a");}
   get deliverySpeedOptionsContainer()             {return $("//div[@class='full-indent row consignment-container']");}
-  
+
+  get sofortBTN()             {return $("//div[contains(@class,'no-h-margin row')]//div[5]//label[1]");}
+  get sofortBankCodeSearch()  {return $("//input[@id='BankCodeSearch']");}
+  get sofortBankProceed()     {return $("//a[contains(text(),'Demo Bank')]");}
+  get sofortAcc()             {return $("//input[@id='BackendFormLOGINNAMEUSERID']");}
+  get sofortPIN()             {return $("//input[@id='BackendFormUSERPIN']");}
+  get sofortNext()            {return $("//button[@class='button-right primary has-indicator']");}
+  get sofortSelctAccount()    {return $("//input[@id='account-1']");}
+  get sofortTAN()             {return $("//input[@id='BackendFormTan']");}
+  get checkout_proceed_button()             {return $("//div[@id='checkout_proceed_button']//input");}
+
+  get bankTransferBTN()    {return $("#checkout-section-payment-methods > div > div.col-12.col-md-7.payment-form.pad-v > div > div:nth-child(4) > label > div > div");}
+  get bankTransferPage()    {return $("//div[@class='row wrapper checkout_banktransfer']");}
+  get idealBTN()    {return $("//div[contains(@class,'no-h-margin row')]//div[4]//label[1]");}
+  get giroBTN()    {return $("//div[contains(@class,'no-h-margin row')]//div[4]//label[1]");}
+  get idealTestBank1()    {return $("//input[@value='1121']");}
+  get idealContinue()    {return $("//input[@value='Continue']");}
+
+
+  get giroBic()    {return $("//input[@id='giropay.bic-selection']");}
+  get giro1stResult()    {return $("//*[@id='giropaysuggestionlist']/li");}
+  get giroAccName()    {return $("//input[@id='giropay.accountHolderName']");}
+  get giroAccNumber()    {return $("//input[@id='giropay.bankAccountNumber']");}
+  get giroIBAN()    {return $("//input[@id='giropay.iban']");}
+  get giroSubmit()    {return $("//input[@id='mainSubmit']");}
+
   // Functions
   fillTheDeliveryFields(type) {
     let formcountry = country;
@@ -108,14 +131,13 @@ class Checkout extends Page {
     uniqueNo = uniqueNo.toString();
     uniqueNo = uniqueNo.slice(-5);
     let Email = "danrosetest+"+uniqueNo+"@gmail.com";
-
     let clickAndCollectDetect = this.collection_location.isDisplayed();
     fillObject.element(this.shipping_first_name, cusfirstname);
     fillObject.element(this.shipping_last_name,cuslastname);
     fillObject.element(this.billing_phone,Phone);
     fillObject.element(this.billing_email,Email);
     fillObject.element(this.billing_confirmemail,Email);
-    browser.pause(250);
+    browser.pause(1000);
     if (clickAndCollectDetect !== true) {
       let shippingAddress1displayed = this.shipping_address_input1.isDisplayed();
       if (shippingAddress1displayed !== true) {
@@ -130,20 +152,24 @@ class Checkout extends Page {
       }
       browser.pause(250);
       fillObject.element(this.shipping_address_input1,del_address1);
-      fillObject.element(this.shipping_address_input2,Address_line2);
       fillObject.element(this.shipping_address_city,del_city);
-      fillObject.element(this.shipping_address_region, Region);
       fillObject.element(this.shipping_address_zip,del_postcode);
     }
-
-    fillObject.element(this.billing_same_as_del, 'on');
+  /*  if (this.billing_same_as_del.isDisplayed() === true) {
+      let currentState = this.billing_same_as_del.getValue();
+      console.log('currentState = '+currentState);
+      if (currentState === 'off') {
+        this.billing_same_as_del.click();
+      }
+    }
+   */
     browser.pause(250);
     if (clickAndCollectDetect === true) {
       let billingAddress1displayed = this.billing_address_1.isDisplayed();
       if (billingAddress1displayed !== true) {
-        let billingAddressManual = this.billing_address_manual[0];
-        billingAddressManual.click();
+        this.billing_address_manual.click();
       }
+      browser.pause(250);
       fillObject.element(this.billing_country,formcountry);
       browser.pause(250);
       fillObject.element(this.billing_first_name,cusfirstname);
@@ -159,7 +185,7 @@ class Checkout extends Page {
   payByCard() {
     let paymentData = yaml.load(fs.readFileSync('./data/payments.yml', 'utf8'));
     let creditCardData = paymentData["creditCard"];
-    let paymentMethod = "Debit Card";
+    paymentMethod = "Debit Card";
     let Card_Name = creditCardData["name"];
     let Card_Number = creditCardData["number"];
     let Card_exp = creditCardData["exp"];
@@ -167,15 +193,8 @@ class Checkout extends Page {
     let debit_credit_card_button = this.paymentButtons;
     debit_credit_card_button[0].click();
     browser.pause(500);
-    let Card_name_length = Card_Name.length;
     fillObject.element(this.name_on_card_field,Card_Name);
     browser.pause(500);
-    let field_value = this.name_on_card_field.getValue();
-    let field_value_length = field_value.length;
-    if (field_value_length !== Card_name_length) {
-      fillObject.element(this.name_on_card_field,Card_Name);
-      browser.pause(500);
-    }
     browser.pause(500);
     fillObject.element(this.card_number_field,Card_Number);
     let Card_exp_month = Card_exp.slice(0,2);
@@ -195,6 +214,88 @@ class Checkout extends Page {
     this.card_cvv_code_field.setValue(Cvv);
     browser.pause(250);
     this.buy_now_button.click();
+    this.orderConfirmation();
+  }
+  payByIdeal() {
+    paymentMethod = "Ideal";
+    this.idealBTN.click();
+    browser.pause(1500);
+    Screenshot.viewport();
+    this.checkout_proceed_button.click();
+    try{this.checkout_proceed_button.click()}catch(err){}
+    browser.pause(1000);
+    this.idealTestBank1.waitForExist();
+    this.idealTestBank1.click();
+    browser.pause(500);
+    this.idealContinue.click();
+    browser.pause(1000);
+    this.thankyou_order_placed.isExisting();
+    this.orderConfirmation();
+  }
+  payByGiropay() {
+    let paymentData = yaml.load(fs.readFileSync('./data/payments.yml', 'utf8'));
+    let giroData = paymentData["giropay"];
+    paymentMethod = "Giropay";
+    let giroAccName = giroData["giroAccName"];
+    let giroAccNumber = giroData["giroAccNumber"];
+    let giroIBAN = giroData["giroIBAN"];
+    this.giroBTN.click();
+    browser.pause(1000);
+    this.checkout_proceed_button.click();
+    browser.pause(1000);
+    let giroBicExist = this.giroBic.isExisting();
+    if (giroBicExist === true) {
+      this.giroBic.setValue(giroAccName);
+      browser.pause(500);
+      browser.keys("Enter");
+      browser.pause(500);
+      this.giro1stResult.click();
+    } else {
+      this.giroSubmit.waitForExist();
+      this.giroAccName.setValue(giroAccName);
+      this.giroAccNumber.setValue(giroAccNumber);
+      this.giroIBAN.setValue(giroIBAN);
+    }
+    let currentURL = browser.getUrl();
+    currentURL = currentURL.split("=");
+    currentURL = currentURL[20];
+    let referenceNumberArray = currentURL.split("&");
+    referenceNumber = referenceNumberArray[0];
+    this.orderConfirmation();
+  }
+  payBySofort() {
+    let paymentData = yaml.load(fs.readFileSync('./data/payments.yml', 'utf8'));
+    paymentMethod = "Sofort";
+    let sofortData = paymentData["sofort"];
+    let bankname = sofortData["Bankname"];
+    let accountNumber = sofortData["Account"];
+    this.sofortBTN.click();
+    Screenshot.viewport();
+    browser.pause(1000);
+    this.checkout_proceed_button.click();
+    browser.pause(3000);
+    this.sofortBankCodeSearch.waitForExist();
+    this.sofortBankCodeSearch.setValue(bankname);
+    browser.pause(1000);
+    Screenshot.viewport();
+    this.sofortBankProceed.click();
+    this.sofortAcc.waitForExist();
+    browser.pause(1000);
+    this.sofortAcc.setValue(accountNumber);
+    this.sofortPIN.setValue("1111");
+    Screenshot.viewport();
+    browser.pause(1000);
+    this.sofortNext.click();
+    this.sofortSelctAccount.waitForExist();
+    this.sofortSelctAccount.click();
+    browser.pause(1000);
+    Screenshot.viewport();
+    this.sofortNext.click();
+    this.sofortTAN.waitForExist();
+    browser.pause(1000);
+    this.sofortTAN.setValue("12345");
+    Screenshot.viewport();
+    this.sofortNext.click();
     this.orderConfirmation();
   }
   addGiftcards(cardCode,cardPIN) {
@@ -235,6 +336,7 @@ class Checkout extends Page {
     let paypalData = paymentData["paypal"];
     let paypal_email = paypalData["email"];
     let paypal_password = paypalData["password"];
+    paymentMethod = "Paypal";
     try {
       this.billing_same_as_del.scrollIntoView();
     } catch (e) {}
@@ -321,19 +423,22 @@ class Checkout extends Page {
   }
   orderConfirmation() {
     browser.pause(1500);
-    let staffconfirm = this.staffdiscountconfirm;
-    let staffdiscountmodal = staffconfirm.isExisting();
 
-    if (staffdiscountmodal === true) {
+    if (this.staffdiscountconfirm.isExisting() === true) {
       this.staffdiscountconfirm.click();
       browser.pause(1500);
       this.staffdiscountsubmit.click();
       browser.pause(1500);
     }
-    let orderRef = this.order_reference;
-    orderRef.waitForExist();
-    referenceNumber = orderRef.getHTML(false);
-    let paymentMethod = "Paypal";
+
+    if (paymentMethod !== "Giropay") {
+        this.view_order.click();
+        browser.pause(1000);
+        referenceNumber = browser.getUrl();
+        referenceNumber = referenceNumber.split("=");
+        referenceNumber = referenceNumber[1];
+    }
+
     console.log("Order Number: " + referenceNumber + " generated on "+site);
     write.toTextFile("Order Number: " + referenceNumber + " - " + paymentMethod + " " + giftCardUsed + " " +  cusCredit);
     giftCardUsed = "";

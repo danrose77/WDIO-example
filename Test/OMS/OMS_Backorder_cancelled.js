@@ -8,7 +8,7 @@ import OMS from "../../Pages/OMS";
 let SKU1 = '1020201000229OY1002';
 let Qty1 = 1;
 
-describe('Create order with a specific SKU, and cancel from backordered status', () => {
+describe(specname+' - Create order with a specific SKU, and cancel from backordered status', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });

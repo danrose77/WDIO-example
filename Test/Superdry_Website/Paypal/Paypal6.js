@@ -10,7 +10,7 @@ import Givex from "../../../Pages/Givex";
 let giftcard = '6338901547310003689';
 let username = 'danrosetest+DC_user@gmail.com';
 
-describe('Paypal and giftcard payment from an existing user', () => {
+describe(specname+' - Paypal and giftcard payment from an existing user', () => {
     it('Set up a customer account', () => {
         Environment.openBaseURL();
         Customer.setUpNewAccount(username);

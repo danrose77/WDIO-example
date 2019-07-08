@@ -8,7 +8,7 @@ import AdminPortal from "../../../Pages/AdminPortal";
 
 let username = 'danrosetest+DC_user@gmail.com';
 
-describe('Paypal payment from an existing user', () => {
+describe(specname+' - Paypal payment from an existing user', () => {
     it('Set up a customer account', () => {
         Environment.openBaseURL();
         Customer.setUpNewAccount(username);

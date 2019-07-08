@@ -1,7 +1,7 @@
 import Environment from '../../../Pages/Environment.js';
 import Checkout from "../../../Pages/Checkout";
 
-describe('Delivery.js - Place order with a non standard delivery speed', () => {
+describe(specname+' - Place order with a non standard delivery speed', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });

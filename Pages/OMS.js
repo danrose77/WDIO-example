@@ -55,10 +55,10 @@ class OMS extends Page {
   get API_password()          {return $("//table[@cellpadding='7']//input[@name='YFSEnvironment.password']");}
   get API_Message()          {return $("//textarea[@id='InteropApiData']");}
   get API_run()          {return $("//input[@value='Test API Now!']");}
-  get APRD_FlagProductsToESRB()          {return $("//a[contains(text(),'Flag products to ESB')]");}
-  get APRD_FlagPricesToESRB()          {return $("//a[contains(text(),'Flag prices to ESB')]");}
-  get APRD_ProductFeed()          {return $("//a[contains(text(),'ProductFeed')]");}
-  get APRD_PriceFeed()          {return $("//a[contains(text(),'PriceFeed')]");}
+  get APRD_FlagProductsToESRB()          {return $$("//a[contains(text(),'Flag products to ESB')]");}
+  get APRD_FlagPricesToESRB()          {return $$("//a[contains(text(),'Flag prices to ESB')]");}
+  get APRD_ProductFeed()          {return $$("//a[contains(text(),'ProductFeed')]");}
+  get APRD_PriceFeed()          {return $$("//a[contains(text(),'PriceFeed')]");}
   get APRD_inputPLUS()          {return $("//input[@name='extra.option.plus']");}
   get APRD_inputSKU()          {return $("//input[@name='extra.option.skus']");}
   get APRD_RunButton()          {return $("#execFormRunButton");}

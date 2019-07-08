@@ -8,7 +8,7 @@ import AdminPortal from "../../../Pages/AdminPortal";
 
 let username = 'danrosetest+DC_user@gmail.com';
 
-describe('Debit card payment from an existing user', () => {
+describe(specname+' - Debit card payment from an existing user', () => {
     it('Set up a customer account for email '+username, () => {
         Environment.openBaseURL();
         Customer.setUpNewAccount(username);
@@ -24,8 +24,8 @@ describe('Debit card payment from an existing user', () => {
         Navigation.randomSection();
         Search.PickRandomProduct();
         Product.SelectASizeAndAddTo('Bag');
-    });
-    it('Go to the checkout as a guest and pay by card', () => {
+    }, 3);
+    it('Go to the checkout and pay by card', () => {
         Navigation.GoToCheckout();
         Checkout.payByCard();
     });

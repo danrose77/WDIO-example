@@ -1,5 +1,6 @@
 import Page from './Page'
 import Screenshot from "../functions/Screenshot";
+import OMS from "./OMS";
 
 class Rundeck extends Page {
   get rundeck_username()          {return $("//input[@id='login']");}
@@ -44,13 +45,93 @@ class Rundeck extends Page {
   get rundeck_pjct_Teal()          {return $("//span[contains(text(),'Teal')]");}
   get rundeck_pjct_Violet()          {return $("//span[contains(text(),'Violet')]");}
   get rundeck_pjct_Yellow()          {return $("//span[contains(text(),'Yellow')]");}
-  
-  orderExport(orderNo) {
-    browser.url("https://rundeck-ext.nonprod.sd.co.uk/user/login");
-    this.rundeck_username.waitForExist();
+
+  login() {
     this.rundeck_username.setValue("danielr");
     this.rundeck_password.setValue("KL8AM67NaJ5d9KvF");
     this.rundeck_submitBTN.click();
+  }
+  accessEnvironment(environment) {
+    browser.pause(2000);
+    let enviroLink = $("//span[contains(text(),'"+environment+"')]");
+    enviroLink.click();
+  }
+  addProductsToESB(skuArray) {
+    let counter = 0;
+    while (counter !== skuArray.length) {
+      OMS.APRD_FlagProductsToESRB[1].click();
+
+      OMS.APRD_inputPLUS.setValue(skuArray[counter]);
+      OMS.APRD_inputSKU.setValue(skuArray[counter]);
+      OMS.APRD_RunButton.click();
+
+      browser.pause(3000);
+      let runStatus = OMS.APRD_RunStatus.getAttribute('data-execstate');
+      while (runStatus !== 'SUCCEEDED') {
+        browser.pause(2000);
+        runStatus = OMS.APRD_RunStatus.getAttribute('data-execstate');
+      }
+      browser.back();
+      browser.pause(2000);
+      browser.back();
+      browser.pause(2000);
+      counter++;
+    }
+  }
+  addPricesToESB(skuArray) {
+    let counter = 0;
+    while (counter !== skuArray.length) {
+      OMS.APRD_FlagPricesToESRB[1].click();
+
+      OMS.APRD_inputSKU.setValue(skuArray[counter]);
+      OMS.APRD_RunButton.click();
+
+      browser.pause(3000);
+      let runStatus = OMS.APRD_RunStatus.getAttribute('data-execstate');
+      while (runStatus !== 'SUCCEEDED') {
+        browser.pause(2000);
+        runStatus = OMS.APRD_RunStatus.getAttribute('data-execstate');
+      }
+      browser.back();
+      browser.pause(2000);
+      browser.back();
+      browser.pause(2000);
+      counter++;
+    }
+  }
+  pushProductAndPriceFeeds() {
+    OMS.APRD_ProductFeed[1].click();
+    OMS.APRD_RunButton.click();
+
+    browser.pause(3000);
+    let runStatus = OMS.APRD_RunStatus.getAttribute('data-execstate');
+    while (runStatus !== 'SUCCEEDED') {
+      browser.pause(2000);
+      runStatus = OMS.APRD_RunStatus.getAttribute('data-execstate');
+    }
+    browser.back();
+    browser.pause(2000);
+    browser.back();
+    browser.pause(2000);
+
+    OMS.APRD_PriceFeed[2].click();
+    OMS.APRD_RunButton.click();
+
+    browser.pause(3000);
+    runStatus = OMS.APRD_RunStatus.getAttribute('data-execstate');
+    while (runStatus !== 'SUCCEEDED') {
+      browser.pause(2000);
+      runStatus = OMS.APRD_RunStatus.getAttribute('data-execstate');
+    }
+    browser.back();
+    browser.pause(2000);
+    browser.back();
+    browser.pause(2000);
+  }
+  orderExport(orderNo) {
+    browser.url("https://rundeck-ext.nonprod.sd.co.uk/user/login");
+    this.rundeck_username.waitForExist();
+    this.login();
     this.rundeck_pjctsrch.waitForExist();
     switch (envcol) {
       case 'amber':

@@ -10,7 +10,7 @@ let Qty1 = 1;
 let SKU2 = '104040500024226C003';
 let Qty2 = 1;
 
-describe('Create order with a specific SKU', () => {
+describe(specname+' - Create order with a specific SKU', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });

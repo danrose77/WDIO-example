@@ -8,7 +8,7 @@ import Givex from "../../../Pages/Givex";
 
 let giftcard = '6338901547310003689';
 
-describe('Debit card and Gift card payment from a new user', () => {
+describe(specname+' - Debit card and Gift card payment from a new user', () => {
     it('Set up a gift card', () => {
         Givex.login();
         Givex.setupGiftcards(giftcard);

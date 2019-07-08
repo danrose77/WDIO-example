@@ -38,7 +38,19 @@ class AdminPortal extends Page {
     this.configuration.waitForExist(30000);
     browser.pause(5000);
   }
-
+  setStockLevels(skuArray) {
+    this.configuration.moveTo();
+    this.SQLviewer.click();
+    browser.pause(500);
+    let counter = 0;
+    while (counter !== skuArray.length) {
+      this.SQLentry('update jos_vm_product set product_publish = "Y" where product_sku = "'+skuArray[counter]+'";');
+      browser.pause(500);
+      this.SQLentry('update inventory set quantity = "1000" where sku = "'+skuArray[counter]+'";');
+      browser.pause(500);
+      counter++;
+    }
+  }
   performSetup() {
     let screendate = new Date();
     this.configuration.moveTo();

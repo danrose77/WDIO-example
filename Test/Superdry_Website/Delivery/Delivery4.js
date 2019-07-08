@@ -1,7 +1,7 @@
 import Environment from '../../../Pages/Environment.js';
 import Checkout from "../../../Pages/Checkout";
 
-describe('Delivery.js - Place an order with international delivery type option', () => {
+describe(specname+' - Place an order with international delivery type option', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });

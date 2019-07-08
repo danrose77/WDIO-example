@@ -1,5 +1,5 @@
 require("dotenv").config();
-let timeout = 90 * 1000;
+let timeout = 180 * 1000;
 
 exports.config = {
   services: ["selenium-standalone"],
@@ -53,7 +53,7 @@ exports.config = {
     };
     mkdirSync("./reports/");
     mkdirSync("./reports/ErrorShots/");
-    var screendate = new Date();
+    let screendate = new Date();
     let month = screendate.getMonth();
     month = month + 1;
     mkdirSync("./reports/" + screendate.getFullYear() + "_" + month + "_" + screendate.getDate() + "/");
@@ -92,13 +92,14 @@ exports.config = {
     City = "";
     Region = "";
     Postcode = "";
+    cuscountry = "";
     del_YorN = "";
     del_address1 = "";
     del_city = "";
     del_region = "";
     del_postcode = "";
     del_country = "";
-
+    paymentMethod = "";
     promotionID1 = "";
     promotionID2 = "";
     creditAmount = "";
@@ -113,29 +114,41 @@ exports.config = {
     cusCredit = "";
     
     // set specname global
-    specname = String(specs);
+    let specname = String(specs);
     specname = specname.split("\\");
     let specnamelength = specname.length - 1;
     specname = specname[specnamelength];
+    global.specname = specname;
 
     // set runStartTime global
-    var screendate = new Date();
+    screendate = new Date();
     let hour = ("0" + screendate.getHours()).slice(-2);
     let minute = ("0" + screendate.getMinutes()).slice(-2);
     let seconds = ("0" + screendate.getSeconds()).slice(-2);
     runStartTime = hour + "_" + minute + "_" + seconds;
 
     // determine form factor
-    formFactor = "";
-    if (capabilities["real_mobile"] === 'true') {
-      formFactor = "mobile";
-    } else if (capabilities["platformName"] === 'Android') {
-      formFactor = "mobile";
-    } else {
-      formFactor = "desktop";
+    let formFactor = 'desktop';
+    if (('true' === capabilities["real_mobile"]) || ('false' === capabilities['real_mobile'])) {
+      formFactor = 'mobile';
     }
+    global.formFactor = formFactor;
     if (formFactor === "desktop") {
       browser.maximizeWindow();
+    }
+    let platform = capabilities.browserName;
+    if (platform === undefined) {
+      platform = capabilities.device;
+    }
+    global.platform = platform;
+    //console.dir(capabilities, {depth: null, colors: true});
+    //console.dir(specs, {depth: null, colors: true});
+  },
+  afterTest(test) {
+    //console.dir(test, {depth: null, colors: true});
+    if (!test.passed) {
+      let screendate = new Date();
+      browser.saveScreenshot('./reports/ErrorShots/' + test.fullTitle + screendate.getTime() + '.png');
     }
   },
   after() {},

@@ -76,7 +76,6 @@ expectShoppingBagItemNumberToBe(numberExpected) {
     Navigation.openShoppingBasket();
     browser.pause(1000);
     let numberOfLines = objectLength.element(this.Quantity);
-    console.log(numberOfLines);
     let counter = 1;
     let total = 0;
     while (counter !== numberOfLines) {

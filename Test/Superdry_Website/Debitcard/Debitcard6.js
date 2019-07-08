@@ -9,7 +9,7 @@ import Givex from "../../../Pages/Givex";
 
 let username = 'danrosetest+DC_user@gmail.com';
 
-describe('Debit card and Gift card payment from an existing user', () => {
+describe(specname+' - Debit card and Gift card payment from an existing user', () => {
     it('Set up a customer account', () => {
         Environment.openBaseURL();
         Customer.setUpNewAccount(username);

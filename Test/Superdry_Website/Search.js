@@ -2,7 +2,7 @@ import Environment from '../../Pages/Environment.js';
 import Search from '../../Pages/Search.js';
 import Navigation from "../../Pages/Navigation";
 
-describe('Search.js - Search for a product,select a random filter and sort by highest price', () => {
+describe(specname+' - Search for a product,select a random filter and sort by highest price', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });
@@ -13,7 +13,7 @@ describe('Search.js - Search for a product,select a random filter and sort by hi
     });
 });
 
-describe('Search.js - Search for a product and filter by colour', () => {
+describe(specname+' - Search for a product and filter by colour', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });
@@ -24,7 +24,7 @@ describe('Search.js - Search for a product and filter by colour', () => {
     });
 });
 
-describe('Search.js - Search for a product and sort by lowest price', () => {
+describe(specname+' - Search for a product and sort by lowest price', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });

@@ -3,7 +3,10 @@ import objectLength from './objectLength'
 
 class GetRandom extends Page {
   element(elements,successElement,maxResults,Offset) {
-    let count = objectLength.element(elements);
+    let count = elements.length;
+    if (count > 100) {
+      count = 99;
+    }
     let randomNumber = 1;
     let success = false;
     while (success === false) {
@@ -20,7 +23,11 @@ class GetRandom extends Page {
         randomNumber = Math.floor(Math.random() * count);
       }
       let element = elements[randomNumber];
-      try{element.click()} catch (e) {console.log(e)}
+      try{
+        element.click();
+      } catch (e) {
+        console.log("Failed in click attempt, trying again");
+      }
       browser.pause(1000);
       if (successElement !== undefined) {
           // successElement set to none will skip success check
@@ -28,7 +35,7 @@ class GetRandom extends Page {
           let counter = 0;
           while (elementConfirmed === false) {
             browser.pause(1000);
-            elementConfirmed = successElement.isExisting();
+            elementConfirmed = successElement.isDisplayed();
             counter = counter + 1;
             if (counter === 30) {
               console.log("Element not found");
@@ -58,7 +65,6 @@ class GetRandom extends Page {
         element.click();
         success = true;
       } else {
-        console.log("Size box invalid - trying again");
         randomNumber = Math.floor(Math.random() * count);
       }
     }
@@ -75,8 +81,6 @@ class GetRandom extends Page {
       try {
         select.selectByIndex(randomNumber);
       } catch (e) {
-        console.log('Couldnt selectByIndex');
-        console.log(e);
       }
     }
   };

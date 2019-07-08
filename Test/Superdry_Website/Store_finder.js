@@ -1,7 +1,7 @@
 import Environment from '../../Pages/Environment.js';
 import Storefinder from "../../Pages/Storefinder";
 
-describe('Store_finder.js - Search for stores by partial postcode', () => {
+describe(specname+' - Search for stores by partial postcode', () => {
     it('Go to the storefinder', () => {
         Environment.goToBasePlus('/stores');
     });
@@ -11,7 +11,7 @@ describe('Store_finder.js - Search for stores by partial postcode', () => {
     });
 });
 
-describe('Store_finder.js - Search for stores in region', () => {
+describe(specname+' - Search for stores in region', () => {
     it('Go to the storefinder', () => {
         Environment.goToBasePlus('/stores');
     });
@@ -20,7 +20,7 @@ describe('Store_finder.js - Search for stores in region', () => {
     });
 });
 
-describe('Store_finder.js - Search for gibberish', () => {
+describe(specname+' - Search for gibberish', () => {
     it('Go to the storefinder', () => {
         Environment.goToBasePlus('/stores');
     });
@@ -30,7 +30,7 @@ describe('Store_finder.js - Search for gibberish', () => {
     });
 });
 
-describe('Store_finder.js - Search for a town and select a result', () => {
+describe(specname+' - Search for a town and select a result', () => {
     it('Go to the storefinder', () => {
         Environment.goToBasePlus('/stores');
     });

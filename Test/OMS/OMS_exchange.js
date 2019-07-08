@@ -9,7 +9,7 @@ import IBMse from "../../Pages/IBMse";
 let SKU1 = '1020200500313OI6003';
 let Qty1 = 1;
 
-describe('Create order with a specific SKU', () => {
+describe(specname+' - Create order with a specific SKU', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });

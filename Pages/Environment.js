@@ -1,23 +1,36 @@
 import Page from './Page'
+import Navigation from "./Navigation";
 
 class Environment extends Page {
-  get cookieConsent()          {return $('div.cc-window.cc-banner.cc-type-info.cc-theme-block.cc-bottom.cc-color-override-1668554415 > div > a');}
-
-  openBaseURL() {
+  openUSsiteForColour() {
     browser.deleteCookies();
     browser.url('/');
-    site = browser.getUrl();
     environment = browser.getUrl();
     envcol = environment;
     envcol = envcol.split("-");
     envcol = envcol[1];
     envcol = envcol.split(".");
     envcol = envcol[0];
+    let environmentTemp = "https://com-"+envcol+".nonprod.sd.co.uk/us/";
+    browser.url(environmentTemp);
     browser.pause(2000);
-    let cookieConsentExist = this.cookieConsent.isDisplayed();
-    if (cookieConsentExist === true) {
-      this.cookieConsent.click();
-    }
+    Navigation.acceptCookiesPrompt();
+    this.country();
+    site = browser.getUrl();
+    environment = browser.getUrl();
+  }
+  openBaseURL() {
+    browser.deleteCookies();
+    browser.url('/');
+    site = browser.getUrl();
+    environment = site;
+    envcol = environment;
+    envcol = envcol.split("-");
+    envcol = envcol[1];
+    envcol = envcol.split(".");
+    envcol = envcol[0];
+    browser.pause(2000);
+    Navigation.acceptCookiesPrompt();
     this.country();
   }
   goToBasePlus(basePlus) {

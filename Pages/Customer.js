@@ -4,6 +4,7 @@ import fillObject from '../functions/fillObject'
 import * as yaml from "js-yaml";
 import shopperGroupIDfunc from "../functions/shopperGroupID";
 import objectLength from "../functions/objectLength";
+import Screenshot from "../functions/Screenshot";
 
 class Customer extends Page {
   get username()                    {return $("//input[@id='username_login']");}
@@ -66,13 +67,19 @@ class Customer extends Page {
       City = customerData["City"];
       Region = customerData["Region"];
       Postcode = customerData["Postcode"];
+      cuscountry = customerData["Country"];
       shopperGroupID = shopperGroupIDfunc.pick();
 
       this.signIn(email);
       let logOutButtonExist = this.signOutButton.isExisting();
       if (logOutButtonExist === false) {
-        this.registerButton.click();
-        browser.pause(2000);
+        browser.url('/my-account/register');
+        try {
+          this.registerPageEmail.waitForExist(60000);
+        } catch (e) {
+          this.registerPageEmail.waitForExist(60000);
+        }
+        Screenshot.viewport();
         fillObject.element(this.registerPageEmail, emailaddress);
         fillObject.element(this.registerPagePassword1, newPassword);
         fillObject.element(this.registerPagePassword2, newPassword);
@@ -83,21 +90,47 @@ class Customer extends Page {
         fillObject.element(this.registerPageLastName, Last_name);
         browser.pause(1000);
         try {this.manualAddress.click()} catch (err) {}
-        if (country === "US") {country = "United States"}
-        try {fillObject.element(this.country, country)} catch (err) {}
+        browser.pause(1000);
+        try {this.country.selectByVisibleText(cuscountry)} catch (err) {console.log("Errored selecting country")}
         try {fillObject.element(this.address1, Address_line1)} catch (err) {}
-        try {fillObject.element(this.address2, Address_line2)} catch (err) {}
         try {fillObject.element(this.city, City)} catch (err) {}
-        try {fillObject.element(this.region, Region)} catch (err) {}
         try {fillObject.element(this.zip, Postcode)} catch (err) {}
         browser.pause(500);
-        try {this.registerPageGenderSelect.scroll()} catch (err) {}
-        try {this.registerPageMarketing.click()} catch (err) {}
+        try {
+          this.registerPageGenderSelect.scroll()
+        } catch (err) {
+
+        }
         browser.pause(1000);
-        try {this.registerPageButtonRegister.click()} catch (err) {}
+        this.registerPagePhone1.scrollIntoView();
+        try {
+          this.registerPageButtonRegister.click()
+        } catch (err) {
+
+        }
         browser.pause(1000);
-        try {this.confirmTerms.click()} catch (err) {browser.pause(1000)}
-        this.confirmProceed.click();
+        try {
+          this.confirmTerms.click();
+          browser.pause(500);
+          this.confirmProceed.click();
+          browser.pause(1000);
+        } catch (err) {
+          try {
+            this.confirmTerms.click();
+            browser.pause(500);
+            this.confirmProceed.click();
+            browser.pause(1000);
+          } catch (err) {
+            try {
+              this.confirmTerms.click();
+              browser.pause(500);
+              this.confirmProceed.click();
+              browser.pause(1000);
+            } catch (err) {
+              console.log("Couldn't create user account")
+            }
+          }
+        }
         browser.pause(1000);
       } else {
       }
@@ -168,16 +201,18 @@ class Customer extends Page {
     if (emailaddress === undefined || emailaddress === "") {
       emailaddress = email;
     }
-    Navigation.MyAccount.click();
+    if (Navigation.MyAccountMobile.isDisplayed() === true) {
+      Navigation.MyAccountMobile.click();
+    } else {
+      Navigation.MyAccount.click();
+    }
     let logOutButtonExist = this.signOutButton.isExisting();
     if (logOutButtonExist === true) {
       this.signOutButton.click();
     }
-    browser.refresh();
     browser.pause(500);
     fillObject.element(this.username, emailaddress);
     fillObject.element(this.password, newPassword);
-    //try{this.cookieConsentClose.click()} catch (e) {}
     this.signInButton.click();
     browser.pause(1000);
   }

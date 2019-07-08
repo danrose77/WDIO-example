@@ -4,7 +4,7 @@ import Search from '../../../Pages/Search.js';
 import Navigation from '../../../Pages/Navigation.js';
 import Checkout from "../../../Pages/Checkout";
 
-describe('Debit card payment from a guest user', () => {
+describe(specname+' - Debit card payment from a guest user', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });
@@ -12,9 +12,11 @@ describe('Debit card payment from a guest user', () => {
         Navigation.randomSection();
         Search.PickRandomProduct();
         Product.SelectASizeAndAddTo('Bag');
-    });
-    it('Go to the checkout as a guest and pay by card', () => {
+    }, 3);
+    it('Go to the checkout as a guest', () => {
         Navigation.GoToCheckout();
+    });
+    it('Pay by card', () => {
         Checkout.fillTheDeliveryFields();
         Checkout.payByCard();
     });
