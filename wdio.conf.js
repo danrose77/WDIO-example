@@ -1,4 +1,4 @@
-let timeout = 60 * 100000;
+let timeout = 60 * 1000;
 const {join} = require('path');
 
 exports.config = {
