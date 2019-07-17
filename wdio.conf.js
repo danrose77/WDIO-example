@@ -1,4 +1,3 @@
-require("dotenv").config();
 let timeout = 60 * 100000;
 const {join} = require('path');
 
