@@ -3,7 +3,12 @@ const master = require("../wdio.conf");
 exports.config = Object.assign(master.config, {
   specs: ["Test/**/*.js"],
   logLevel: 'error',
-  reporters: ["spec"],
+    reporters: ['spec', 'junit'],
+    reporterOptions: {
+        junit: {
+            outputDir: './reports/'
+        }
+    },
   maxInstances: 2,
   services: ['browserstack'],
   user: 'danielrose3',

@@ -37,7 +37,6 @@ exports.config = {
         "wdio-screenshot": {}
     },
     framework: "mocha",
-    reporters: ["dot"],
     mochaOpts: {
         ui: "bdd",
         compilers: ["js:babel-register"],
