@@ -24,6 +24,15 @@ exports.config = {
             }
         }
     ],
+    reporters: [
+        'spec',
+        ['junit', {
+            outputDir: './reports/',
+            outputFileFormat: function() {
+                return `testresult.xml`
+            }
+        }]
+    ],
     updateJob: false,
     specs: [],
     exclude: [],
