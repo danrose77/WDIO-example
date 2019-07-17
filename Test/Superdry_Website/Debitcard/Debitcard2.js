@@ -5,7 +5,7 @@ import Navigation from '../../../Pages/Navigation.js';
 import Checkout from "../../../Pages/Checkout";
 import Customer from "../../../Pages/Customer";
 
-describe(specname+' - Debit card payment from a new user', () => {
+describe(specname + ' - Debit card payment from a new user', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });

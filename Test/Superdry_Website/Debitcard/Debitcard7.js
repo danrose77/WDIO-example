@@ -5,14 +5,17 @@ import Navigation from '../../../Pages/Navigation.js';
 import Checkout from "../../../Pages/Checkout";
 import Customer from "../../../Pages/Customer";
 import AdminPortal from "../../../Pages/AdminPortal";
+import Givex from "../../../Pages/Givex";
 
-let username = 'danrosetest+DCandCCuser@gmail.com';
+let username = 'danrosetest+DCCC2@gmail.com';
 
 describe(specname+' - Debit card and Customer credit payment from an existing user', () => {
     it('Set up a customer account', () => {
         Environment.openBaseURL();
         Customer.setUpNewAccount(username);
         Customer.addDeliveryAddress();
+    });
+    it('Set up in admin portal', () => {
         AdminPortal.login();
         AdminPortal.performSetup();
     });

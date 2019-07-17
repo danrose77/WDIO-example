@@ -7,6 +7,8 @@ import Givex from "../../../Pages/Givex";
 
 let giftcard = '6338901547310003689';
 
+// If a mobile test giftcard needs to be set up with script "./test/setupGiftcard.js"
+
 describe(specname+' - Debit card and Gift card payment from a guest user', () => {
     it('Set up a gift card', () => {
         Givex.login();

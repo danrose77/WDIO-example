@@ -47,6 +47,7 @@
   "license": "MIT",
   "devDependencies": {
     "lighthouse": "^5.1.0",
-    "lighthouse-batch": "^5.0.1"
+    "lighthouse-batch": "^5.0.1",
+    "wdio-image-comparison-service": "^1.2.0"
   }
 }

@@ -6,7 +6,7 @@ import Checkout from "../../../Pages/Checkout";
 import Customer from "../../../Pages/Customer";
 import AdminPortal from "../../../Pages/AdminPortal";
 
-let username = 'danrosetest+DCandCC_user@gmail.com';
+let username = 'danrosetest+DCCC2@gmail.com';
 
 describe(specname+' - Paypal and customer credit payment from an existing user', () => {
     it('Set up a customer account', () => {

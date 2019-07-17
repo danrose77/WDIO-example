@@ -1,7 +1,4 @@
 import Environment from '../../Pages/Environment.js';
-import Customer from "../../Pages/Customer";
-import AdminPortal from "../../Pages/AdminPortal";
-import Givex from "../../Pages/Givex";
 import Navigation from "../../Pages/Navigation";
 import GetRandom from "../../functions/GetRandom";
 import Screenshot from "../../functions/Screenshot";
@@ -28,7 +25,7 @@ describe(specname + ' - Check all menu links', () => {
             Navigation.acceptCookiesPrompt();
             Navigation.hamburger.click();
             Navigation.backToBaseMenu();
-            let lvl1MenuAlt = Navigation.menu_tier1[0].getAttribute('alt');
+            let lvl1MenuAlt = Navigation.menu_tier1[tick].getAttribute('alt');
             topMenuNumber = Navigation.menu_tier1.length;
             browser.pause(500);
             GetRandom.element(Navigation.menu_tier1, undefined, 1, tick);
@@ -88,7 +85,7 @@ describe(specname + ' - Check all menu links', () => {
             Navigation.acceptCookiesPrompt();
             Navigation.hamburger.click();
             Navigation.backToBaseMenu();
-            let lvl1MenuAlt = Navigation.menu_tier1[1].getAttribute('alt');
+            let lvl1MenuAlt = Navigation.menu_tier1[tick].getAttribute('alt');
             topMenuNumber = Navigation.menu_tier1.length;
             browser.pause(500);
             GetRandom.element(Navigation.menu_tier1, undefined, 1, tick);
@@ -148,7 +145,7 @@ describe(specname + ' - Check all menu links', () => {
             Navigation.acceptCookiesPrompt();
             Navigation.hamburger.click();
             Navigation.backToBaseMenu();
-            let lvl1MenuAlt = Navigation.menu_tier1[2].getAttribute('alt');
+            let lvl1MenuAlt = Navigation.menu_tier1[tick].getAttribute('alt');
             topMenuNumber = Navigation.menu_tier1.length;
             browser.pause(500);
             GetRandom.element(Navigation.menu_tier1, undefined, 1, tick);
@@ -208,7 +205,7 @@ describe(specname + ' - Check all menu links', () => {
             Navigation.acceptCookiesPrompt();
             Navigation.hamburger.click();
             Navigation.backToBaseMenu();
-            let lvl1MenuAlt = Navigation.menu_tier1[3].getAttribute('alt');
+            let lvl1MenuAlt = Navigation.menu_tier1[tick].getAttribute('alt');
             topMenuNumber = Navigation.menu_tier1.length;
             browser.pause(500);
             GetRandom.element(Navigation.menu_tier1, undefined, 1, tick);
