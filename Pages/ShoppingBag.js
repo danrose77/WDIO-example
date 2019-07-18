@@ -28,11 +28,14 @@ class ShoppingBag extends Page {
     get basketEmpty() {
         return $('#basket-empty');
     }
+    get get1stItemQty() {
+        return $('.basket-account .js-basket-item-count');
+    }
 
     removeShoppingBagItems(numberToRemove) {
         Navigation.openShoppingBasket();
         browser.pause(1000);
-        let quantityItem1 = this.Quantity[1];
+        let quantityItem1 = this.get1stItemQty;
         let quantityVal1 = quantityItem1.getHTML(false);
         let counter = 1;
         while (counter <= numberToRemove) {
@@ -41,7 +44,7 @@ class ShoppingBag extends Page {
             browser.pause(1000);
             counter = counter + 1;
         }
-        quantityItem1 = this.Quantity[1];
+        quantityItem1 = this.get1stItemQty;
         let quantityVal2 = quantityItem1.getHTML(false);
         quantityVal1 = parseInt(quantityVal1);
         quantityVal2 = parseInt(quantityVal2);
@@ -53,7 +56,7 @@ class ShoppingBag extends Page {
     increaseShoppingBagItems(numberToAdd) {
         Navigation.openShoppingBasket();
         browser.pause(1000);
-        let quantityItem1 = this.Quantity[1];
+        let quantityItem1 = this.get1stItemQty;
         let quantityVal1 = quantityItem1.getHTML(false);
         let counter = 1;
         while (counter <= numberToAdd) {
@@ -63,7 +66,7 @@ class ShoppingBag extends Page {
             counter = counter + 1;
         }
         browser.pause(1000);
-        quantityItem1 = this.Quantity[1];
+        quantityItem1 = this.get1stItemQty;
         let quantityVal2 = quantityItem1.getHTML(false);
         console.log(quantityVal2);
         quantityVal1 = parseInt(quantityVal1);
