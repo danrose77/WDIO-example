@@ -68,7 +68,6 @@ class ShoppingBag extends Page {
         browser.pause(1000);
         quantityItem1 = this.get1stItemQty;
         let quantityVal2 = quantityItem1.getHTML(false);
-        console.log(quantityVal2);
         quantityVal1 = parseInt(quantityVal1);
         quantityVal2 = parseInt(quantityVal2);
         let endResult = quantityVal1 + numberToAdd;
@@ -99,16 +98,9 @@ class ShoppingBag extends Page {
     expectShoppingBagItemNumberToBe(numberExpected) {
         Navigation.openShoppingBasket();
         browser.pause(1000);
-        let numberOfLines = objectLength.element(this.Quantity);
-        let counter = 1;
-        let total = 0;
-        while (counter !== numberOfLines) {
-            let quantityItem = this.Quantity[counter];
-            let quantityVal = quantityItem.getHTML(false);
-            quantityVal = parseInt(quantityVal);
-            total = total + quantityVal;
-            counter = counter + 1;
-        }
+        let total = parseInt(this.get1stItemQty.getHTML(false));
+        console.log(total);
+        console.log(typeof total);
         expect(total).to.equal(numberExpected);
     }
 }
