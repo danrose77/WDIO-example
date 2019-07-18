@@ -62,7 +62,7 @@ class ShoppingBag extends Page {
         while (counter <= numberToAdd) {
             let control = this.IncreaseQtyCtrl[1];
             control.click();
-            browser.pause(1000);
+            browser.pause(2000);
             counter = counter + 1;
         }
         browser.pause(1000);
