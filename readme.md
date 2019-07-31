@@ -1,4 +1,4 @@
-# webriverio-v5 - test123
+# webriverio-v5
 
 A front-end test automation framework using webdriverio and mocha, designed to be as simple as possible.
 
