@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
     grunt.config("environment", (function() {
         let env = grunt.option("env");
+        console.log('env = '+ env);
         return env;
     })());
     grunt.config("feature", (function() {
@@ -15,6 +16,7 @@ module.exports = function(grunt) {
         } else {
             path = "./Test/**/*.js";
         }
+        console.log('feature = '+ path);
         return path;
     })());
     grunt.config("platform", (function() {
@@ -34,6 +36,7 @@ module.exports = function(grunt) {
             console.log("No platform specified, using chrome")
             platform = [{'os' : 'Windows','os_version' : '10','browserName' : 'chrome','resolution' : '1920x1200','browserstack.timezone' : 'UK','browserstack.local' : 'false','browserstack.debug' : 'true','browserstack.geoLocation' : 'GB',"goog:chromeOptns": {"args": ["disable-infobars"]}}]
         }
+        console.log('platform = '+ platform);
         return platform;
     })());
     grunt.initConfig({
@@ -44,15 +47,15 @@ module.exports = function(grunt) {
                     specs: [
                         grunt.config("feature"),
                     ],
-                baseUrl: grunt.config("environment")
+                    baseUrl: grunt.config("environment"),
             },
             browserstack: {
                 configFile: "./config/wdio.conf.browserstack.js",
-                specs: [
-                    grunt.config("feature"),
-                ],
-                baseUrl: grunt.config("environment"),
-                capabilities: grunt.config("platform")
+                    specs: [
+                        grunt.config("feature"),
+                    ],
+                    baseUrl: grunt.config("environment"),
+                    capabilities: grunt.config("platform"),
             },
         },
     });

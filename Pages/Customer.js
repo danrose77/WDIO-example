@@ -156,7 +156,7 @@ class Customer extends Page {
             this.signIn(emailaddress);
             let logOutButtonExist = this.signOutButton.isExisting();
             if (logOutButtonExist === false) {
-                browser.url('/my-account/register');
+                browser.url(site + 'my-account/register');
                 try {
                     this.registerPageEmail.waitForExist(60000);
                 } catch (e) {
@@ -172,12 +172,17 @@ class Customer extends Page {
                 fillObject.element(this.registerPageLastName, customerDetails.Last_name);
                 browser.pause(1000);
                 try {
-                    this.manualAddress.click()
+                    if (this.manualAddress.isDisplayed() === true) {
+                        this.manualAddress.click();
+                    }
                 } catch (err) {
                 }
                 browser.pause(1000);
                 try {
-                    this.country.selectByVisibleText(customerDetails.cuscountry)
+                    this.country.selectByVisibleText(customerDetails.cuscountry);
+                    if (customerDetails.cuscountry === "United States") {
+                        this.region.selectByVisibleText("Alabama");
+                    }
                 } catch (err) {
                     console.log("Errored selecting country")
                 }
@@ -296,7 +301,7 @@ class Customer extends Page {
         if (emailaddress === undefined || emailaddress === "") {
             global.emailaddress = email;
         }
-        browser.url('/log-out');
+        browser.url(site + 'log-out');
         browser.pause(1000);
         fillObject.element(this.username, emailaddress);
         fillObject.element(this.password, customerDetails.password);

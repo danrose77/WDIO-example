@@ -13,6 +13,7 @@ describe(specname+' - Debit card payment from a guest user', () => {
         Search.PickRandomProduct();
         Product.SelectASizeAndAddTo('Bag');
     }, 3);
+
     it('Go to the checkout as a guest', () => {
         Navigation.GoToCheckout();
     });

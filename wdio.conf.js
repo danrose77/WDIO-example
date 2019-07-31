@@ -37,7 +37,6 @@ exports.config = {
     specs: [],
     exclude: [],
     suites: {},
-    logLevel: "silent",
     coloredLogs: true,
     screenshotPath: "./reports/ErrorShots",
     waitforTimeout: 30000,

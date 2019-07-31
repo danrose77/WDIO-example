@@ -5,24 +5,32 @@ import Navigation from '../../Pages/Navigation.js';
 import Checkout from "../../Pages/Checkout";
 import Customer from "../../Pages/Customer";
 
-let username = 'danrosetest+giropay@gmail.com';
+/*
+DOTPAY available on PL site only.
+*/
 
-describe(specname+' - Giropay payment from an existing user', () => {
+let username = 'danrosetest+dotpay@gmail.com';
+
+describe(specname+' - Dotpay payment from an existing user', () => {
     it('Set up a customer account for email '+username, () => {
-        Environment.openBaseURL();
+        Environment.openCountrySiteForColour('PL');
         Customer.setUpNewAccount(username);
     });
+
     it('Go to website and log in', () => {
-        Environment.openBaseURL();
+        Environment.openCountrySiteForColour('PL');
         Customer.signIn(username);
     });
     it('Go to a random section and add a product to the shopping bag', () => {
         Navigation.randomSection();
         Search.PickRandomProduct();
         Product.SelectASizeAndAddTo('Bag');
-    });
-    it('Go to the checkout and pay by giropay', () => {
+    }, 3);
+
+    it('Go to the checkout as a guest', () => {
         Navigation.GoToCheckout();
-        Checkout.payByGiropay();
+    });
+    it('Pay by Dotpay', () => {
+        Checkout.payByDotpay();
     });
 });

@@ -18,6 +18,7 @@ class GetRandom extends Page {
             if (Offset === undefined) {
                 randomNumber = Math.floor(Math.random() * count);
             } else if (Offset !== 0) {
+                count--;
                 randomNumber = Math.floor((Math.random() * count) + Offset);
             } else {
                 randomNumber = Math.floor(Math.random() * count);
@@ -26,7 +27,6 @@ class GetRandom extends Page {
             try {
                 element.click();
             } catch (e) {
-                console.log("Failed in click attempt, trying again");
             }
             browser.pause(1000);
             if (successElement !== undefined) {

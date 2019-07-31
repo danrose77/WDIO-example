@@ -5,24 +5,35 @@ import Navigation from '../../Pages/Navigation.js';
 import Checkout from "../../Pages/Checkout";
 import Customer from "../../Pages/Customer";
 
-let username = 'danrosetest+giropay@gmail.com';
+/*
+AFTERPAY available on NL site only.
+Current issue with android and iOS - run on chrome only until resolved (Manual test on mobile platforms pass fine).
+*/
 
-describe(specname+' - Giropay payment from an existing user', () => {
+let username = 'danrosetest+afterpay@gmail.com';
+
+describe(specname+' - Afterpay payment from an existing user', () => {
+
     it('Set up a customer account for email '+username, () => {
-        Environment.openBaseURL();
+        Environment.openCountrySiteForColour('NL');
         Customer.setUpNewAccount(username);
     });
+
     it('Go to website and log in', () => {
-        Environment.openBaseURL();
+        Environment.openCountrySiteForColour('NL');
         Customer.signIn(username);
     });
+
     it('Go to a random section and add a product to the shopping bag', () => {
         Navigation.randomSection();
         Search.PickRandomProduct();
         Product.SelectASizeAndAddTo('Bag');
-    });
-    it('Go to the checkout and pay by giropay', () => {
+    }, 3);
+
+    it('Go to the checkout as a guest', () => {
         Navigation.GoToCheckout();
-        Checkout.payByGiropay();
+    });
+    it('Pay by afterpay', () => {
+        Checkout.payByAfterpay();
     });
 });

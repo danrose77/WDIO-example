@@ -2,7 +2,7 @@ const master = require("../wdio.conf");
 
 exports.config = Object.assign(master.config, {
   specs: ["Test/**/*.js"],
-  logLevel: 'error',
+  logLevel: 'silent',
   maxInstances: 2,
   services: ['browserstack'],
   user: 'danielrose3',

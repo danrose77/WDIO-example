@@ -1,6 +1,7 @@
 import Page from './Page'
 import Navigation from "./Navigation";
 import * as yaml from "js-yaml";
+import Screenshot from "../functions/Screenshot";
 
 class Environment extends Page {
     setSite() {
@@ -13,21 +14,42 @@ class Environment extends Page {
         envcol = envcol[0];
         global.envcol = envcol;
     }
-    openUSsiteForColour() {
+    openCountrySiteForColour(countryVal) {
         browser.deleteCookies();
         browser.url('/');
         this.setSite();
-        let environmentTemp = "https://com-" + envcol + ".nonprod.sd.co.uk/us/";
+        console.log("Site changed to " + countryVal + " site as specified in script.");
+        let environmentTemp = "";
+        switch (countryVal) {
+            case 'US':
+                environmentTemp = "https://com-" + envcol + ".nonprod.sd.co.uk/us/";
+                break;
+            case 'NL':
+                environmentTemp = "https://nl-" + envcol + ".nonprod.sd.co.uk/";
+                break;
+            case 'PL':
+                environmentTemp = "https://pl-" + envcol + ".nonprod.sd.co.uk/";
+                break;
+            case 'DE':
+                environmentTemp = "https://de-" + envcol + ".nonprod.sd.co.uk/";
+                break;
+            default:
+                console.log("No country or invalid country specified");
+                break;
+        }
         browser.url(environmentTemp);
         browser.pause(2000);
         Navigation.acceptCookiesPrompt();
+        this.setSite();
         this.country();
     }
+
     openBaseURL() {
-        browser.deleteCookies();
+        browser.url('/');
+        this.setSite();
         let screenDate = new Date();
         browser.url('/?a' + screenDate.getTime() + 'a');
-        this.setSite();
+        browser.deleteCookies();
         browser.pause(2000);
         Navigation.acceptCookiesPrompt();
         this.country();

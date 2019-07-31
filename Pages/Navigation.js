@@ -99,34 +99,31 @@ class Navigation extends Page {
             this.acceptCookiesPrompt();
             this.backToBaseMenu();
             browser.pause(1000);
-            GetRandom.element(this.menu_tier1, undefined, 1);
+            GetRandom.element(this.menu_tier1, undefined, 2);
             browser.pause(1000);
-            GetRandom.element(this.menu_subtiers, undefined, 1, 3);
+            GetRandom.element(this.menu_subtiers, undefined, 4, 2);
             browser.pause(1000);
-            GetRandom.element(this.menu_subtiers, undefined, 1, 3);
+            if (this.menu_subtiers[0].isDisplayed() === true) {
+                GetRandom.element(this.menu_subtiers, undefined,4, 1);
+            }
             browser.pause(5000);
 
-            let classAttrib = this.body.getAttribute('class');
-            if (classAttrib === 'error-page sana') {
+            let classAttrib = this.body.getAttribute('class').trim();
+            console.log('classAttrib = ' + classAttrib);
+            if ((classAttrib === 'error-page sana')||(classAttrib === 'error-page sana two-tone')) {
                 browser.url(site);
                 browser.pause(3000);
                 success = false;
             } else {
                 let count = Search.ResultsLinks.length;
-                if (count !== 0) {
-                    success = true;
-                } else {
-                    browser.url(site);
-                    browser.pause(3000);
-                    success = false;
-                }
+                success = !((count === undefined) || (count === 0));
             }
         }
         Screenshot.viewport();
     }
 
     GoToCheckout() {
-        browser.url('/checkout/log-in');
+        browser.url(site + '/checkout/log-in');
         browser.pause(1500);
         Screenshot.viewport();
         try {

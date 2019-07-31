@@ -6,16 +6,16 @@ import Checkout from "../../../Pages/Checkout";
 import Customer from "../../../Pages/Customer";
 import AdminPortal from "../../../Pages/AdminPortal";
 
-let username = 'danrosetest+klarnaUK_user@gmail.com';
+let username = 'danrosetest+klarnaUS_user@gmail.com';
 
-describe(specname+' - Klarna UK pay in 3 payment from an existing user', () => {
+describe(specname+' - Klarna US pay in 3 payment from an existing user', () => {
     it('Set up a customer account', () => {
-        Environment.openBaseURL();
+        Environment.openCountrySiteForColour('US');
         Customer.setUpNewAccount(username);
         Customer.addDeliveryAddress();
     });
     it('Go to website and log in', () => {
-        Environment.openBaseURL();
+        Environment.openCountrySiteForColour('US');
         Customer.signIn(username);
     });
     it('Go to a random section and add a product to the shopping bag', () => {
@@ -23,8 +23,8 @@ describe(specname+' - Klarna UK pay in 3 payment from an existing user', () => {
         Search.PickRandomProduct();
         Product.SelectASizeAndAddTo('Bag');
     }, 3);
-    it('Go to the checkout as a guest and pay by Klarna in 3', () => {
+    it('Go to the checkout as a guest and pay by Klarna in 4', () => {
         Navigation.GoToCheckout();
-        Checkout.payByKlarna('in3');
+        Checkout.payByKlarna('in4');
     });
 });

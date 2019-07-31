@@ -15,13 +15,13 @@ let username = 'danrosetest+US_user@gmail.com';
 
 describe(specname+' - Line: Single - Quantity: Multi - Payment: Card - Created -> Scheduled -> Released -> Shipped', () => {
     it('Set up a customer account for email '+username, () => {
-        Environment.openUSsiteForColour();
+        Environment.openCountrySiteForColour('US');
         // Environment.openBaseURL(); --> If script is to be run on non us remove uncomment here and comment above
         Customer.setUpNewAccount(username);
         Customer.addDeliveryAddress();
     });
     it('Go to website and log in', () => {
-        Environment.openUSsiteForColour();
+        Environment.openCountrySiteForColour('US');
         // Environment.openBaseURL(); --> If script is to be run on non us remove uncomment here and comment above
         Customer.signIn(username);
     });

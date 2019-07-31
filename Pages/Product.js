@@ -2,9 +2,6 @@ import Page from './Page'
 import Screenshot from '../functions/Screenshot';
 import GetRandom from "../functions/GetRandom";
 import ShoppingBag from "./ShoppingBag";
-import Navigation from "./Navigation";
-import Search from "./Search";
-import * as yaml from "js-yaml";
 
 class Product extends Page {
     get ProductTitle() {
@@ -59,10 +56,6 @@ class Product extends Page {
         return $$('div.size-box-container:not([class$=hidden]) > div.size-box:not([class$="size-box invalid"])');
     }
 
-    get SizeBoxOnesize() {
-        return $('div.size-box-container > div.size-box:not([class$=onesize])');
-    }
-
     get ATBSizeBoxValid() {
         return $$('#atb-size-selector-modal > div > div > div.modal-body.row > div.col-12.col-md-7 > div > div > div.size-box');
     }
@@ -86,25 +79,11 @@ class Product extends Page {
         skuslist[skuslist.length] = new this.skuObject(SKU, "", "", "", "");
     }
 
-    SelectASizeAndAddTo(addTo, numberToAdd, OMS) {
-        if (formFactor === 'mobile') {
-            browser.pause(5000);
-        } else {
-            this.ProductTitle.waitForDisplayed();
-        }
-        let sizeBoxHTML = this.SizeBoxText.getHTML(false).trim();
-        while (sizeBoxHTML === "Sorry, this item is currently out of stock.") {
-            Navigation.randomSection();
-            Search.PickRandomProduct();
-            sizeBoxHTML = this.SizeBoxText.getHTML(false).trim();
-        }
-
-        if ((OMS === false) || (OMS === undefined)) {
+    SelectASizeAndAddTo(addTo, numberToAdd, SKU_used) {
+        if ((SKU_used === false) || (SKU_used === undefined)) {
             browser.pause(3000);
-            if (this.SizeBoxValid.length > 0) {
-                if (this.SizeBoxOnesize.length === undefined) {
+            if (this.SizeBoxValid.length > 1) {
                     GetRandom.sizeBox(this.SizeBoxValid);
-                }
             } else if (this.SizeSelectorDD.isDisplayed() === true) {
                 GetRandom.selectByIndex(this.SizeSelectorDD, this.SizeSelectorDDoptions)
             }
@@ -112,16 +91,32 @@ class Product extends Page {
         browser.pause(1000);
         Screenshot.viewport();
         // ATB
+        console.log('addTo = '+ addTo);
         if (addTo === 'Bag') {
             let ATBbutton = this.AddToBagButtons;
             if (numberToAdd === undefined) {
-                ATBbutton[0].click();
+                let quantity1 = parseInt(ShoppingBag.get1stItemQty.getHTML(false));
+                let quantity2 = quantity1 + 1;
+                while (quantity1 !== quantity2) {
+                    try {
+                        ATBbutton[0].click();
+                    } catch (e) {
+
+                    }
+                    browser.pause(1000);
+                    quantity1 = parseInt(ShoppingBag.get1stItemQty.getHTML(false));
+                }
             } else {
-                let counter = 1;
-                while (counter <= numberToAdd) {
-                    ATBbutton[0].click();
-                    counter = counter + 1;
+                let quantity1 = parseInt(ShoppingBag.get1stItemQty.getHTML(false));
+                let quantity2 = quantity1 + numberToAdd;
+                while (quantity1 !== quantity2) {
+                    try {
+                        ATBbutton[0].click();
+                    } catch (e) {
+
+                    }
                     browser.pause(1200);
+                    quantity1 = parseInt(ShoppingBag.get1stItemQty.getHTML(false));
                     if (formFactor !== 'mobile') {
                         ShoppingBag.closeBasket.click();
                     }
@@ -133,31 +128,36 @@ class Product extends Page {
             WLbutton.click();
         }
         Screenshot.viewport();
-        let ATBmodalDetector = this.atbSizeSelectorModal.getAttribute('class');
-        let WLmodalDetector = this.wlSizeSelectorModal.getAttribute('class');
+        try {
+            let ATBmodalDetector = this.atbSizeSelectorModal.getAttribute('class');
+            let WLmodalDetector = this.wlSizeSelectorModal.getAttribute('class');
 
-        Screenshot.viewport();
-        browser.pause(1000);
-        if (ATBmodalDetector === 'modal fade size-select-modal show') {
-            if (this.ATBSizeBoxValid.length > 0) {
-                GetRandom.sizeBox(this.ATBSizeBoxValid);
-            } else if (this.ATBSizeSelectorDD.isDisplayed() === true) {
-                GetRandom.selectByIndex(this.ATBSizeSelectorDD, this.ATBSizeSelectorDDoptions)
+            Screenshot.viewport();
+            browser.pause(1000);
+            if (ATBmodalDetector === 'modal fade size-select-modal show') {
+                if (this.ATBSizeBoxValid.length > 0) {
+                    GetRandom.sizeBox(this.ATBSizeBoxValid);
+                } else if (this.ATBSizeSelectorDD.isDisplayed() === true) {
+                    GetRandom.selectByIndex(this.ATBSizeSelectorDD, this.ATBSizeSelectorDDoptions)
+                }
+                browser.pause(500);
+                let ATBbutton = this.AddToBagButtons;
+                ATBbutton[1].click();
+            } else if (WLmodalDetector === 'modal fade size-select-modal show') {
+                if (this.WLSizeBoxValid.length > 0) {
+                    GetRandom.sizeBox(this.WLSizeBoxValid);
+                } else if (this.wlSizeSelectorDD.isDisplayed() === true) {
+                    GetRandom.selectByIndex(this.wlSizeSelectorDD, this.wlSizeSelectorDDoptions)
+                }
+                browser.pause(500);
+                this.SizeModal_addtowishlist.click();
             }
-            browser.pause(500);
-            let ATBbutton = this.AddToBagButtons;
-            ATBbutton[1].click();
-        } else if (WLmodalDetector === 'modal fade size-select-modal show') {
-            if (this.WLSizeBoxValid.length > 0) {
-                GetRandom.sizeBox(this.WLSizeBoxValid);
-            } else if (this.wlSizeSelectorDD.isDisplayed() === true) {
-                GetRandom.selectByIndex(this.wlSizeSelectorDD, this.wlSizeSelectorDDoptions)
-            }
-            browser.pause(500);
-            this.SizeModal_addtowishlist.click();
+            Screenshot.viewport();
+            browser.pause(1500);
+        } catch (e) {
+
         }
-        Screenshot.viewport();
-        browser.pause(1500);
+
     }
 }
 

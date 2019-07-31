@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4cea8097-f04b-4e2a-9d8f-92a64695058e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/Gruntfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Checkout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Customer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/PoC/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/PoC/Test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Afterpay1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Superdry_Website/Afterpay1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Dotpay1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Superdry_Website/Dotpay1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaDE1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaDE1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK4.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUS1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUS1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/wdio.conf.browserstack.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/wdio.conf.browserstack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/customers.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/customers.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/GetRandom.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/GetRandom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdio.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/wdio.conf.js" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>spli</find>
+      <find>console</find>
+      <find>register</find>
+      <find>price</find>
+      <find>creditTimes</find>
+      <find>staffPercent</find>
+      <find>screendate</find>
+      <find>paymentMethod</find>
+      <find>: &quot;</find>
+      <find>referenceNumber</find>
+      <find>exchangeOrderNumber</find>
+      <find>resolvedHolds</find>
+      <find>appliedHolds</find>
+      <find>OMSquantitiesRecorded</find>
+      <find>shopperGroupID</find>
+      <find>//span[@title='Parameters']</find>
+      <find>sendk</find>
+      <find>//td[@colspan='4']//input[@name='srch_val']</find>
+      <find>key</find>
+      <find>movet</find>
+      <find>small</find>
+      <find>btn-</find>
+      <find>},</find>
+      <find>browser.url</find>
+      <find>display</find>
+      <find>CHECKOUT.</find>
+      <find>#checkout-section-delivery-options &gt; div &gt; div &gt; div &gt; p &gt; a</find>
+      <find>buy</find>
+      <find>deliver</find>
+      <find>[data-template='checkout\/payment\/klarna-slice'] .payment-method-label div</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>()</replace>
+      <replace>{return $('</replace>
+      <replace>fillObject</replace>
+      <replace>()          {return $(</replace>
+      <replace>numberToRemove</replace>
+      <replace>fieldset[id$=</replace>
+      <replace>this</replace>
+      <replace>result</replace>
+      <replace>fillObject.element</replace>
+      <replace>City</replace>
+      <replace>&quot;);}</replace>
+      <replace>);}</replace>
+      <replace>c</replace>
+      <replace>get</replace>
+      <replace>);}get</replace>
+      <replace>Navigation.openShoppingBasket();</replace>
+      <replace>paymentMethod</replace>
+      <replace>customerDetails.creditAmount</replace>
+      <replace>customerDetails.creditTimes</replace>
+      <replace>customerDetails.staffPercent</replace>
+      <replace>screenDate</replace>
+      <replace>global.paymentMethod</replace>
+      <replace>= customerData[&quot;&quot;];</replace>
+      <replace>global.referenceNumber</replace>
+      <replace>this.</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\webdriverio-v5\functions</dir>
+      <dir>C:\webdriverio-v5</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard3.js" />
+        <option value="$PROJECT_DIR$/functions/Screenshot.js" />
+        <option value="$PROJECT_DIR$/Test/PoC/MenuScreens.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard7.js" />
+        <option value="$PROJECT_DIR$/Pages/AdminPortal.js" />
+        <option value="$PROJECT_DIR$/Pages/Page.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Paypal/Paypal7.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Search.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Shopping_Bag.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Shopping_bag/Shopping_Bag.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Shopping_bag/Shopping_Bag1.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Shopping_bag/Shopping_Bag2.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Shopping_bag/Shopping_Bag3.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Search/Search.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Search/Search1.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Search/Search2.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Search/Search3.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Store_finder/Store_finder.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Store_finder/Store_finder4.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Store_finder/Store_finder2.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Store_finder/Store_finder3.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Store_finder/Store_finder1.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Wishlist/Wishlist.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Wishlist/Wishlist2.js" />
+        <option value="$PROJECT_DIR$/Pages/Wishlist.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Wishlist/Wishlist1.js" />
+        <option value="$PROJECT_DIR$/Pages/ShoppingBag.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Shopping_bag/Shopping_Bag4.js" />
+        <option value="$PROJECT_DIR$/config/wdio.conf.browserstack.js" />
+        <option value="$PROJECT_DIR$/Pages/Product.js" />
+        <option value="$PROJECT_DIR$/functions/GetRandom.js" />
+        <option value="$PROJECT_DIR$/Pages/Search.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Dotpay1.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Afterpay1.js" />
+        <option value="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship3.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard1.js" />
+        <option value="$PROJECT_DIR$/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/wdio.conf.js" />
+        <option value="$PROJECT_DIR$/Test/PoC/Test.js" />
+        <option value="$PROJECT_DIR$/Pages/Environment.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK1.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK2.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaDE1.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK3.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK4.js" />
+        <option value="$PROJECT_DIR$/config/wdio.conf.local.js" />
+        <option value="$PROJECT_DIR$/data/customers.yml" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUS1.js" />
+        <option value="$PROJECT_DIR$/Pages/Customer.js" />
+        <option value="$PROJECT_DIR$/Pages/Navigation.js" />
+        <option value="$PROJECT_DIR$/Pages/Checkout.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1928" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="webdriverio-v5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdriverio-v5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdriverio-v5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdriverio-v5" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdriverio-v5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdriverio-v5" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdriverio-v5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdriverio-v5" type="462c0819:PsiDirectoryNode" />
+              <item name="functions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdriverio-v5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdriverio-v5" type="462c0819:PsiDirectoryNode" />
+              <item name="Pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdriverio-v5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdriverio-v5" type="462c0819:PsiDirectoryNode" />
+              <item name="Test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdriverio-v5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdriverio-v5" type="462c0819:PsiDirectoryNode" />
+              <item name="Test" type="462c0819:PsiDirectoryNode" />
+              <item name="PoC" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdriverio-v5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdriverio-v5" type="462c0819:PsiDirectoryNode" />
+              <item name="Test" type="462c0819:PsiDirectoryNode" />
+              <item name="Superdry_Website" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdriverio-v5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdriverio-v5" type="462c0819:PsiDirectoryNode" />
+              <item name="Test" type="462c0819:PsiDirectoryNode" />
+              <item name="Superdry_Website" type="462c0819:PsiDirectoryNode" />
+              <item name="Debitcard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdriverio-v5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdriverio-v5" type="462c0819:PsiDirectoryNode" />
+              <item name="Test" type="462c0819:PsiDirectoryNode" />
+              <item name="Superdry_Website" type="462c0819:PsiDirectoryNode" />
+              <item name="Klarna" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Test/Superdry_Website/Klarna" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.2.5\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Wishlist" />
+      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Store_finder" />
+      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Search" />
+      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Shopping_bag" />
+      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Delivery" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Klarna" />
+      <recent name="C:\webdriverio-v5\Test\Superdry_Website" />
+      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Wishlist" />
+      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Store_finder" />
+      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Search" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Load page and search" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>SUITE</test-kind>
+      <test-file>$PROJECT_DIR$/Superdry_Website/superdry_01.js</test-file>
+      <test-names>
+        <name value="Load page and search" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Mocha.Load page and search" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4cea8097-f04b-4e2a-9d8f-92a64695058e" name="Default Changelist" comment="" />
+      <created>1556184667502</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1556184667502</updated>
+      <workItem from="1556184668780" duration="11219000" />
+      <workItem from="1556197479192" duration="1186000" />
+      <workItem from="1558615351373" duration="114373000" />
+      <workItem from="1559545438590" duration="41458000" />
+      <workItem from="1560153160937" duration="1753000" />
+      <workItem from="1560160112121" duration="48541000" />
+      <workItem from="1560411334672" duration="37766000" />
+      <workItem from="1560761561234" duration="4902000" />
+      <workItem from="1560771382992" duration="27859000" />
+      <workItem from="1560863573749" duration="32224000" />
+      <workItem from="1561101889502" duration="1400000" />
+      <workItem from="1561106641210" duration="12237000" />
+      <workItem from="1561359840211" duration="13847000" />
+      <workItem from="1561624273605" duration="24301000" />
+      <workItem from="1561964782335" duration="40787000" />
+      <workItem from="1562078183311" duration="23634000" />
+      <workItem from="1562223278281" duration="46301000" />
+      <workItem from="1562655879765" duration="49475000" />
+      <workItem from="1562850573977" duration="31823000" />
+      <workItem from="1563202779969" duration="538000" />
+      <workItem from="1563203350698" duration="8531000" />
+      <workItem from="1563278776340" duration="75995000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1556195896755</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1556195896755</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial commit">
+      <created>1556195969275</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1556195969275</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Initial commit">
+      <created>1556196121501</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1556196121501</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Initial commit">
+      <created>1559641867173</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1559641867173</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Too many changes to document... commit more often Daniel!">
+      <created>1560938918250</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1560938918250</updated>
+    </task>
+    <task id="LOCAL-00006" summary=".">
+      <created>1562574857833</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1562574857834</updated>
+    </task>
+    <task id="LOCAL-00007" summary=".">
+      <created>1563347439880</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1563347439880</updated>
+    </task>
+    <task id="LOCAL-00008" summary=".">
+      <created>1563348809135</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1563348809135</updated>
+    </task>
+    <task id="LOCAL-00009" summary=".">
+      <created>1563349008210</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1563349008210</updated>
+    </task>
+    <task id="LOCAL-00010" summary=".">
+      <created>1563349222663</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1563349222663</updated>
+    </task>
+    <task id="LOCAL-00011" summary=".">
+      <created>1563349806230</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1563349806230</updated>
+    </task>
+    <task id="LOCAL-00012" summary=".">
+      <created>1563351063449</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1563351063449</updated>
+    </task>
+    <task id="LOCAL-00013" summary=".">
+      <created>1563354650503</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1563354650503</updated>
+    </task>
+    <task id="LOCAL-00014" summary=".">
+      <created>1563437109960</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1563437109960</updated>
+    </task>
+    <task id="LOCAL-00015" summary=".">
+      <created>1563440193003</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1563440193004</updated>
+    </task>
+    <task id="LOCAL-00016" summary=".">
+      <created>1563441812980</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1563441812980</updated>
+    </task>
+    <task id="LOCAL-00017" summary=".">
+      <created>1563443240184</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1563443240184</updated>
+    </task>
+    <task id="LOCAL-00018" summary=".">
+      <created>1563444044864</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1563444044864</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Load_page_and_search - 2019.05.24 at 14h 53m 58s.xml">
+      <configuration name="Load page and search" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="650150000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info id="npm" order="1" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.256" />
+      <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" weight="0.32910052" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="TypeScript" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.32910052" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.32910052" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" weight="0.32910052" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32910052" />
+      <window_info anchor="right" id="Key Promoter X" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="Too many changes to document... commit more often Daniel!" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/functions/GetRandom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="43" column="52" lean-forward="true" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/ShoppingBag.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="59" column="56" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/Search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/Product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Sofort1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Ideal1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Giropay1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/OMS/OMS_ship.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Afterpay1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard7.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Delivery/Delivery1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Delivery/Delivery2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Delivery/Delivery3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Delivery/Delivery4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Delivery/Delivery5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Search/Search1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Search/Search2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Search/Search3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/PoC/MenuScreens.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/PoC/VisRegressionTest.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Store_finder/Store_finder1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Store_finder/Store_finder2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Store_finder/Store_finder3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Store_finder/Store_finder4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Dotpay1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="15" column="27" lean-forward="true" selection-start-line="14" selection-start-column="63" selection-end-line="15" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/OMS/testpack/OMS_ship3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/wdio.conf.browserstack.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wdio.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="85" column="32" lean-forward="true" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/PoC/Test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="57" column="59" selection-start-line="57" selection-start-column="59" selection-end-line="57" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/Environment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/wdio.conf.local.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/payments.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaDE1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="12" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/customers.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/Navigation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="115" column="32" selection-start-line="115" selection-start-column="32" selection-end-line="115" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUS1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/Checkout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="490" column="68" selection-start-line="490" selection-start-column="68" selection-end-line="490" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/Page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/Customer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="186" column="60" selection-start-line="186" selection-start-column="60" selection-end-line="186" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard6.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/AdminPortal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="119" column="40" selection-start-line="119" selection-start-column="40" selection-end-line="119" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

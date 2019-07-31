@@ -12,6 +12,12 @@ import GetRandom from "../functions/GetRandom";
 import Customer from "./Customer"
 
 class Checkout extends Page {
+    get OrderTotalValue() {
+        return $("#checkout-section-basket-summary [class='col-12']:nth-of-type(5) [class='col-5  text-right']");
+    }
+    get OrderDeliveryValue() {
+        return $("#checkout-section-basket-summary [class='col-12']:nth-of-type(4) [class='col-5  text-right']");
+    }
     get shipping_first_name() {
         return $("input[id|='shipping_first_name']");
     }
@@ -38,10 +44,6 @@ class Checkout extends Page {
 
     get shipping_address_city() {
         return $("input[id|='shipping_city']");
-    }
-
-    get shipping_address_region() {
-        return $("select[id|='shipping_state']");
     }
 
     get shipping_address_zip() {
@@ -195,6 +197,7 @@ class Checkout extends Page {
     get collection_location_1stresult_accept() {
         return $('//*[@id="collection-location-results"]/div[3]/div[1]/div[1]/div/div[2]/a');
     }
+
     get collection_location_1stresult_acceptMobile() {
         return $("#collection-location-results [class='collection-location col-12 superdry pad-1v spaced-v']:nth-of-type(3) [class='col-6 offset-3 d-sm-none spaced-v'] [data-collection-type-0]");
     }
@@ -206,6 +209,7 @@ class Checkout extends Page {
     get collectionPlusLocationSelect() {
         return $$('#collection-location-results > div[class~="cplus"] > div  > div  > div  > div  > a');
     }
+
     get collectionPlusLocationSelectMobile() {
         return $$("#collection-location-results > [class*='cplus'] > div > div > a");
     }
@@ -257,6 +261,7 @@ class Checkout extends Page {
     get deliveryTypeOptions() {
         return $$("div[class='deliveryTypes row'] > div > a");
     }
+
     get international_delivery() {
         return $("#delivery-type-international");
     }
@@ -342,6 +347,135 @@ class Checkout extends Page {
         return $("#mainSubmit");
     }
 
+    get afterpayBTN() {
+        return $('//*[@id="checkout-section-payment-methods"]/div/div[2]/div/div[5]/label/div/div');
+    }
+
+    get afterpayFRAME() {
+        return $("//iframe[@id='adyen-frame']");
+    }
+
+    get afterpayStreet() {
+        return $("//input[@placeholder='Straat']");
+    }
+
+    get afterpayHouseNumber() {
+        return $("//input[@placeholder='Huisnummer']");
+    }
+
+    get afterpaySubmitBTN() {
+        return $("//button[@id='additional-info-submit']");
+    }
+
+    get afterpayfirstName() {
+        return $('//*[@id="afterpay_default.shopper.firstName"]');
+    }
+
+    get afterpaymiddleName() {
+        return $('//*[@id="afterpay_default.shopper.infix"]');
+    }
+
+    get afterpaylastName() {
+        return $('//*[@id="afterpay_default.shopper.lastName"]');
+    }
+
+    get afterpaygender() {
+        return $('//*[@id="afterpay_default.shopper.gender"]');
+    }
+
+    get afterpaydateOfBirthDayOfMonth() {
+        return $('//*[@id="afterpay_default.shopper.dateOfBirthDayOfMonth"]');
+    }
+
+    get afterpaydateOfBirthMonth() {
+        return $('//*[@id="afterpay_default.shopper.dateOfBirthMonth"]');
+    }
+
+    get afterpaydateOfBirthYear() {
+        return $('//*[@id="afterpay_default.shopper.dateOfBirthYear"]');
+    }
+
+    get afterpaytelephoneNumber() {
+        return $('//*[@id="afterpay_default.shopper.telephoneNumber"]');
+    }
+
+    get afterpayacceptPrivacyPolicy() {
+        return $('//*[@id="afterpay_default.acceptTermsAndConditions"]');
+    }
+
+    get afterpaymainSubmit() {
+        return $('//*[@id="mainSubmit"]');
+    }
+
+
+    get dotPay() {
+        return $('//*[@id="checkout-section-payment-methods"]/div/div[2]/div/div[3]/label/div/div');
+    }
+    get dotPay_continue() {
+        return $("//input[contains(@value,'Kup teraz')]");
+    }
+    get dotPay_receipt() {
+        return $('//*[@id="transaction-desc"]/span');
+    }
+
+    // Klarna getters
+
+    get klarnaPayLaterLink() {
+        return $("[data-template='checkout/payment/klarna'] .payment-method-label div");
+    }
+    get klarnaPayIn3Link() {
+        return $("[data-template='checkout/payment/klarna-slice'] .payment-method-label div");
+    }
+    get klarnaStreet() {
+        return $("[name='klarna_street_address']");
+    }
+    get klarnaHouseNumber() {
+        return $("[name='klarna_house_number']");
+    }
+    get klarnaSubmitBTN() {
+        return $("//button[@id='additional-info-submit']");
+    }
+    get klarnaBuyBTN() {
+        return $("//button[@id='buy-button']");
+    }
+    get klarnaNewFrame() {
+        return $("//iframe[@id='klarna-hpp-instance-fullscreen']");
+    }
+    get klarnaDOB() {
+        return $('//input[@id="purchase-approval-date-of-birth"]');
+    }
+    get klarnaDOBcontinue() {
+        return $('//*[@id="purchase-approval-continue__text"]');
+    }
+    get klarnaBuyNow() {
+        return $('.btn-submit');
+    }
+    get klarnaTotalPurchaseValue() {
+        return $('.amount___LANix strong');
+    }
+    get klarnaDeliveryPurchaseValue() {
+        return $('#desktop-order-lines__item__1__amount');
+    }
+    get klarnaCardNumber() {
+        return $("[name='cardNumber']");
+    }
+    get klarnaexpire() {
+        return $("[name='expire']");
+    }
+    get klarnasecurityCode() {
+        return $("[name='securityCode']");
+    }
+
+    get klarnaIn3BuyButton() {
+        return $("#buy-button__text");
+    }
+    get klarnaIn3Frame() {
+        return $("//div[@id='pay-later-slice-it-slice-it-by-card-card-container']/iframe[@title='payment-gateway-frame']");
+    }
+    get alliframes() {
+        return $$("iframe");
+    }
+
     // Functions
     fillTheDeliveryFields(type) {
         let formcountry = country;
@@ -362,10 +496,18 @@ class Checkout extends Page {
         browser.pause(1000);
         if (clickAndCollectDetect !== true) {
             let shippingAddress1displayed = this.shipping_address_input1.isDisplayed();
-            if (shippingAddress1displayed !== true) {
-                this.shipping_address_manual.click();
+            try{
+                if (shippingAddress1displayed !== true) {
+                    this.shipping_address_manual.click();
+                }
+            } catch (e) {
+
             }
-            fillObject.element(this.shipping_address_country, formcountry);
+            try {
+                fillObject.element(this.shipping_address_country, formcountry);
+            } catch (e) {
+
+            }
             fillObject.element(this.RD2019_billing_country, formcountry);
             browser.pause(250);
             let countryChanged = this.countryChanged.isDisplayed();
@@ -524,6 +666,7 @@ class Checkout extends Page {
         this.sofortNext.click();
         this.orderConfirmation();
     }
+
     fillGiftcardForm(cardCode, cardPIN) {
         fillObject.element(this.giftcard_code, cardCode);
         fillObject.element(this.giftcard_pin, cardPIN);
@@ -535,19 +678,19 @@ class Checkout extends Page {
         if (cardCode !== undefined) {
             this.delivery_type_domestic.scrollIntoView();
             this.giftcard_expand.click();
-            this.fillGiftcardForm(cardCode,cardPIN);
+            this.fillGiftcardForm(cardCode, cardPIN);
         } else {
             if (country === "UK") {
                 this.delivery_type_domestic.scrollIntoView();
                 this.giftcard_expand.click();
-                this.fillGiftcardForm(customerData.giftcardCode1,customerData.giftcardPIN1);
-                if ((customerData.giftcardCode2 === "")||(customerData.giftcardCode2 === undefined)) {
+                this.fillGiftcardForm(customerData.giftcardCode1, customerData.giftcardPIN1);
+                if ((customerData.giftcardCode2 === "") || (customerData.giftcardCode2 === undefined)) {
                 } else {
                     let giftcardOpen = this.giftcard_expanded.isExisting();
                     if (giftcardOpen === false) {
                         this.giftcard_expand.click();
                     }
-                    this.fillGiftcardForm(customerData.giftcardCode2,customerData.giftcardPIN2);
+                    this.fillGiftcardForm(customerData.giftcardCode2, customerData.giftcardPIN2);
                     this.giftcard_expand.waitForExist();
                 }
             } else {
@@ -709,7 +852,7 @@ class Checkout extends Page {
             Search.PickRandomProduct();
             Product.SelectASizeAndAddTo('Bag');
             Navigation.GoToCheckout();
-            if (this.international_delivery.isDisplayed() === true ) {
+            if (this.international_delivery.isDisplayed() === true) {
                 success = true;
                 Screenshot.viewport();
             } else {
@@ -739,9 +882,8 @@ class Checkout extends Page {
         this.fillTheDeliveryFields();
         this.payByCard();
     }
-
-    selectLocalDelivery() {
-        this.deliveryTypeOptions[0].click();
+    selectDeliveryOption2() {
+        this.deliverySpeedOptions[2].click();
     }
 
     selectClickAndCollectAndPay(plus) {
@@ -813,8 +955,158 @@ class Checkout extends Page {
         this.payByCard();
     }
 
-    payByKlarna() {
+    payByKlarna(type) {
+        let OrderTotalValue = this.OrderTotalValue.getHTML(false);
+        let OrderDeliveryValue = this.OrderDeliveryValue.getHTML(false);
+        if ((type === 'in3')||(type === 'in4')) {
+            this.klarnaPayIn3Link.click();
+        } else {
+            this.klarnaPayLaterLink.click();
+        }
+        this.klarnaStreet.waitForDisplayed(30000);
+        browser.pause(3000);
+        this.klarnaStreet.setValue("Test Street");
+        browser.pause(3000);
+        this.klarnaHouseNumber.setValue("5");
+        browser.pause(3000);
+        try{
+            this.klarnaSubmitBTN.click();
+            browser.pause(3000);
+        } catch (e) {
+            console.log("Klarna submit not clicked")
+        }
+        try{
+            this.klarnaBuyNow.click();
+        } catch (e) {
+            console.log("Klarna klarnaBuyNow not clicked")
+        }
+        let klarnaTotalPurchaseValue = this.klarnaTotalPurchaseValue.getHTML(false);
 
+        let OrderTotalValueFirstCharacter = OrderTotalValue.slice(0,1);
+        if (OrderTotalValueFirstCharacter === 'U') {
+            OrderTotalValue = OrderTotalValue.slice(4);
+        }
+        expect(OrderTotalValue).to.equal(klarnaTotalPurchaseValue);
+        console.log("Confirmed that order total value (" + OrderTotalValue + ") is equal to the Klarna total purchase value (" + klarnaTotalPurchaseValue + ").");
+
+        let OrderDeliveryValueFirstCharacter = OrderDeliveryValue.slice(0,1);
+        if (OrderDeliveryValueFirstCharacter === 'U') {
+            OrderDeliveryValue = OrderDeliveryValue.slice(4);
+        }
+        let deliveryZero = parseInt(OrderDeliveryValue.slice(1));
+        if (deliveryZero !== 0) {
+            let klarnaDeliveryPurchaseValue = this.klarnaDeliveryPurchaseValue.getHTML(false);
+            expect(OrderDeliveryValue).to.equal(klarnaDeliveryPurchaseValue);
+            console.log("Confirmed that order delivery value (" + OrderDeliveryValue + ") is equal to the Klarna delivery purchase value (" + klarnaDeliveryPurchaseValue + ").");
+        } else {
+            console.log("Delivery cost 0 so no delivery cost displayed in Klarna")
+        }
+
+        try{
+            browser.pause(3000);
+            this.klarnaBuyBTN.waitForEnabled(30000);
+            this.klarnaBuyBTN.click();
+            browser.pause(3000);
+        } catch (e) {
+            console.log("Klarna klarnaBuyBTN not clicked")
+        }
+        browser.pause(3000);
+
+        if ((type === 'in3')||(type === 'in4')) {
+            try{
+                browser.switchToParentFrame();
+                browser.switchToFrame(this.alliframes[0]);
+                browser.switchToFrame(this.alliframes[0]);
+                this.klarnaCardNumber.setValue("4111111111111111");
+                this.klarnaexpire.setValue("10/20");
+                this.klarnasecurityCode.setValue("737");
+                browser.switchToParentFrame();
+                browser.switchToParentFrame();
+                this.klarnaIn3BuyButton.click();
+            } catch(e) {
+                console.log("Klarna in3 failure")
+            }
+        } else {
+            try{
+                try{
+                    browser.switchToFrame(this.klarnaNewFrame);
+                } catch (e) {
+                    console.log("Klarna frame not switched")
+                }
+                browser.pause(3000);
+                console.log(this.view_order.isDisplayed());
+                if (this.view_order.isDisplayed() === false) {
+                    this.klarnaDOB.setValue('01011990');
+                    this.klarnaDOBcontinue.click();
+                    browser.pause(6000);
+                }
+            } catch(e) {
+                console.log("Klarna DOB not checked")
+            }
+        }
+
+        this.orderConfirmation();
+    }
+
+    payByAfterpay() {
+        let paymentData = yaml.load(fs.readFileSync('./data/payments.yml', 'utf8'));
+        let afterpayData = paymentData["afterpay"];
+        global.paymentMethod = "Afterpay";
+        let afterpayStreet = afterpayData["afterpayStreet"];
+        let afterpayHouseNumber = afterpayData["afterpayHouseNumber"];
+        let afterpayfirstName = afterpayData["afterpayfirstName"];
+        let afterpaymiddleName = afterpayData["afterpaymiddleName"];
+        let afterpaylastName = afterpayData["afterpaylastName"];
+        let afterpaygender = afterpayData["afterpaygender"];
+        let afterpaydateOfBirthDayOfMonth = afterpayData["afterpaydateOfBirthDayOfMonth"];
+        let afterpaydateOfBirthMonth = afterpayData["afterpaydateOfBirthMonth"];
+        let afterpaydateOfBirthYear = afterpayData["afterpaydateOfBirthYear"];
+        let afterpaytelephoneNumber = afterpayData["afterpaytelephoneNumber"];
+        try {
+            this.afterpayBTN.click()
+        } catch (e) {
+            browser.pause(1500);
+            this.afterpayBTN.click();
+        }
+        browser.pause(1500);
+        this.afterpayStreet.waitForExist();
+        this.afterpayStreet.setValue(afterpayStreet);
+        this.afterpayHouseNumber.setValue(afterpayHouseNumber);
+        this.afterpaySubmitBTN.click();
+        browser.pause(2500);
+        try {
+            this.afterpayFRAME.waitForExist();
+            browser.switchToFrame(this.afterpayFRAME);
+        } catch (e) {
+
+        }
+        browser.pause(2500);
+        this.afterpayfirstName.waitForExist();
+        this.afterpayfirstName.setValue(afterpayfirstName);
+        this.afterpaymiddleName.setValue(afterpaymiddleName);
+        this.afterpaylastName.setValue(afterpaylastName);
+        afterpaygender = parseInt(afterpaygender);
+        this.afterpaygender.selectByIndex(afterpaygender);
+        this.afterpaydateOfBirthDayOfMonth.setValue(afterpaydateOfBirthDayOfMonth);
+        this.afterpaydateOfBirthMonth.setValue(afterpaydateOfBirthMonth);
+        this.afterpaydateOfBirthYear.setValue(afterpaydateOfBirthYear);
+        this.afterpaytelephoneNumber.setValue(afterpaytelephoneNumber);
+        this.afterpayacceptPrivacyPolicy.click();
+        Screenshot.viewport();
+        this.afterpaymainSubmit.click();
+        this.orderConfirmation();
+    }
+    payByDotpay() {
+        global.paymentMethod = "Dotpay";
+        this.dotPay.click();
+        browser.pause(1000);
+        this.dotPay_continue.click();
+        browser.pause(1000);
+        try {
+            this.dotPay_receipt.waitForExist()
+        } catch (err) {
+        }
+        this.orderConfirmation();
     }
 }
 

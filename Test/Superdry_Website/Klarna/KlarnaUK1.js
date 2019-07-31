@@ -4,7 +4,7 @@ import Search from '../../../Pages/Search.js';
 import Navigation from '../../../Pages/Navigation.js';
 import Checkout from "../../../Pages/Checkout";
 
-describe(specname+' - Klarna payment from a guest user', () => {
+describe(specname+' - Klarna UK pay later payment from a guest user', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });
@@ -12,7 +12,7 @@ describe(specname+' - Klarna payment from a guest user', () => {
         Navigation.randomSection();
         Search.PickRandomProduct();
         Product.SelectASizeAndAddTo('Bag');
-    });
+    }, 3);
     it('Go to the checkout as a guest and pay by Klarna', () => {
         Navigation.GoToCheckout();
         Checkout.fillTheDeliveryFields();

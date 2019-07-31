@@ -6,16 +6,16 @@ import Checkout from "../../../Pages/Checkout";
 import Customer from "../../../Pages/Customer";
 import AdminPortal from "../../../Pages/AdminPortal";
 
-let username = 'danrosetest+klarnaUK_user@gmail.com';
+let username = 'danrosetest+klarnaDE_user@gmail.com';
 
-describe(specname+' - Klarna payment from an existing user', () => {
+describe(specname+' - Klarna DE pay later payment from an existing user', () => {
     it('Set up a customer account', () => {
-        Environment.openBaseURL();
+        Environment.openCountrySiteForColour('DE');
         Customer.setUpNewAccount(username);
         Customer.addDeliveryAddress();
     });
     it('Go to website and log in', () => {
-        Environment.openBaseURL();
+        Environment.openCountrySiteForColour('DE');
         Customer.signIn(username);
     });
     it('Go to a random section and add a product to the shopping bag', () => {

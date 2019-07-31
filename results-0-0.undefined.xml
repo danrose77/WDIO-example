@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Test_js_Check_all_menu_links" timestamp="2019-07-17T10:00:36" time="8.741" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Test.js - Check all menu links"/>
+      <property name="capabilities" value="chrome"/>
+      <property name="file" value=".\Test\PoC\Test.js"/>
+    </properties>
+    <testcase classname="chrome.Test_js_Check_all_menu_links" name="Open_the_environment" time="8.723"/>
+  </testsuite>
+</testsuites>

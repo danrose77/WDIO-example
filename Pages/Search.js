@@ -225,6 +225,24 @@ class Search extends Page {
 
     PickRandomProduct() {
         GetRandom.element(this.ResultsLinks);
+        if (formFactor === 'mobile') {
+            browser.pause(5000);
+        } else {
+            browser.pause(3000);
+            Product.ProductTitle.waitForDisplayed();
+        }
+        let sizeBoxHTML = Product.SizeBoxText.getHTML(false).trim();
+        while (sizeBoxHTML === "Sorry, this item is currently out of stock.") {
+            Navigation.randomSection();
+            GetRandom.element(this.ResultsLinks);
+            if (formFactor === 'mobile') {
+                browser.pause(5000);
+            } else {
+                browser.pause(3000);
+                Product.ProductTitle.waitForDisplayed();
+            }
+            sizeBoxHTML = Product.SizeBoxText.getHTML(false).trim();
+        }
         Screenshot.viewport();
     }
 }

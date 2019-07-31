@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Debitcard1_js_Debit_card_payment_from_a_guest_user" timestamp="2019-07-17T10:06:52" time="98.909" tests="4" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Debitcard1.js - Debit card payment from a guest user"/>
+      <property name="capabilities" value=""/>
+      <property name="file" value=".\Test\Superdry_Website\Debitcard\Debitcard1.js"/>
+    </properties>
+    <testcase classname=".Debitcard1_js_Debit_card_payment_from_a_guest_user" name="Open_the_environment" time="8.413"/>
+    <testcase classname=".Debitcard1_js_Debit_card_payment_from_a_guest_user" name="Go_to_a_random_section_and_add_a_product_to_the_shopping_bag" time="58.266"/>
+    <testcase classname=".Debitcard1_js_Debit_card_payment_from_a_guest_user" name="Go_to_the_checkout_as_a_guest" time="9.116"/>
+    <testcase classname=".Debitcard1_js_Debit_card_payment_from_a_guest_user" name="Pay_by_card" time="23.105"/>
+  </testsuite>
+</testsuites>

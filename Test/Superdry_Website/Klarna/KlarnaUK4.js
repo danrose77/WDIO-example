@@ -8,15 +8,9 @@ import AdminPortal from "../../../Pages/AdminPortal";
 
 let username = 'danrosetest+klarnaUK_user@gmail.com';
 
-describe(specname+' - Klarna UK pay later payment from an existing user', () => {
-    it('Set up a customer account', () => {
+describe(specname+' - Klarna UK pay later payment from a guest user, with paid delivery', () => {
+    it('Open the environment', () => {
         Environment.openBaseURL();
-        Customer.setUpNewAccount(username);
-        Customer.addDeliveryAddress();
-    });
-    it('Go to website and log in', () => {
-        Environment.openBaseURL();
-        Customer.signIn(username);
     });
     it('Go to a random section and add a product to the shopping bag', () => {
         Navigation.randomSection();
@@ -25,6 +19,7 @@ describe(specname+' - Klarna UK pay later payment from an existing user', () => 
     }, 3);
     it('Go to the checkout as a guest and pay by Klarna', () => {
         Navigation.GoToCheckout();
+        Checkout.fillTheDeliveryFields();
         Checkout.payByKlarna();
     });
 });
