@@ -39,14 +39,6 @@ class Navigation extends Page {
         return $('a[class$=register-link]');
     }
 
-    get MyAccount() {
-        return $('#main-menu > div.account-actions.banner-column > div > ul > li:nth-child(2) > a > i');
-    }
-
-    get MyAccountMobile() {
-        return $('#mobile-cta-buttons > a:nth-child(1)');
-    }
-
     get wishlistLinks() {
         return $$("//i[@class='custom-icon favourites']");
     }
@@ -59,6 +51,22 @@ class Navigation extends Page {
 
     get acceptCookies() {
         return $("//a[@class='cc-btn cc-allow']");
+    }
+
+    get logo() {
+        return $(".logo");
+    }
+    get my_account() {
+        return $(".account-actions .my-account");
+    }
+    get favourites() {
+        return $(".account-actions .favourites");
+    }
+    get search_container() {
+        return $(".banner-column .search-container i");
+    }
+    get navWrapper() {
+        return $(".nav-wrapper");
     }
 
     // Functions
@@ -103,9 +111,14 @@ class Navigation extends Page {
             browser.pause(1000);
             GetRandom.element(this.menu_subtiers, undefined, 4, 2);
             browser.pause(1000);
-            if (this.menu_subtiers[0].isDisplayed() === true) {
-                GetRandom.element(this.menu_subtiers, undefined,4, 1);
+            try {
+                if (this.menu_subtiers[0].isDisplayed() === true) {
+                    GetRandom.element(this.menu_subtiers, undefined,4, 1);
+                }
+            } catch (e) {
+
             }
+
             browser.pause(5000);
 
             let classAttrib = this.body.getAttribute('class').trim();

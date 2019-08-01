@@ -57,7 +57,9 @@ class Checkout extends Page {
     get RD2019_billing_country() {
         return $("select[id|='checkout-billing-country-select']");
     }
-
+    get shipping_state() {
+        return $("#shipping_state");
+    }
     get countryChanged() {
         return $("div[id|='country-changed-modal'] div[class|='modal-footer'] button");
     }
@@ -481,6 +483,8 @@ class Checkout extends Page {
         let formcountry = country;
         if (country === "UK") {
             formcountry = "United Kingdom";
+        } else if (country === "US") {
+            formcountry = "United States";
         }
         if (type === 'international') {
             formcountry = 'Albania';
@@ -509,6 +513,9 @@ class Checkout extends Page {
 
             }
             fillObject.element(this.RD2019_billing_country, formcountry);
+            if (formcountry === "United States") {
+                this.shipping_state.selectByVisibleText("Alabama");
+            }
             browser.pause(250);
             let countryChanged = this.countryChanged.isDisplayed();
             if (countryChanged === true) {

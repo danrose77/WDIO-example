@@ -1,13 +1,16 @@
-import Environment from '../../Pages/Environment.js';
-import Navigation from "../../Pages/Navigation";
-import VizCheck from "../../functions/VizCheck";
+import Environment from '../../../Pages/Environment.js';
+import Navigation from "../../../Pages/Navigation";
+import VizCheck from "../../../functions/VizCheck";
+import Search from "../../../Pages/Search";
 
-describe(specname+' - Debit card payment from a guest user', () => {
+let searchTerm = 'Shirt';
 
-    it('Open the environment', () => {
+describe('Visual Regression test for ' + specname, () => {
+
+    it('Open the ' + specname + ' for ' + searchTerm, () => {
         Environment.openBaseURL();
+        Search.searchFor(searchTerm);
     });
-    /*
     it('Visual Regression test - HamburgerIcon', () => {
         VizCheck.element(Navigation.hamburger,'HamburgerIcon');
     });
@@ -26,12 +29,7 @@ describe(specname+' - Debit card payment from a guest user', () => {
     it('Visual Regression test - SearchIcon', () => {
         VizCheck.element(Navigation.search_container,'SearchIcon');
     });
-    it('Visual Regression test - HomePage', () => {
-        VizCheck.page('HomePage', 75);
-    });
-     */
-
-    it('Visual Regression test - HomePage', () => {
-        VizCheck.fullPage('HomePageFull');
+    it('Visual Regression test - ' + specname, () => {
+        VizCheck.page(specname, 25);
     });
 });

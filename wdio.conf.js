@@ -1,20 +1,24 @@
 let timeout = 48 * 10000;
 const {join} = require('path');
 
+let screendate = new Date();
+let month = screendate.getMonth() + 1;
+let dateString = screendate.getFullYear() + "_" + month + "_" + screendate.getDate();
+
 exports.config = {
     services: ["selenium-standalone", ['image-comparison',
         // The options
         {
             // Some options, see the docs for more
-            baselineFolder: join(process.cwd(), './reports/Baseline/'),
-            formatImageName: '{tag}-{logName}-{width}x{height}',
-            screenshotPath: join(process.cwd(), '.tmp/'),
+            baselineFolder: join(process.cwd(), './Visual_Regression/Baseline/'),
+            formatImageName: '{tag}-{width}x{height}',
+            screenshotPath: join(process.cwd(), './Visual_Regression/'+dateString+'/'),
             savePerInstance: true,
             autoSaveBaseline: true,
             blockOutStatusBar: true,
             blockOutToolBar: true,
             // ... more options
-        }],
+        }]
     ],
     capabilities: [
         {
@@ -74,9 +78,7 @@ exports.config = {
         };
         mkdirSync("./reports/");
         mkdirSync("./reports/ErrorShots/");
-        let screendate = new Date();
-        let month = screendate.getMonth() + 1;
-        mkdirSync("./reports/" + screendate.getFullYear() + "_" + month + "_" + screendate.getDate() + "/");
+        mkdirSync("./reports/" + dateString + "/");
 
 
         // declared globals

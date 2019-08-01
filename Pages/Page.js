@@ -1,3 +1,5 @@
+import * as assert from "chai";
+
 class Page {
 
     open(path) {

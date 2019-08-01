@@ -2,27 +2,65 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cea8097-f04b-4e2a-9d8f-92a64695058e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/Gruntfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Checkout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Checkout_Login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Homepage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Product_page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Search_Results.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/VizCheck.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/Checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Checkout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Customer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Environment.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Page.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/PoC/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/PoC/Test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Afterpay1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Superdry_Website/Afterpay1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Dotpay1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Superdry_Website/Dotpay1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaDE1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaDE1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK4.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUS1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUS1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/PoC/VisRegressionTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/PoC/VisRegressionTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Afterpay1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Afterpay1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard4.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard5.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard6.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard7.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Delivery/Delivery1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Delivery/Delivery1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Delivery/Delivery2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Delivery/Delivery2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Delivery/Delivery3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Delivery/Delivery3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Delivery/Delivery4.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Delivery/Delivery4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Delivery/Delivery5.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Delivery/Delivery5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Dotpay1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Dotpay1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Giropay1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Giropay1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Ideal1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Ideal1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaDE1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Klarna/KlarnaDE1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Klarna/KlarnaUK1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Klarna/KlarnaUK2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Klarna/KlarnaUK3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK4.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Klarna/KlarnaUK4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUS1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Klarna/KlarnaUS1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Paypal/Paypal1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Paypal/Paypal1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Paypal/Paypal2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Paypal/Paypal2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Paypal/Paypal3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Paypal/Paypal3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Paypal/Paypal4.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Paypal/Paypal4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Paypal/Paypal5.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Paypal/Paypal5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Paypal/Paypal6.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Paypal/Paypal6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Paypal/Paypal7.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Paypal/Paypal7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Search/Search1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Search/Search1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Search/Search2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Search/Search2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Search/Search3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Search/Search3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Shopping_bag/Shopping_Bag1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Shopping_bag/Shopping_Bag1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Shopping_bag/Shopping_Bag2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Shopping_bag/Shopping_Bag2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Shopping_bag/Shopping_Bag3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Shopping_bag/Shopping_Bag3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Shopping_bag/Shopping_Bag4.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Shopping_bag/Shopping_Bag4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Sofort1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Sofort1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Store_finder/Store_finder1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Store_finder/Store_finder1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Store_finder/Store_finder2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Store_finder/Store_finder2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Store_finder/Store_finder3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Store_finder/Store_finder3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Store_finder/Store_finder4.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Store_finder/Store_finder4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Wishlist/Wishlist1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Wishlist/Wishlist1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Superdry_Website/Wishlist/Wishlist2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Wishlist/Wishlist2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/wdio.conf.browserstack.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/wdio.conf.browserstack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/customers.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/customers.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/GetRandom.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/GetRandom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/results-0-0.testresult.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/wdio.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/wdio.conf.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -34,8 +72,63 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="webdriverio-v5" />
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/functions/VizCheck.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="655">
+              <caret line="41" column="61" selection-start-line="41" selection-start-column="61" selection-end-line="41" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/B2C/Visual_Regression/Checkout.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="16" column="54" lean-forward="true" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard1.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="552">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+              <folding>
+                <element signature="e#0#56#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pages/Environment.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="444">
+              <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="53" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pages/Navigation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="139" column="28" selection-start-line="139" selection-start-column="28" selection-end-line="139" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -46,9 +139,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>spli</find>
-      <find>console</find>
-      <find>register</find>
       <find>price</find>
       <find>creditTimes</find>
       <find>staffPercent</find>
@@ -76,6 +166,9 @@
       <find>buy</find>
       <find>deliver</find>
       <find>[data-template='checkout\/payment\/klarna-slice'] .payment-method-label div</find>
+      <find>#shipping_state</find>
+      <find>'Open the environment'</find>
+      <find>this.VizCheck(</find>
     </findStrings>
     <replaceStrings>
       <replace>()</replace>
@@ -103,6 +196,8 @@
       <replace>= customerData[&quot;&quot;];</replace>
       <replace>global.referenceNumber</replace>
       <replace>this.</replace>
+      <replace>'Visual Regression test - '</replace>
+      <replace>VizCheck.element(</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\webdriverio-v5\functions</dir>
@@ -115,15 +210,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard3.js" />
-        <option value="$PROJECT_DIR$/functions/Screenshot.js" />
-        <option value="$PROJECT_DIR$/Test/PoC/MenuScreens.js" />
-        <option value="$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard7.js" />
-        <option value="$PROJECT_DIR$/Pages/AdminPortal.js" />
-        <option value="$PROJECT_DIR$/Pages/Page.js" />
-        <option value="$PROJECT_DIR$/Test/Superdry_Website/Paypal/Paypal7.js" />
-        <option value="$PROJECT_DIR$/Test/Superdry_Website/Search.js" />
-        <option value="$PROJECT_DIR$/Test/Superdry_Website/Shopping_Bag.js" />
         <option value="$PROJECT_DIR$/Test/Superdry_Website/Shopping_bag/Shopping_Bag.js" />
         <option value="$PROJECT_DIR$/Test/Superdry_Website/Shopping_bag/Shopping_Bag1.js" />
         <option value="$PROJECT_DIR$/Test/Superdry_Website/Shopping_bag/Shopping_Bag2.js" />
@@ -143,7 +229,6 @@
         <option value="$PROJECT_DIR$/Test/Superdry_Website/Wishlist/Wishlist1.js" />
         <option value="$PROJECT_DIR$/Pages/ShoppingBag.js" />
         <option value="$PROJECT_DIR$/Test/Superdry_Website/Shopping_bag/Shopping_Bag4.js" />
-        <option value="$PROJECT_DIR$/config/wdio.conf.browserstack.js" />
         <option value="$PROJECT_DIR$/Pages/Product.js" />
         <option value="$PROJECT_DIR$/functions/GetRandom.js" />
         <option value="$PROJECT_DIR$/Pages/Search.js" />
@@ -152,28 +237,38 @@
         <option value="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship3.js" />
         <option value="$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard1.js" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
-        <option value="$PROJECT_DIR$/wdio.conf.js" />
-        <option value="$PROJECT_DIR$/Test/PoC/Test.js" />
         <option value="$PROJECT_DIR$/Pages/Environment.js" />
         <option value="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK1.js" />
         <option value="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK2.js" />
         <option value="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaDE1.js" />
         <option value="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK3.js" />
         <option value="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK4.js" />
-        <option value="$PROJECT_DIR$/config/wdio.conf.local.js" />
         <option value="$PROJECT_DIR$/data/customers.yml" />
-        <option value="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUS1.js" />
         <option value="$PROJECT_DIR$/Pages/Customer.js" />
-        <option value="$PROJECT_DIR$/Pages/Navigation.js" />
         <option value="$PROJECT_DIR$/Pages/Checkout.js" />
+        <option value="$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUS1.js" />
+        <option value="$PROJECT_DIR$/config/wdio.conf.local.js" />
+        <option value="$PROJECT_DIR$/config/wdio.conf.browserstack.js" />
+        <option value="$PROJECT_DIR$/Test/PoC/Test.js" />
+        <option value="$PROJECT_DIR$/Pages/Page.js" />
+        <option value="$PROJECT_DIR$/Test/PoC/VisRegressionTest.js" />
+        <option value="$PROJECT_DIR$/Pages/Navigation.js" />
+        <option value="$PROJECT_DIR$/wdio.conf.js" />
+        <option value="$PROJECT_DIR$/Test/B2C/Visual_Regression/Homepage.js" />
+        <option value="$PROJECT_DIR$/Test/B2C/Visual_Regression/Search_Results.js" />
+        <option value="$PROJECT_DIR$/Test/B2C/Visual_Regression/Product_page.js" />
+        <option value="$PROJECT_DIR$/Test/B2C/Visual_Regression/Checkout_Popout.js" />
+        <option value="$PROJECT_DIR$/Test/B2C/Visual_Regression/Checkout_Login.js" />
+        <option value="$PROJECT_DIR$/Test/B2C/Visual_Regression/Checkout.js" />
+        <option value="$PROJECT_DIR$/functions/VizCheck.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1928" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="58" />
+    <option name="y" value="-18" />
+    <option name="width" value="1827" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -194,53 +289,39 @@
             <path>
               <item name="webdriverio-v5" type="b2602c69:ProjectViewProjectNode" />
               <item name="webdriverio-v5" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdriverio-v5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdriverio-v5" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webdriverio-v5" type="b2602c69:ProjectViewProjectNode" />
               <item name="webdriverio-v5" type="462c0819:PsiDirectoryNode" />
-              <item name="functions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdriverio-v5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdriverio-v5" type="462c0819:PsiDirectoryNode" />
-              <item name="Pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdriverio-v5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdriverio-v5" type="462c0819:PsiDirectoryNode" />
               <item name="Test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webdriverio-v5" type="b2602c69:ProjectViewProjectNode" />
               <item name="webdriverio-v5" type="462c0819:PsiDirectoryNode" />
               <item name="Test" type="462c0819:PsiDirectoryNode" />
-              <item name="PoC" type="462c0819:PsiDirectoryNode" />
+              <item name="B2C" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webdriverio-v5" type="b2602c69:ProjectViewProjectNode" />
               <item name="webdriverio-v5" type="462c0819:PsiDirectoryNode" />
               <item name="Test" type="462c0819:PsiDirectoryNode" />
-              <item name="Superdry_Website" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdriverio-v5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdriverio-v5" type="462c0819:PsiDirectoryNode" />
-              <item name="Test" type="462c0819:PsiDirectoryNode" />
-              <item name="Superdry_Website" type="462c0819:PsiDirectoryNode" />
+              <item name="B2C" type="462c0819:PsiDirectoryNode" />
               <item name="Debitcard" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webdriverio-v5" type="b2602c69:ProjectViewProjectNode" />
               <item name="webdriverio-v5" type="462c0819:PsiDirectoryNode" />
               <item name="Test" type="462c0819:PsiDirectoryNode" />
-              <item name="Superdry_Website" type="462c0819:PsiDirectoryNode" />
+              <item name="B2C" type="462c0819:PsiDirectoryNode" />
               <item name="Klarna" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdriverio-v5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdriverio-v5" type="462c0819:PsiDirectoryNode" />
+              <item name="Test" type="462c0819:PsiDirectoryNode" />
+              <item name="B2C" type="462c0819:PsiDirectoryNode" />
+              <item name="Visual_Regression" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -252,7 +333,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Test/Superdry_Website/Klarna" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Test/B2C/Visual_Regression" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -263,23 +344,23 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.2.5\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\webdriverio-v5\Test\B2C\Visual_Regression" />
+      <recent name="C:\webdriverio-v5\functions" />
+      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Klarna" />
+      <recent name="C:\webdriverio-v5\Test\Superdry_Website" />
+      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Wishlist" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\webdriverio-v5\Test\Superdry_Website\Wishlist" />
       <recent name="C:\webdriverio-v5\Test\Superdry_Website\Store_finder" />
       <recent name="C:\webdriverio-v5\Test\Superdry_Website\Search" />
       <recent name="C:\webdriverio-v5\Test\Superdry_Website\Shopping_bag" />
       <recent name="C:\webdriverio-v5\Test\Superdry_Website\Delivery" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Klarna" />
-      <recent name="C:\webdriverio-v5\Test\Superdry_Website" />
-      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Wishlist" />
-      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Store_finder" />
-      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Search" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -347,7 +428,14 @@
       <workItem from="1562850573977" duration="31823000" />
       <workItem from="1563202779969" duration="538000" />
       <workItem from="1563203350698" duration="8531000" />
-      <workItem from="1563278776340" duration="75995000" />
+      <workItem from="1563278776340" duration="77131000" />
+      <workItem from="1564567850432" duration="435000" />
+      <workItem from="1564568319329" duration="186000" />
+      <workItem from="1564568550303" duration="468000" />
+      <workItem from="1564569039318" duration="180000" />
+      <workItem from="1564569241573" duration="81000" />
+      <workItem from="1564569342328" duration="101000" />
+      <workItem from="1564569463614" duration="26198000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1556195896755</created>
@@ -484,7 +572,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="650150000" />
+    <option name="totallyTimeSpent" value="678935000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -496,11 +584,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.256" />
+      <window_info id="Favorites" order="0" sideWeight="0.50090414" side_tool="true" weight="0.29493332" />
+      <window_info id="npm" order="1" sideWeight="0.5004803" side_tool="true" weight="0.27733332" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4995197" visible="true" weight="0.2944" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -531,117 +620,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/functions/GetRandom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="43" column="52" lean-forward="true" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/ShoppingBag.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="59" column="56" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/Search.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/Product.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Sofort1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Ideal1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Giropay1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/OMS/OMS_ship.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Afterpay1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard7.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard4.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Delivery/Delivery1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Delivery/Delivery2.js">
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Delivery/Delivery2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
@@ -651,7 +630,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Delivery/Delivery3.js">
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Delivery/Delivery3.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
@@ -661,7 +640,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Delivery/Delivery4.js">
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Delivery/Delivery4.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
@@ -671,7 +650,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Delivery/Delivery5.js">
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Delivery/Delivery5.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
@@ -680,21 +659,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Search/Search1.js">
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Search/Search2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Search/Search2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Search/Search3.js">
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Search/Search3.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
@@ -710,17 +682,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/PoC/VisRegressionTest.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Store_finder/Store_finder1.js">
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Store_finder/Store_finder1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Store_finder/Store_finder2.js">
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Store_finder/Store_finder2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
@@ -729,7 +698,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Store_finder/Store_finder3.js">
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Store_finder/Store_finder3.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
@@ -738,7 +707,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Store_finder/Store_finder4.js">
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Store_finder/Store_finder4.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
@@ -747,7 +716,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Dotpay1.js">
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Dotpay1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="15" column="27" lean-forward="true" selection-start-line="14" selection-start-column="63" selection-end-line="15" selection-end-column="51" />
@@ -761,27 +730,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/wdio.conf.browserstack.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wdio.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="85" column="32" lean-forward="true" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/PoC/Test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
@@ -789,17 +737,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard2.js">
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
@@ -808,7 +746,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard3.js">
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard3.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
@@ -818,40 +756,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/Environment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK2.js">
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Klarna/KlarnaUK2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/wdio.conf.local.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -862,76 +773,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaDE1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="12" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/customers.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/Navigation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="115" column="32" selection-start-line="115" selection-start-column="32" selection-end-line="115" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUS1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK3.js">
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Klarna/KlarnaUK3.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Klarna/KlarnaUK4.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/Checkout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="490" column="68" selection-start-line="490" selection-start-column="68" selection-end-line="490" selection-end-column="68" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/Page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/Customer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="186" column="60" selection-start-line="186" selection-start-column="60" selection-end-line="186" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard5.js">
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard5.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
@@ -940,7 +789,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Superdry_Website/Debitcard/Debitcard6.js">
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard6.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
@@ -956,6 +805,235 @@
           <caret line="119" column="40" selection-start-line="119" selection-start-column="40" selection-end-line="119" selection-end-column="40" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Klarna/KlarnaUK1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Klarna/KlarnaDE1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/customers.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11777">
+          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Klarna/KlarnaUK4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/country.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/Checkout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="764">
+          <caret line="533" column="13" selection-start-line="533" selection-start-column="13" selection-end-line="533" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Klarna/KlarnaUS1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/wdio.conf.local.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/wdio.conf.browserstack.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="23">
+            <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/Customer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="144" column="47" selection-start-line="144" selection-start-column="47" selection-end-line="144" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/PoC/Test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" selection-start-line="4" selection-end-line="24" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/Page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wdio.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Visual_Regression/Homepage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/Search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="88" column="4" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/translations.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Search/Search1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/PoC/VisRegressionTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="78" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Visual_Regression/Search_Results.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/Navigation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="139" column="28" selection-start-line="139" selection-start-column="28" selection-end-line="139" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/Environment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="53" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Visual_Regression/Checkout_Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="51" selection-start-column="51" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Visual_Regression/Product_page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="64" lean-forward="true" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/VizCheck.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="655">
+          <caret line="41" column="61" selection-start-line="41" selection-start-column="61" selection-end-line="41" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Visual_Regression/Checkout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="16" column="54" lean-forward="true" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
