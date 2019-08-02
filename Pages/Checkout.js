@@ -964,7 +964,6 @@ class Checkout extends Page {
         OrderTotalValue = OrderTotalValue.replace(/[^0-9]+|\s+/gmi, "");
         OrderDeliveryValue = OrderDeliveryValue.replace(/[^0-9]+|\s+/gmi, "");
         OrderTotalValue = parseInt(OrderTotalValue);
-        OrderDeliveryValue = parseInt(OrderDeliveryValue);
         if ((type === 'in3')||(type === 'in4')) {
             this.klarnaPayIn3Link.click();
         } else {
@@ -997,6 +996,7 @@ class Checkout extends Page {
         console.log("Confirmed that order total value (" + OrderTotalValue + ") is equal to the Klarna total purchase value (" + klarnaTotalPurchaseValue + ").");
 
         let deliveryZero = parseInt(OrderDeliveryValue.slice(1));
+        OrderDeliveryValue = parseInt(OrderDeliveryValue);
         if (deliveryZero !== 0) {
             let klarnaDeliveryPurchaseValue = this.klarnaDeliveryPurchaseValue.getHTML(false);
             klarnaDeliveryPurchaseValue = klarnaDeliveryPurchaseValue.replace(/[^0-9]+|\s+/gmi, "");
