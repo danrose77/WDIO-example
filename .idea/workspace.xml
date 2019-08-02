@@ -4,10 +4,7 @@
     <list default="true" id="4cea8097-f04b-4e2a-9d8f-92a64695058e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/Checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Checkout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Checkout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/PoC/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/PoC/Test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/VizCheck.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/VizCheck.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,7 +24,7 @@
         <entry file="file://$PROJECT_DIR$/Test/B2C/Klarna/KlarnaDE1.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="483">
-              <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+              <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -35,10 +32,34 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pages/Checkout.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="985" column="28" selection-start-line="985" selection-start-column="28" selection-end-line="985" selection-end-column="28" />
+            <state relative-caret-position="741">
+              <caret line="1009" column="12" lean-forward="true" selection-start-line="1009" selection-start-column="12" selection-end-line="1009" selection-end-column="12" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pages/AdminPortal.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="106" column="71" selection-start-line="106" selection-start-column="36" selection-end-line="106" selection-end-column="71" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/PoC/Test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="e#0#53#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -363,7 +384,7 @@
       <workItem from="1564569463614" duration="26533000" />
       <workItem from="1564663655800" duration="37000" />
       <workItem from="1564663709968" duration="97000" />
-      <workItem from="1564663828833" duration="11079000" />
+      <workItem from="1564663828833" duration="14005000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1556195896755</created>
@@ -498,7 +519,21 @@
       <option name="project" value="LOCAL" />
       <updated>1564663313946</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary=".">
+      <created>1564737739950</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1564737739950</updated>
+    </task>
+    <task id="LOCAL-00021" summary=".">
+      <created>1564743531613</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1564743531613</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -507,7 +542,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="690483000" />
+    <option name="totallyTimeSpent" value="693409000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -890,26 +925,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/PoC/Test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/AdminPortal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="107" column="51" selection-start-line="107" selection-start-column="36" selection-end-line="107" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/functions/shopperGroupID.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -939,17 +954,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/AdminPortal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="106" column="71" selection-start-line="106" selection-start-column="36" selection-end-line="106" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/PoC/Test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Test/B2C/Klarna/KlarnaDE1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
-          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+          <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Pages/Checkout.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="985" column="28" selection-start-line="985" selection-start-column="28" selection-end-line="985" selection-end-column="28" />
+        <state relative-caret-position="741">
+          <caret line="1009" column="12" lean-forward="true" selection-start-line="1009" selection-start-column="12" selection-end-line="1009" selection-end-column="12" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>

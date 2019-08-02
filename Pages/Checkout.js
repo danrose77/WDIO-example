@@ -961,6 +961,10 @@ class Checkout extends Page {
     payByKlarna(type) {
         let OrderTotalValue = this.OrderTotalValue.getHTML(false);
         let OrderDeliveryValue = this.OrderDeliveryValue.getHTML(false);
+        OrderTotalValue = OrderTotalValue.replace(/[^0-9]+|\s+/gmi, "");
+        OrderDeliveryValue = OrderDeliveryValue.replace(/[^0-9]+|\s+/gmi, "");
+        OrderTotalValue = parseInt(OrderTotalValue);
+        OrderDeliveryValue = parseInt(OrderDeliveryValue);
         if ((type === 'in3')||(type === 'in4')) {
             this.klarnaPayIn3Link.click();
         } else {
@@ -983,23 +987,20 @@ class Checkout extends Page {
         } catch (e) {
             console.log("Klarna klarnaBuyNow not clicked")
         }
-        browser.pause(5000);
+        this.klarnaTotalPurchaseValue.waitForDisplayed(30000);
         let klarnaTotalPurchaseValue = this.klarnaTotalPurchaseValue.getHTML(false);
 
-        let OrderTotalValueFirstCharacter = OrderTotalValue.slice(0,1);
-        if (OrderTotalValueFirstCharacter === 'U') {
-            OrderTotalValue = OrderTotalValue.slice(4);
-        }
+        klarnaTotalPurchaseValue = klarnaTotalPurchaseValue.replace(/[^0-9]+|\s+/gmi, "");
+        klarnaTotalPurchaseValue = parseInt(klarnaTotalPurchaseValue);
+
         expect(OrderTotalValue).to.equal(klarnaTotalPurchaseValue);
         console.log("Confirmed that order total value (" + OrderTotalValue + ") is equal to the Klarna total purchase value (" + klarnaTotalPurchaseValue + ").");
 
-        let OrderDeliveryValueFirstCharacter = OrderDeliveryValue.slice(0,1);
-        if (OrderDeliveryValueFirstCharacter === 'U') {
-            OrderDeliveryValue = OrderDeliveryValue.slice(4);
-        }
         let deliveryZero = parseInt(OrderDeliveryValue.slice(1));
         if (deliveryZero !== 0) {
             let klarnaDeliveryPurchaseValue = this.klarnaDeliveryPurchaseValue.getHTML(false);
+            klarnaDeliveryPurchaseValue = klarnaDeliveryPurchaseValue.replace(/[^0-9]+|\s+/gmi, "");
+            klarnaDeliveryPurchaseValue = parseInt(klarnaDeliveryPurchaseValue);
             expect(OrderDeliveryValue).to.equal(klarnaDeliveryPurchaseValue);
             console.log("Confirmed that order delivery value (" + OrderDeliveryValue + ") is equal to the Klarna delivery purchase value (" + klarnaDeliveryPurchaseValue + ").");
         } else {
