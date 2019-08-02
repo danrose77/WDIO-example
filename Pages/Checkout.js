@@ -983,7 +983,7 @@ class Checkout extends Page {
         } catch (e) {
             console.log("Klarna klarnaBuyNow not clicked")
         }
-        browser.pause(3000);
+        browser.pause(5000);
         let klarnaTotalPurchaseValue = this.klarnaTotalPurchaseValue.getHTML(false);
 
         let OrderTotalValueFirstCharacter = OrderTotalValue.slice(0,1);
