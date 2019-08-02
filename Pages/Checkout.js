@@ -477,6 +477,9 @@ class Checkout extends Page {
     get alliframes() {
         return $$("iframe");
     }
+    get checkout_basket() {
+        return $('#checkout-section-basket');
+    }
 
     // Functions
     fillTheDeliveryFields(type) {
@@ -497,7 +500,7 @@ class Checkout extends Page {
         fillObject.element(this.billing_phone, customerData.Phone);
         fillObject.element(this.billing_email, emailaddress);
         fillObject.element(this.billing_confirmemail, emailaddress);
-        browser.pause(1000);
+        browser.pause(500);
         if (clickAndCollectDetect !== true) {
             let shippingAddress1displayed = this.shipping_address_input1.isDisplayed();
             try{
@@ -582,20 +585,18 @@ class Checkout extends Page {
     payByIdeal() {
         global.paymentMethod = "Ideal";
         this.idealBTN.click();
-        browser.pause(1500);
+        this.checkout_proceed_button.waitForEnabled();
         Screenshot.viewport();
         this.checkout_proceed_button.click();
         try {
             this.checkout_proceed_button.click()
         } catch (err) {
         }
-        browser.pause(1000);
         this.idealTestBank1.waitForExist();
         this.idealTestBank1.click();
         browser.pause(500);
         this.idealContinue.click();
-        browser.pause(1000);
-        this.thankyou_order_placed.isExisting();
+        this.thankyou_order_placed.waitForExist();
         this.orderConfirmation();
     }
 
@@ -648,14 +649,12 @@ class Checkout extends Page {
         Screenshot.viewport();
         browser.pause(1000);
         this.checkout_proceed_button.click();
-        browser.pause(3000);
-        this.sofortBankCodeSearch.waitForExist();
+        this.sofortBankCodeSearch.waitForExist(30000);
         this.sofortBankCodeSearch.setValue(bankname);
         browser.pause(1000);
         Screenshot.viewport();
         this.sofortBankProceed.click();
-        this.sofortAcc.waitForExist();
-        browser.pause(1000);
+        this.sofortAcc.waitForExist(30000);
         this.sofortAcc.setValue(accountNumber);
         this.sofortPIN.setValue("1111");
         Screenshot.viewport();
@@ -889,9 +888,6 @@ class Checkout extends Page {
         this.fillTheDeliveryFields();
         this.payByCard();
     }
-    selectDeliveryOption2() {
-        this.deliverySpeedOptions[2].click();
-    }
 
     selectClickAndCollectAndPay(plus) {
         if (country === "UK") {
@@ -987,6 +983,7 @@ class Checkout extends Page {
         } catch (e) {
             console.log("Klarna klarnaBuyNow not clicked")
         }
+        browser.pause(3000);
         let klarnaTotalPurchaseValue = this.klarnaTotalPurchaseValue.getHTML(false);
 
         let OrderTotalValueFirstCharacter = OrderTotalValue.slice(0,1);
@@ -1024,6 +1021,7 @@ class Checkout extends Page {
                 browser.switchToParentFrame();
                 browser.switchToFrame(this.alliframes[0]);
                 browser.switchToFrame(this.alliframes[0]);
+
                 this.klarnaCardNumber.setValue("4111111111111111");
                 this.klarnaexpire.setValue("10/20");
                 this.klarnasecurityCode.setValue("737");

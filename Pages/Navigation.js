@@ -68,6 +68,9 @@ class Navigation extends Page {
     get navWrapper() {
         return $(".nav-wrapper");
     }
+    get spinner() {
+        return $(".spinner");
+    }
 
     // Functions
     acceptCookiesPrompt() {
@@ -106,12 +109,12 @@ class Navigation extends Page {
             this.hamburger.click();
             this.acceptCookiesPrompt();
             this.backToBaseMenu();
-            browser.pause(1000);
+            this.menu_tier1[1].waitForExist();
             GetRandom.element(this.menu_tier1, undefined, 2);
-            browser.pause(1000);
+            this.menu_subtiers[1].waitForExist();
             GetRandom.element(this.menu_subtiers, undefined, 4, 2);
-            browser.pause(1000);
             try {
+                this.menu_subtiers[1].waitForExist();
                 if (this.menu_subtiers[0].isDisplayed() === true) {
                     GetRandom.element(this.menu_subtiers, undefined,4, 1);
                 }
@@ -119,7 +122,8 @@ class Navigation extends Page {
 
             }
 
-            browser.pause(5000);
+            browser.pause(1000);
+            this.spinner.waitForExist(30000, true);
 
             let classAttrib = this.body.getAttribute('class').trim();
             console.log('classAttrib = ' + classAttrib);
@@ -136,14 +140,16 @@ class Navigation extends Page {
     }
 
     GoToCheckout() {
-        browser.url(site + '/checkout/log-in');
-        browser.pause(1500);
+        browser.url(site + 'checkout/log-in');
+        browser.waitUntil(() => {
+            return browser.getUrl().includes("checkout");
+        },5000);
         Screenshot.viewport();
         try {
             if (this.SignIn_Guest.isExisting() === true) {
                 this.SignIn_Guest.click();
             }
-            browser.pause(5000);
+            Checkout.deliveryTypeOptions[1].waitForExist(30000);
         } catch (e) {
         }
     }

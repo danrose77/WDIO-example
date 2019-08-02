@@ -17,32 +17,13 @@ class VizCheck extends Page {
       expect(browser.checkScreen(PageName, { /* some options*/ })).to.be.below(variance);
     }
   }
-  fullPage(PageName, variance, hideElement) {
+  fullPage(PageName, variance) {
     if (variance === undefined) {
       variance = 0;
     }
-    if (hideElement !== undefined) {
-      browser.saveFullPageScreen(PageName, {
-        hideAfterFirstScroll: [
-          hideElement
-        ],
-      });
-    } else {
-      browser.saveFullPageScreen(PageName, {});
-    }
-
-    if (hideElement !== undefined) {
-      expect(browser.checkFullPageScreen(PageName, {
-        hideAfterFirstScroll: [
-          hideElement
-        ],
-      })).to.be.most(variance);
-    } else {
-      expect(browser.checkFullPageScreen(PageName, {})).to.be.most(variance);
-      console.log(browser.checkFullPageScreen(PageName, {}));
-
-    }
-
+    browser.saveFullPageScreen(PageName, {});
+    expect(browser.checkFullPageScreen(PageName, {})).to.be.most(variance);
+    console.log(browser.checkFullPageScreen(PageName, {}));
   }
 }
 export default new VizCheck();
