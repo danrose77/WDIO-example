@@ -4,7 +4,6 @@
     <list default="true" id="4cea8097-f04b-4e2a-9d8f-92a64695058e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/Checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Checkout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/PoC/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/PoC/Test.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,7 +23,7 @@
         <entry file="file://$PROJECT_DIR$/Test/B2C/Klarna/KlarnaDE1.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="483">
-              <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+              <caret line="27" column="17" lean-forward="true" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -32,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pages/Checkout.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="741">
-              <caret line="1009" column="12" lean-forward="true" selection-start-line="1009" selection-start-column="12" selection-end-line="1009" selection-end-column="12" />
+            <state relative-caret-position="450">
+              <caret line="1015" column="58" lean-forward="true" selection-start-line="1015" selection-start-column="58" selection-end-line="1015" selection-end-column="58" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -202,10 +201,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-2161" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1827" />
-    <option name="height" value="1055" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -384,7 +383,7 @@
       <workItem from="1564569463614" duration="26533000" />
       <workItem from="1564663655800" duration="37000" />
       <workItem from="1564663709968" duration="97000" />
-      <workItem from="1564663828833" duration="14005000" />
+      <workItem from="1564663828833" duration="16764000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1556195896755</created>
@@ -533,7 +532,21 @@
       <option name="project" value="LOCAL" />
       <updated>1564743531613</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary=".">
+      <created>1564751306853</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1564751306853</updated>
+    </task>
+    <task id="LOCAL-00023" summary=".">
+      <created>1564751613518</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1564751613518</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -542,7 +555,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="693409000" />
+    <option name="totallyTimeSpent" value="696168000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -554,7 +567,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50090414" side_tool="true" weight="0.29493332" />
@@ -977,14 +990,14 @@
     <entry file="file://$PROJECT_DIR$/Test/B2C/Klarna/KlarnaDE1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
-          <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+          <caret line="27" column="17" lean-forward="true" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Pages/Checkout.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="1009" column="12" lean-forward="true" selection-start-line="1009" selection-start-column="12" selection-end-line="1009" selection-end-column="12" />
+        <state relative-caret-position="450">
+          <caret line="1015" column="58" lean-forward="true" selection-start-line="1015" selection-start-column="58" selection-end-line="1015" selection-end-column="58" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>

@@ -12,6 +12,9 @@ import GetRandom from "../functions/GetRandom";
 import Customer from "./Customer"
 
 class Checkout extends Page {
+    get OrderBalanceValues() {
+        return $$("#checkout-section-basket [class='col-5  text-right']");
+    }
     get OrderTotalValue() {
         return $("#checkout-section-basket-summary [class='col-12']:nth-of-type(5) [class='col-5  text-right']");
     }
@@ -959,10 +962,24 @@ class Checkout extends Page {
     }
 
     payByKlarna(type) {
-        let OrderTotalValue = this.OrderTotalValue.getHTML(false);
-        let OrderDeliveryValue = this.OrderDeliveryValue.getHTML(false);
+        let OBVlength = this.OrderBalanceValues.length;
+        let OrderTotalValue = "";
+        let OrderDeliveryValue = "";
+        console.log('OBVlength = ' + OBVlength);
+        if (OBVlength === 4) {
+            OrderTotalValue = this.OrderBalanceValues[3].getHTML(false);
+            OrderDeliveryValue = this.OrderBalanceValues[1].getHTML(false);
+        } else if (OBVlength === 3) {
+            OrderTotalValue = this.OrderBalanceValues[2].getHTML(false);
+            OrderDeliveryValue = this.OrderBalanceValues[1].getHTML(false);
+        } else {
+            OrderTotalValue = this.OrderBalanceValues[1].getHTML(false);
+            OrderDeliveryValue = 0;
+        }
         OrderTotalValue = OrderTotalValue.replace(/[^0-9]+|\s+/gmi, "");
         OrderDeliveryValue = OrderDeliveryValue.replace(/[^0-9]+|\s+/gmi, "");
+        console.log('OrderTotalValue = ' + OrderTotalValue);
+        console.log('OrderDeliveryValue = ' + OrderDeliveryValue);
         OrderTotalValue = parseInt(OrderTotalValue);
         if ((type === 'in3')||(type === 'in4')) {
             this.klarnaPayIn3Link.click();
