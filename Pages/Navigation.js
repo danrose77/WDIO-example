@@ -7,6 +7,26 @@ import write from "../functions/write";
 import Checkout from "./Checkout";
 
 class Navigation extends Page {
+    get OrderSummary() {
+        return $("[class='col-12 consignment pad-v']");
+    }
+    get checkout_section_giftcard_voucher() {
+        return $("#checkout-section-giftcard-voucher");
+    }
+    get checkout_section_basket_summary() {
+        return $("#checkout-section-basket-summary");
+    }
+
+    get checkout_section_delivery_options() {
+        return $("#checkout-section-delivery-options");
+    }
+    get checkout_section_billing_address() {
+        return $("#checkout-section-billing-address");
+    }
+    get checkout_section_payment_methods() {
+        return $("#checkout-section-payment-methods");
+    }
+
     get body() {
         return $("body");
     }
@@ -71,6 +91,9 @@ class Navigation extends Page {
     get spinner() {
         return $(".spinner");
     }
+    get copyright_row() {
+        return $(".copyright-row");
+    }
 
     // Functions
     acceptCookiesPrompt() {
@@ -108,14 +131,19 @@ class Navigation extends Page {
         while (success === false) {
             this.hamburger.click();
             this.acceptCookiesPrompt();
-            this.backToBaseMenu();
+            try {
+                this.backToBaseMenu();
+            } catch (e) {
+                console.log("Couldnt/or no need to return to main menu")
+            }
             this.menu_tier1[1].waitForExist();
-            GetRandom.element(this.menu_tier1, undefined, 2);
+            GetRandom.element(this.menu_tier1, undefined, 2, 1);
             this.menu_subtiers[1].waitForExist();
             GetRandom.element(this.menu_subtiers, undefined, 4, 2);
             try {
                 this.menu_subtiers[1].waitForExist();
-                if (this.menu_subtiers[0].isDisplayed() === true) {
+                browser.pause(1000);
+                if (this.menu_subtiers[1].isDisplayed() === true) {
                     GetRandom.element(this.menu_subtiers, undefined,4, 1);
                 }
             } catch (e) {

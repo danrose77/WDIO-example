@@ -3,7 +3,6 @@ import Navigation from "../../../Pages/Navigation";
 import Environment from "../../../Pages/Environment";
 import Search from "../../../Pages/Search";
 import Product from "../../../Pages/Product";
-import Checkout from "../../../Pages/Checkout";
 
 describe('Visual Regression test for ' + specname, () => {
 
@@ -15,7 +14,35 @@ describe('Visual Regression test for ' + specname, () => {
         browser.url(site + 'checkout');
         browser.pause(1500);
     });
+    /*
+    // Full page check more likely to generate false positive diffs so commented out
     it('Visual Regression test - ' + specname, () => {
-        VizCheck.fullPage(specname, 15, Navigation.navWrapper);
+        VizCheck.fullPage(specname, 1);
+    });
+    */
+    it('Visual Regression test - OrderSummary', () => {
+        Navigation.OrderSummary.scrollIntoView();
+        VizCheck.element(Navigation.OrderSummary,specname + '-OrderSummary',1);
+    });
+    it('Visual Regression test - checkout_section_giftcard_voucher', () => {
+        Navigation.checkout_section_giftcard_voucher.scrollIntoView();
+        VizCheck.element(Navigation.checkout_section_giftcard_voucher,specname + '-checkout_section_giftcard_voucher',1,Navigation.navWrapper);
+    });
+    it('Visual Regression test - checkout_section_basket_summary', () => {
+        Navigation.checkout_section_basket_summary.scrollIntoView();
+        VizCheck.element(Navigation.checkout_section_basket_summary,specname + '-checkout_section_basket_summary',1);
+    });
+    it('Visual Regression test - checkout_section_delivery_options', () => {
+        Navigation.checkout_section_delivery_options.scrollIntoView();
+        VizCheck.element(Navigation.checkout_section_delivery_options,specname + '-checkout_section_delivery_options',1);
+    });
+    it('Visual Regression test - checkout_section_billing_address', () => {
+        Navigation.checkout_section_billing_address.scrollIntoView();
+        VizCheck.element(Navigation.checkout_section_billing_address,specname + '-checkout_section_billing_address',1,Navigation.navWrapper);
+    });
+
+    it('Visual Regression test - checkout_section_payment_methods', () => {
+        Navigation.checkout_section_payment_methods.scrollIntoView();
+        VizCheck.element(Navigation.checkout_section_payment_methods,specname + '-checkout_section_payment_methods',1);
     });
 });

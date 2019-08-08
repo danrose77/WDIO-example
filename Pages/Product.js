@@ -4,6 +4,34 @@ import GetRandom from "../functions/GetRandom";
 import ShoppingBag from "./ShoppingBag";
 
 class Product extends Page {
+    get breadcrumbs_container() {
+        return $(".breadcrumbs_container");
+    }
+    get FreeUKdeliveryreturns() {
+        return $("[class='col-sm-12 col-lg-auto lg-first']");
+    }
+    get color() {
+        return $(".color");
+    }
+    get size_container() {
+        return $(".size-container");
+    }
+    get add_to_bag_button() {
+        return $(".button-container .add-to-bag-button");
+    }
+    get wishlist_button() {
+        return $(".button-container .wishlist-button");
+    }
+    get why_not_try() {
+        return $("[class='col-12 why-not-try-container']");
+    }
+    get social_icons() {
+        return $("[class='social-icons col-12 col-xl-10 offset-xl-2 d-none d-md-block']");
+    }
+    get product_information_container() {
+        return $(".product_information_container.d-md-block");
+    }
+
     get ProductTitle() {
         return $('h1.col-12.product-description.lg-first:nth-child(1)');
     }
@@ -86,6 +114,12 @@ class Product extends Page {
                     GetRandom.sizeBox(this.SizeBoxValid);
             } else if (this.SizeSelectorDD.isDisplayed() === true) {
                 GetRandom.selectByIndex(this.SizeSelectorDD, this.SizeSelectorDDoptions)
+            } else {
+                try {
+                    this.SizeBoxValid[0].click();
+                }catch (e) {
+                    
+                }
             }
         }
         browser.pause(1000);

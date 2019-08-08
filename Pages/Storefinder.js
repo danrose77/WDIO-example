@@ -26,6 +26,16 @@ class Storefinder extends Page {
         return $("//div[@class='store-info']/h2");
     }
 
+    get store_locator__input() {
+        return $(".store-locator__input");
+    }
+    get nearest_stores() {
+        return $("//div[@id='nearest-stores']/ul/li[1]");
+    }
+    get store_info() {
+        return $(".store-info");
+    }
+
     // Functions
     findTheNearestStoreTo(location) {
         if (siteSuffix === "us") {

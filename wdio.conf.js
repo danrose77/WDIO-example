@@ -6,7 +6,7 @@ let month = screendate.getMonth() + 1;
 let dateString = screendate.getFullYear() + "_" + month + "_" + screendate.getDate();
 
 exports.config = {
-    services: ["selenium-standalone", ['image-comparison',
+    services: ["browserstack", ['image-comparison',
         // The options
         {
             // Some options, see the docs for more
@@ -125,6 +125,7 @@ exports.config = {
         global.formFactor = formFactor;
         if (formFactor === "desktop") {
             browser.maximizeWindow();
+           // browser.setWindowSize(1920, 1080)
         }
         let platform = capabilities.browserName;
         if (platform === undefined) {

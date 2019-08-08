@@ -983,6 +983,10 @@ class Checkout extends Page {
         OrderTotalValue = parseInt(OrderTotalValue);
         if ((type === 'in3')||(type === 'in4')) {
             this.klarnaPayIn3Link.click();
+            if (siteSuffix === 'US') {
+                browser.pause(3000);
+                this.klarnaPayIn3Link.click();
+            }
         } else {
             this.klarnaPayLaterLink.click();
         }

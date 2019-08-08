@@ -48,7 +48,9 @@ class Environment extends Page {
         browser.url('/');
         this.setSite();
         let screenDate = new Date();
-        browser.url('/?a' + screenDate.getTime() + 'a');
+        let urlString = screenDate.getTime();
+        browser.url('/?a' + urlString + 'a');
+        browser.waitUntil(() => browser.getUrl().includes(urlString));
         browser.deleteCookies();
         browser.pause(2000);
         Navigation.acceptCookiesPrompt();
