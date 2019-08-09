@@ -12,6 +12,6 @@ describe('Visual Regression test for ' + specname, () => {
         Search.searchFor(searchTerm);
     });
     it('Visual Regression test - ' + specname, () => {
-        VizCheck.page(specname, 25);
+        VizCheck.screen(specname, 25);
     });
 });

@@ -7,6 +7,6 @@ describe('Visual Regression test for ' + specname, () => {
         browser.pause(1500);
     });
     it('Visual Regression test - ' + specname, () => {
-        VizCheck.fullPage(specname, 1);
+        VizCheck.page(specname, 1);
     });
 });

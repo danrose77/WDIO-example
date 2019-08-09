@@ -2,30 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cea8097-f04b-4e2a-9d8f-92a64695058e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Giftcard_page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Navigation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/RegisterUser_page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Sitemap_page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Storefinder_page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Wishlist_page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Checkout_Sidebar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Customer_Account_page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/Gruntfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Checkout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Environment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Storefinder.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Storefinder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/B2C/Klarna/KlarnaUS1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Klarna/KlarnaUS1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Checkout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Checkout_Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Checkout_Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Giftcard_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Giftcard_page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Homepage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Product_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Product_page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Visual_Regression/RegisterUser_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/RegisterUser_page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Search_Results.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Search_Results.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/PoC/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/PoC/Test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/wdio.conf.browserstack.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/wdio.conf.browserstack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/wdio.conf.local.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/wdio.conf.local.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Sitemap_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Sitemap_page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Storefinder_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Storefinder_page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Wishlist_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Wishlist_page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/PoC/VisRegressionTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/PoC/VisRegressionTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions/VizCheck.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/VizCheck.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdio.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/wdio.conf.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,12 +105,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1715" />
-    <option name="y" value="-22" />
-    <option name="width" value="1827" />
-    <option name="height" value="892" />
-  </component>
   <component name="ProjectId" id="1P93OWqq1WpR6sLuFnD1sNSe72F" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -140,23 +125,23 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.2.5\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Wishlist" />
-      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Store_finder" />
-      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Search" />
-      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Shopping_bag" />
-      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Delivery" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\webdriverio-v5\Test\B2C\Visual_Regression" />
       <recent name="C:\webdriverio-v5\functions" />
       <recent name="C:\webdriverio-v5\Test\Superdry_Website\Klarna" />
       <recent name="C:\webdriverio-v5\Test\Superdry_Website" />
       <recent name="C:\webdriverio-v5\Test\Superdry_Website\Wishlist" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Wishlist" />
+      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Store_finder" />
+      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Search" />
+      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Shopping_bag" />
+      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Delivery" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -241,7 +226,7 @@
       <workItem from="1565272344818" duration="60000" />
       <workItem from="1565272458748" duration="95000" />
       <workItem from="1565272575813" duration="148000" />
-      <workItem from="1565272742322" duration="1413000" />
+      <workItem from="1565272742322" duration="18490000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1556195896755</created>
@@ -411,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565000724707</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary=".">
+      <created>1565275436136</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1565275436136</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TestHistory">

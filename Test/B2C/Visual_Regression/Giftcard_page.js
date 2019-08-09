@@ -8,6 +8,6 @@ describe('Visual Regression test for ' + specname, () => {
         Navigation.acceptCookiesPrompt();
     });
     it('Visual Regression test - ' + specname, () => {
-        VizCheck.fullPage(specname, 5);
+        VizCheck.page(specname, 5);
     });
 });

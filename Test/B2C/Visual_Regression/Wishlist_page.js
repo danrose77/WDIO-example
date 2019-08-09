@@ -14,6 +14,6 @@ describe('Visual Regression test for ' + specname, () => {
         Navigation.GoToWishlist();
     });
     it('Visual Regression test - ' + specname, () => {
-        VizCheck.fullPage(specname, 1);
+        VizCheck.page(specname, 1);
     });
 });

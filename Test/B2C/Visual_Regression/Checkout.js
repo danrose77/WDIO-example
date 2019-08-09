@@ -22,7 +22,7 @@ describe('Visual Regression test for ' + specname, () => {
     */
     it('Visual Regression test - OrderSummary', () => {
         Navigation.OrderSummary.scrollIntoView();
-        VizCheck.element(Navigation.OrderSummary,specname + '-OrderSummary',1);
+        VizCheck.element(Navigation.OrderSummary,specname + '-OrderSummary',2);
     });
     it('Visual Regression test - checkout_section_giftcard_voucher', () => {
         Navigation.checkout_section_giftcard_voucher.scrollIntoView();
@@ -30,11 +30,11 @@ describe('Visual Regression test for ' + specname, () => {
     });
     it('Visual Regression test - checkout_section_basket_summary', () => {
         Navigation.checkout_section_basket_summary.scrollIntoView();
-        VizCheck.element(Navigation.checkout_section_basket_summary,specname + '-checkout_section_basket_summary',1);
+        VizCheck.element(Navigation.checkout_section_basket_summary,specname + '-checkout_section_basket_summary',20);
     });
     it('Visual Regression test - checkout_section_delivery_options', () => {
         Navigation.checkout_section_delivery_options.scrollIntoView();
-        VizCheck.element(Navigation.checkout_section_delivery_options,specname + '-checkout_section_delivery_options',1);
+        VizCheck.element(Navigation.checkout_section_delivery_options,specname + '-checkout_section_delivery_options',2);
     });
     it('Visual Regression test - checkout_section_billing_address', () => {
         Navigation.checkout_section_billing_address.scrollIntoView();
@@ -43,6 +43,6 @@ describe('Visual Regression test for ' + specname, () => {
 
     it('Visual Regression test - checkout_section_payment_methods', () => {
         Navigation.checkout_section_payment_methods.scrollIntoView();
-        VizCheck.element(Navigation.checkout_section_payment_methods,specname + '-checkout_section_payment_methods',1);
+        VizCheck.element(Navigation.checkout_section_payment_methods,specname + '-checkout_section_payment_methods',2);
     });
 });

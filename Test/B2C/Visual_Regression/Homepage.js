@@ -8,6 +8,6 @@ describe('Visual Regression test for ' + specname, () => {
         Environment.openBaseURL();
     });
     it('Visual Regression test - ' + specname, () => {
-        VizCheck.fullPage(specname, 10);
+        VizCheck.page(specname, 10);
     });
 });

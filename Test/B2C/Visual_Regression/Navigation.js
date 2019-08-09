@@ -1,11 +1,13 @@
 import Environment from '../../../Pages/Environment.js';
 import Navigation from "../../../Pages/Navigation";
 import VizCheck from "../../../functions/VizCheck";
-import GetRandom from "../../../functions/GetRandom";
 
 describe('Visual Regression test for ' + specname, () => {
     it('Open the ' + specname, () => {
         Environment.openBaseURL();
+    });
+    it('Visual Regression test - store_locator__input', () => {
+        VizCheck.element(Navigation.navWrapper,specname + '-NavWrapper');
     });
     it('Visual Regression test - HamburgerIcon', () => {
         VizCheck.element(Navigation.hamburger,specname + '-HamburgerIcon');
@@ -25,17 +27,39 @@ describe('Visual Regression test for ' + specname, () => {
     it('Visual Regression test - SearchIcon', () => {
         VizCheck.element(Navigation.search_container,specname + '-SearchIcon');
     });
+
+    it('Visual Regression test - footer', () => {
+        let footer = $('footer');
+        footer.scrollIntoView();
+        VizCheck.element(footer,specname + '-footer');
+    });
+    it('Visual Regression test - copyright_row', () => {
+        let copyright_row = $('.copyright-row');
+        copyright_row.scrollIntoView();
+        VizCheck.element(copyright_row,specname + '-copyright-row', 0, Navigation.navWrapper);
+    });
     it('Visual Regression test - ' + specname + ' Sidebar', () => {
         Navigation.hamburger.click();
         Navigation.acceptCookiesPrompt();
-        let shotName = specname + '-Sidebar';
-        VizCheck.page(shotName, 10);
+        VizCheck.element($('#menu-pop-in'),specname + '-Sidebar');
+
     });
-    it('Visual Regression test - ' + specname + ' MenuLevel1', () => {
-        Navigation.backToBaseMenu();
-        Navigation.menu_tier1[1].waitForExist();
-        Navigation.menu_tier1[2].click();
-        let shotName = specname + '-MenuLevel1';
-        VizCheck.page(shotName, 2);
+    it('Visual Regression test - ' + specname + ' Womens', () => {
+        Environment.openBaseURL();
+        Navigation.hamburger.click();
+        Navigation.acceptCookiesPrompt();
+        let womenslink = $("img[src*='parent-womens.jpg']");
+        womenslink.waitForExist();
+        womenslink.click();
+        VizCheck.element($('#menu-pop-in'),specname + '-Sidebar-Womens');
+    });
+    it('Visual Regression test - ' + specname + ' Mens', () => {
+        Environment.openBaseURL();
+        Navigation.hamburger.click();
+        Navigation.acceptCookiesPrompt();
+        let menslink = $("img[src*='parent-mens.jpg']");
+        menslink.waitForExist();
+        menslink.click();
+        VizCheck.element($('#menu-pop-in'),specname + '-Sidebar-Mens');
     });
 });

@@ -9,8 +9,9 @@ describe('Visual Regression test for ' + specname, () => {
     });
     it('I search for store nearest to Cheltenham', () => {
         Storefinder.findTheNearestStoreTo('Cheltenham');
-        browser.pause(3000);
+        browser.pause(5000);
         Storefinder.StoreHeader[0].click();
+        browser.pause(2000);
         Navigation.acceptCookiesPrompt();
     });
     /*
