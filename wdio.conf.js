@@ -6,28 +6,6 @@ let month = screendate.getMonth() + 1;
 let dateString = screendate.getFullYear() + "_" + month + "_" + screendate.getDate();
 
 exports.config = {
-    services: ["browserstack", ['image-comparison',
-        // The options
-        {
-            // Some options, see the docs for more
-            baselineFolder: join(process.cwd(), './Visual_Regression/Baseline/'),
-            formatImageName: '{tag}-{width}x{height}',
-            screenshotPath: join(process.cwd(), './Visual_Regression/'+dateString+'/'),
-            savePerInstance: true,
-            autoSaveBaseline: true,
-            blockOutStatusBar: true,
-            blockOutToolBar: true,
-            // ... more options
-        }]
-    ],
-    capabilities: [
-        {
-            "browserName": "chrome",
-            "goog:chromeOptions": {
-                "args": ["disable-infobars"]
-            }
-        }
-    ],
     reporters: [
         'spec',
         ['junit', {
@@ -61,6 +39,7 @@ exports.config = {
     // Gets executed before test execution begins. At this point you will have access to all global
     // variables like `browser`. It is the perfect place to define custom commands.
     before(capabilities, specs) {
+        require('dotenv').config();
         // Chai section
         const chai = require("chai");
         global.expect = chai.expect;
@@ -79,7 +58,6 @@ exports.config = {
         mkdirSync("./reports/");
         mkdirSync("./reports/ErrorShots/");
         mkdirSync("./reports/" + dateString + "/");
-
 
         // declared globals
         global.country = "";

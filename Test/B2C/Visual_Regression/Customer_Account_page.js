@@ -19,7 +19,7 @@ describe('Visual Regression test for ' + specname, () => {
         VizCheck.element($('.heading'),specname + '-heading',5);
     });
     it('Visual Regression test - account-options', () => {
-        VizCheck.element($('.account-options'),specname + '-account-options',5);
+        VizCheck.element($('.account-options'),specname + '-account-options',1);
     });
     it('Visual Regression test - Account_Information', () => {
         let Account_Information = $$('#menu-buttons .btn-secondary')[0];

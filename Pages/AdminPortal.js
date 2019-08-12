@@ -104,8 +104,8 @@ class AdminPortal extends Page {
         if (formFactor !== 'mobile') {
             browser.url('administrator/?source=34885');
             browser.pause(1000);
-            this.username.setValue("ecommerce.alerting@supergroup.co.uk");
-            this.password.setValue("sup3rDryd1g1t&l");
+            this.username.setValue(process.env.ADMIN_USERNAME);
+            this.password.setValue(process.env.ADMIN_PASSWORD);
             browser.pause(500);
             this.adminSiteLogin.click();
             this.configuration.waitForExist(30000);

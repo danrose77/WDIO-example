@@ -1,14 +1,29 @@
 const master = require("../wdio.conf");
+const {join} = require('path');
+require('dotenv').config();
 
 let screendate = new Date();
 let month = screendate.getMonth() + 1;
 let dateString = screendate.getFullYear() + "_" + month + "_" + screendate.getDate();
 
 exports.config = Object.assign(master.config, {
+  services: ["browserstack",['image-comparison',
+    // The options
+    {
+      // Some options, see the docs for more
+      baselineFolder: join(process.cwd(), './Visual_Regression/Baseline/'),
+      formatImageName: '{tag}-{width}x{height}',
+      screenshotPath: join(process.cwd(), './Visual_Regression/'+dateString+'/'),
+      savePerInstance: true,
+      autoSaveBaseline: true,
+      blockOutStatusBar: true,
+      blockOutToolBar: true,
+      // ... more options
+    }]],
   specs: ["Test/**/*.js"],
   logLevel: 'error',
   maxInstances: 2,
-  user: 'danielrose3',
-  key: 'xGL2Yq6PqDqzzVy2J7pQ',
+  user: process.env.REMOTE_USER,
+  key: process.env.REMOTE_PASSWORD,
  capabilities: [],
 });

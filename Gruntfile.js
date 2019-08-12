@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
     grunt.config("environment", (function() {
         let env = grunt.option("env");
+        console.log(env);
         return env;
     })());
     grunt.config("feature", (function() {
@@ -47,6 +48,7 @@ module.exports = function(grunt) {
                         grunt.config("feature"),
                     ],
                     baseUrl: grunt.config("environment"),
+                    capabilities: [{"browserName": "chrome"}],
             },
             browserstack: {
                 configFile: "./config/wdio.conf.browserstack.js",
