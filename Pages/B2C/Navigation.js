@@ -1,9 +1,9 @@
-import Page from './Page'
-import objectLength from '../functions/objectLength'
+import Page from '../Page'
+import objectLength from '../../functions/objectLength'
 import Search from "./Search";
-import Screenshot from "../functions/Screenshot";
-import GetRandom from "../functions/GetRandom";
-import write from "../functions/write";
+import Screenshot from "../../functions/Screenshot";
+import GetRandom from "../../functions/GetRandom";
+import write from "../../functions/write";
 import Checkout from "./Checkout";
 
 class Navigation extends Page {

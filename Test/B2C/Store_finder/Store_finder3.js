@@ -1,5 +1,5 @@
-import Environment from '../../../Pages/Environment.js';
-import Storefinder from "../../../Pages/Storefinder";
+import Environment from '../../../Pages/B2C/Environment.js';
+import Storefinder from "../../../Pages/B2C/Storefinder";
 
 describe(specname+' - Search for gibberish', () => {
     it('Go to the storefinder', () => {

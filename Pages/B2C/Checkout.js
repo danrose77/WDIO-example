@@ -1,14 +1,14 @@
-import Page from './Page'
-import fillObject from "../functions/fillObject";
+import Page from '../Page'
+import fillObject from "../../functions/fillObject";
 import * as yaml from "js-yaml";
-import Screenshot from "../functions/Screenshot";
-import write from "../functions/write";
+import Screenshot from "../../functions/Screenshot";
+import write from "../../functions/write";
 import Navigation from "./Navigation";
 import Search from "./Search";
 import Product from "./Product";
-import objectLength from "../functions/objectLength";
+import objectLength from "../../functions/objectLength";
 import ShoppingBag from "./ShoppingBag";
-import GetRandom from "../functions/GetRandom";
+import GetRandom from "../../functions/GetRandom";
 import Customer from "./Customer"
 
 class Checkout extends Page {

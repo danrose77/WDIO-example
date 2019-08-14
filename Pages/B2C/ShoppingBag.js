@@ -1,7 +1,7 @@
-import Page from './Page'
+import Page from '../Page'
 import {expect} from 'chai';
-import Screenshot from '../functions/Screenshot';
-import objectLength from "../functions/objectLength";
+import Screenshot from '../../functions/Screenshot';
+import objectLength from "../../functions/objectLength";
 import Navigation from "./Navigation";
 
 class ShoppingBag extends Page {

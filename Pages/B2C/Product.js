@@ -1,6 +1,6 @@
-import Page from './Page'
-import Screenshot from '../functions/Screenshot';
-import GetRandom from "../functions/GetRandom";
+import Page from '../Page'
+import Screenshot from '../../functions/Screenshot';
+import GetRandom from "../../functions/GetRandom";
 import ShoppingBag from "./ShoppingBag";
 
 class Product extends Page {
@@ -35,6 +35,15 @@ class Product extends Page {
     get ProductTitle() {
         return $('h1.col-12.product-description.lg-first:nth-child(1)');
     }
+    get images_container() {
+        return $("//div[@class='images_container']");
+    }
+    get thumbnail_image_container() {
+        return $("//div[@class='col-12 col-xl-2 order-xl-1 thumbnail_image_container']");
+     }
+    get picture_image_container() {
+        return $("//div[@class='col-12 col-xl-10 order-xl-2 picture_image_container']");
+     }
 
     get WishListButton() {
         return $('.fa-heart');

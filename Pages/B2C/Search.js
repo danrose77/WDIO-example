@@ -1,11 +1,11 @@
-import Page from './Page'
-import GetRandom from '../functions/GetRandom';
+import Page from '../Page'
+import GetRandom from '../../functions/GetRandom';
 import Product from "./Product";
-import fillObject from "../functions/fillObject";
+import fillObject from "../../functions/fillObject";
 import * as yaml from "js-yaml";
-import objectLength from "../functions/objectLength";
+import objectLength from "../../functions/objectLength";
 import Navigation from "./Navigation";
-import Screenshot from "../functions/Screenshot";
+import Screenshot from "../../functions/Screenshot";
 
 class Search extends Page {
     get SearchBox() {

@@ -1,10 +1,10 @@
-import Environment from '../../../Pages/Environment.js';
-import Product from '../../../Pages/Product.js';
-import Navigation from '../../../Pages/Navigation.js';
-import Checkout from "../../../Pages/Checkout";
+import Environment from '../../../Pages/B2C/Environment.js';
+import Product from '../../../Pages/B2C/Product.js';
+import Navigation from '../../../Pages/B2C/Navigation.js';
+import Checkout from "../../../Pages/B2C/Checkout";
 import Rundeck from "../../../Pages/Rundeck";
 import OMS from "../../../Pages/OMS";
-import Customer from "../../../Pages/Customer";
+import Customer from "../../../Pages/B2C/Customer";
 
 let SKU1 = '1040405000250ZJ9001';
 let Qty1 = 3;

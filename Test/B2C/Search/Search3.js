@@ -1,6 +1,6 @@
-import Environment from '../../../Pages/Environment.js';
-import Search from '../../../Pages/Search.js';
-import Navigation from "../../../Pages/Navigation";
+import Environment from '../../../Pages/B2C/Environment.js';
+import Search from '../../../Pages/B2C/Search.js';
+import Navigation from "../../../Pages/B2C/Navigation";
 
 describe(specname+' - Search for a product and sort by lowest price', () => {
     it('Open the environment', () => {

@@ -1,8 +1,8 @@
-import Environment from '../../../Pages/Environment.js';
-import Product from '../../../Pages/Product.js';
-import Search from '../../../Pages/Search.js';
-import Navigation from '../../../Pages/Navigation.js';
-import ShoppingBag from "../../../Pages/ShoppingBag";
+import Environment from '../../../Pages/B2C/Environment.js';
+import Product from '../../../Pages/B2C/Product.js';
+import Search from '../../../Pages/B2C/Search.js';
+import Navigation from '../../../Pages/B2C/Navigation.js';
+import ShoppingBag from "../../../Pages/B2C/ShoppingBag";
 
 let Qty6 = 20;
 

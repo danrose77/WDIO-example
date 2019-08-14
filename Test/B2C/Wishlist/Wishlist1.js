@@ -1,8 +1,8 @@
-import Environment from '../../../Pages/Environment.js';
-import Navigation from "../../../Pages/Navigation";
-import Search from "../../../Pages/Search";
-import Product from "../../../Pages/Product";
-import Wishlist from "../../../Pages/Wishlist";
+import Environment from '../../../Pages/B2C/Environment.js';
+import Navigation from "../../../Pages/B2C/Navigation";
+import Search from "../../../Pages/B2C/Search";
+import Product from "../../../Pages/B2C/Product";
+import Wishlist from "../../../Pages/B2C/Wishlist";
 
 describe(specname+' - A product can be added to the wishlist and moved to the shopping bag', () => {
     it('Open the environment', () => {

@@ -1,7 +1,7 @@
 import Page from './Page'
 import Screenshot from "../functions/Screenshot";
-import Environment from "./Environment";
-import Product from "./Product";
+import Environment from "./B2C/Environment";
+import Product from "./B2C/Product";
 import objectLength from "../functions/objectLength";
 
 class OMS extends Page {

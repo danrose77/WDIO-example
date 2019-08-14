@@ -1,5 +1,5 @@
-import Environment from '../../Pages/Environment.js';
-import Navigation from "../../Pages/Navigation";
+import Environment from '../../Pages/B2C/Environment.js';
+import Navigation from "../../Pages/B2C/Navigation";
 import GetRandom from "../../functions/GetRandom";
 import Screenshot from "../../functions/Screenshot";
 

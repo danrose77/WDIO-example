@@ -16,7 +16,6 @@ exports.config = {
         }]
     ],
     updateJob: false,
-    specs: [],
     exclude: [],
     suites: {},
     coloredLogs: true,
@@ -39,6 +38,7 @@ exports.config = {
     // Gets executed before test execution begins. At this point you will have access to all global
     // variables like `browser`. It is the perfect place to define custom commands.
     before(capabilities, specs) {
+        console.log(specs);
         require('dotenv').config();
         // Chai section
         const chai = require("chai");

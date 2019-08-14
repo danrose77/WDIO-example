@@ -1,5 +1,5 @@
-import Page from './Page'
-import Screenshot from "../functions/Screenshot";
+import Page from '../Page'
+import Screenshot from "../../functions/Screenshot";
 
 class Storefinder extends Page {
     get Store_search() {

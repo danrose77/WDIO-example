@@ -2,13 +2,103 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cea8097-f04b-4e2a-9d8f-92a64695058e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Test/PoC/locationChecks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/elementVerification.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/Gruntfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/AdminPortal.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/AdminPortal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2C/Checkout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2C/Customer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2C/Environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/IBMse.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/IBMse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2C/Navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/OMS.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/OMS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2C/Product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2C/Search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/ShoppingBag.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2C/ShoppingBag.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Storefinder.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2C/Storefinder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Wishlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2C/Wishlist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Adyen/skinswitch.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Adyen/skinswitch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Afterpay1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Afterpay1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard4.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard5.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard6.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard7.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Delivery/Delivery1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Delivery/Delivery1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Delivery/Delivery2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Delivery/Delivery2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Delivery/Delivery3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Delivery/Delivery3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Delivery/Delivery4.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Delivery/Delivery4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Delivery/Delivery5.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Delivery/Delivery5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Dotpay1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Dotpay1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Giropay1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Giropay1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Ideal1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Ideal1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Klarna/KlarnaDE1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Klarna/KlarnaDE1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Klarna/KlarnaUK1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Klarna/KlarnaUK1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Klarna/KlarnaUK2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Klarna/KlarnaUK2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Klarna/KlarnaUK3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Klarna/KlarnaUK3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Klarna/KlarnaUK4.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Klarna/KlarnaUK4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Klarna/KlarnaUS1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Klarna/KlarnaUS1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Paypal/Paypal1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Paypal/Paypal1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Paypal/Paypal2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Paypal/Paypal2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Paypal/Paypal3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Paypal/Paypal3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Paypal/Paypal4.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Paypal/Paypal4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Paypal/Paypal5.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Paypal/Paypal5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Paypal/Paypal6.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Paypal/Paypal6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Paypal/Paypal7.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Paypal/Paypal7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Search/Search1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Search/Search1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Search/Search2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Search/Search2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Search/Search3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Search/Search3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Shopping_bag/Shopping_Bag1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Shopping_bag/Shopping_Bag1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Shopping_bag/Shopping_Bag2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Shopping_bag/Shopping_Bag2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Shopping_bag/Shopping_Bag3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Shopping_bag/Shopping_Bag3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Shopping_bag/Shopping_Bag4.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Shopping_bag/Shopping_Bag4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Sofort1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Sofort1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Store_finder/Store_finder1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Store_finder/Store_finder1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Store_finder/Store_finder2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Store_finder/Store_finder2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Store_finder/Store_finder3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Store_finder/Store_finder3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Store_finder/Store_finder4.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Store_finder/Store_finder4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Checkout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Checkout_Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Checkout_Sidebar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Customer_Account_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Customer_Account_page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Giftcard_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Giftcard_page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Homepage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Product_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Product_page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Visual_Regression/RegisterUser_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/RegisterUser_page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Search_Results.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Search_Results.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Sitemap_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Sitemap_page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Storefinder_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Storefinder_page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Wishlist_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Visual_Regression/Wishlist_page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Wishlist/Wishlist1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Wishlist/Wishlist1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Wishlist/Wishlist2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Wishlist/Wishlist2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/OMS_Backorder_cancelled.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/OMS_Backorder_cancelled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/OMS_exchange.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/OMS_exchange.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/OMS_product_prep.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/OMS_product_prep.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/OMS_return.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/OMS_return.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/OMS_ship.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/OMS_ship.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/OMS_zeroship.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/OMS_zeroship.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship10.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship10.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship11.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship11.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship12.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship12.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship13.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship13.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship14.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship14.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship4.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship5.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship6.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship7.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship8.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship8.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship9.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship9.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/PoC/MenuScreens.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/PoC/MenuScreens.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/PoC/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/PoC/Test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/PoC/VisRegressionTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/PoC/VisRegressionTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/wdio.conf.browserstack.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/wdio.conf.browserstack.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/wdio.conf.local.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/wdio.conf.local.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/VizCheck.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/VizCheck.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdio.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/wdio.conf.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,74 +117,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>: &quot;</find>
-      <find>referenceNumber</find>
-      <find>exchangeOrderNumber</find>
-      <find>resolvedHolds</find>
-      <find>appliedHolds</find>
-      <find>OMSquantitiesRecorded</find>
-      <find>shopperGroupID</find>
-      <find>//span[@title='Parameters']</find>
-      <find>sendk</find>
-      <find>//td[@colspan='4']//input[@name='srch_val']</find>
-      <find>key</find>
-      <find>movet</find>
-      <find>small</find>
-      <find>btn-</find>
-      <find>},</find>
-      <find>browser.url</find>
-      <find>display</find>
-      <find>CHECKOUT.</find>
-      <find>#checkout-section-delivery-options &gt; div &gt; div &gt; div &gt; p &gt; a</find>
-      <find>buy</find>
-      <find>deliver</find>
-      <find>[data-template='checkout\/payment\/klarna-slice'] .payment-method-label div</find>
-      <find>#shipping_state</find>
-      <find>'Open the environment'</find>
-      <find>this.VizCheck(</find>
-      <find>objectLength</find>
-      <find>frame</find>
-      <find>-</find>
-      <find>.nav-wrapper</find>
-      <find>get</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>()</replace>
-      <replace>{return $('</replace>
-      <replace>fillObject</replace>
-      <replace>()          {return $(</replace>
-      <replace>numberToRemove</replace>
-      <replace>fieldset[id$=</replace>
-      <replace>this</replace>
-      <replace>result</replace>
-      <replace>fillObject.element</replace>
-      <replace>City</replace>
-      <replace>&quot;);}</replace>
-      <replace>);}</replace>
-      <replace>c</replace>
-      <replace>get</replace>
-      <replace>);}get</replace>
-      <replace>Navigation.openShoppingBasket();</replace>
-      <replace>paymentMethod</replace>
-      <replace>customerDetails.creditAmount</replace>
-      <replace>customerDetails.creditTimes</replace>
-      <replace>customerDetails.staffPercent</replace>
-      <replace>screenDate</replace>
-      <replace>global.paymentMethod</replace>
-      <replace>= customerData[&quot;&quot;];</replace>
-      <replace>global.referenceNumber</replace>
-      <replace>this.</replace>
-      <replace>'Visual Regression test - '</replace>
-      <replace>VizCheck.element(</replace>
-      <replace>_</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>C:\webdriverio-v5\functions</dir>
-      <dir>C:\webdriverio-v5</dir>
-    </dirStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -107,7 +129,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Test/B2C/Visual_Regression" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Test/PoC" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -123,18 +145,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\webdriverio-v5\Test\B2C\Visual_Regression" />
+      <recent name="C:\webdriverio-v5\Test\PoC" />
       <recent name="C:\webdriverio-v5\functions" />
+      <recent name="C:\webdriverio-v5\config" />
+      <recent name="C:\webdriverio-v5\Test\B2C\Visual_Regression" />
       <recent name="C:\webdriverio-v5\Test\Superdry_Website\Klarna" />
-      <recent name="C:\webdriverio-v5\Test\Superdry_Website" />
-      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Wishlist" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\webdriverio-v5\Pages\B2C" />
+      <recent name="C:\webdriverio-v5\Pages" />
+      <recent name="C:\webdriverio-v5\Pages\OMS" />
       <recent name="C:\webdriverio-v5\Test\Superdry_Website\Wishlist" />
       <recent name="C:\webdriverio-v5\Test\Superdry_Website\Store_finder" />
-      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Search" />
-      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Shopping_bag" />
-      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Delivery" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -149,7 +171,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.VR">
+    <configuration name="VR" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="VR" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="Load page and search" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -167,6 +199,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.VR" />
         <item itemvalue="Mocha.Load page and search" />
       </list>
     </recent_temporary>
@@ -220,7 +253,9 @@
       <workItem from="1565272458748" duration="95000" />
       <workItem from="1565272575813" duration="148000" />
       <workItem from="1565272742322" duration="27989000" />
-      <workItem from="1565606594267" duration="2311000" />
+      <workItem from="1565606594267" duration="2332000" />
+      <workItem from="1565610613792" duration="11323000" />
+      <workItem from="1565702447321" duration="21817000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1556195896755</created>
@@ -404,7 +439,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565357329798</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary=".">
+      <created>1565610584227</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1565610584227</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TestHistory">

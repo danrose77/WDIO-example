@@ -1,5 +1,5 @@
 import Page from '../Pages/Page'
-import Navigation from "../Pages/Navigation";
+import Navigation from "../Pages/B2C/Navigation";
 
 class VizCheck extends Page {
   element(element, elementName, variance, hideElement, top, right, bottom, left) {

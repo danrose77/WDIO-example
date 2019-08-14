@@ -1,18 +1,36 @@
 module.exports = function(grunt) {
     grunt.config("environment", (function() {
-        let env = grunt.option("env");
-        console.log(env);
-        return env;
+        return grunt.option("env");
     })());
-    grunt.config("feature", (function() {
-        let feature = "";
+    grunt.config("spec", (function() {
+        let spec = "";
         let path = "";
-        if (grunt.option("feature") !== undefined) {
-            feature = grunt.option("feature");
-            path = "./Test/**/" + feature + ".js";
+        if (grunt.option("spec") !== undefined) {
+            spec = grunt.option("spec");
+            path = ["./Test/**/" + spec + ".js"];
         } else if (grunt.option("folder") !== undefined) {
             folder = grunt.option("folder");
-            path = "./Test/**/" + folder + "/*.js";
+            path = ["./Test/**/" + folder + "/**/*.js"];
+        } else if (grunt.option("suite") !== undefined) {
+            suite = grunt.option("suite");
+            // Define scripts to run as part of suites below
+            if (suite === 'B2CSmoke') {
+                path = [
+                    './test/B2C/**/Debitcard1.js',
+                    './test/B2C/**/Debitcard3.js',
+                    './test/B2C/**/Delivery5.js',
+                    './test/B2C/**/KlarnaUK1.js',
+                    './test/B2C/**/Paypal1.js',
+                    './test/B2C/**/Search1.js',
+                    './test/B2C/**/Shopping_Bag1.js',
+                    './test/B2C/**/Store_Finder1.js',
+                    './test/B2C/**/Wishlist1.js'
+                ]
+            } else if ((suite === 'visual_regression')||(suite === 'VR')) {
+                path = [
+                    './test/B2C/Visual_regression/**/*.js'
+                ]
+            }
         } else {
             path = "./Test/**/*.js";
         }
@@ -44,17 +62,13 @@ module.exports = function(grunt) {
         webdriver: {
             test: {
                 configFile: "./config/wdio.conf.local.js",
-                    specs: [
-                        grunt.config("feature"),
-                    ],
+                    specs: grunt.config("spec"),
                     baseUrl: grunt.config("environment"),
                     capabilities: [{"browserName": "chrome"}],
             },
             browserstack: {
                 configFile: "./config/wdio.conf.browserstack.js",
-                    specs: [
-                        grunt.config("feature"),
-                    ],
+                    specs: grunt.config("spec"),
                     baseUrl: grunt.config("environment"),
                     capabilities: grunt.config("platform"),
             },
@@ -64,6 +78,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-mocha");
     grunt.loadNpmTasks("grunt-webdriver");
     grunt.registerTask("default", ["webdriver:test"]);
-    grunt.registerTask("test", ["webdriver:test"]);
+    grunt.registerTask("local", ["webdriver:test"]);
     grunt.registerTask("browserstack", ["webdriver:browserstack"]);
 };

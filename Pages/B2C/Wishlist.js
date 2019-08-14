@@ -1,5 +1,5 @@
-import Page from './Page'
-import objectLength from "../functions/objectLength";
+import Page from '../Page'
+import objectLength from "../../functions/objectLength";
 
 class Wishlist extends Page {
     get moveToBag() {

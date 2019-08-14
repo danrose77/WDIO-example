@@ -1,10 +1,10 @@
-import Page from './Page'
+import Page from '../Page'
 import Navigation from './/Navigation.js';
-import fillObject from '../functions/fillObject'
+import fillObject from '../../functions/fillObject'
 import * as yaml from "js-yaml";
-import shopperGroupIDfunc from "../functions/shopperGroupID";
-import objectLength from "../functions/objectLength";
-import Screenshot from "../functions/Screenshot";
+import shopperGroupIDfunc from "../../functions/shopperGroupID";
+import objectLength from "../../functions/objectLength";
+import Screenshot from "../../functions/Screenshot";
 
 class Customer extends Page {
     get username() {

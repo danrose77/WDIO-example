@@ -11,16 +11,15 @@ exports.config = Object.assign(master.config, {
     // The options
     {
       // Some options, see the docs for more
-      baselineFolder: join(process.cwd(), './Visual_Regression/Baseline/'),
+      baselineFolder: join(process.cwd(), './Reports/Visual_Regression_Browserstack/Baseline/'),
       formatImageName: '{tag}-{width}x{height}',
-      screenshotPath: join(process.cwd(), './Visual_Regression/'+dateString+'/'),
+      screenshotPath: join(process.cwd(), './Reports/Visual_Regression_Browserstack/'+dateString+'/'),
       savePerInstance: true,
       autoSaveBaseline: true,
       blockOutStatusBar: true,
       blockOutToolBar: true,
       // ... more options
     }]],
-  specs: ["Test/**/*.js"],
   logLevel: 'error',
   maxInstances: 2,
   user: process.env.REMOTE_USER,

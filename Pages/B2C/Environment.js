@@ -1,7 +1,7 @@
-import Page from './Page'
+import Page from '../Page'
 import Navigation from "./Navigation";
 import * as yaml from "js-yaml";
-import Screenshot from "../functions/Screenshot";
+import Screenshot from "../../functions/Screenshot";
 
 class Environment extends Page {
     setSite() {
