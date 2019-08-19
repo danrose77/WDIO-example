@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cea8097-f04b-4e2a-9d8f-92a64695058e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Pages/B2B/home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pages/B2B/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pages/B2B/results.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pages/B2B/shoppingbag.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pages/B2B/template.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/B2B/basicE2E.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/PoC/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/PoC/Test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/Gruntfile.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -167,7 +160,7 @@
       <workItem from="1565610613792" duration="11323000" />
       <workItem from="1565702447321" duration="26536000" />
       <workItem from="1565854494176" duration="30990000" />
-      <workItem from="1565949612894" duration="18757000" />
+      <workItem from="1565949612894" duration="18875000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1556195896755</created>
@@ -365,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565786782369</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary=".">
+      <created>1566206792924</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1566206792924</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TestHistory">

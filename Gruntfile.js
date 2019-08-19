@@ -30,6 +30,10 @@ module.exports = function(grunt) {
                 path = [
                     './test/B2C/Visual_regression/**/*.js'
                 ]
+            } else if (suite === 'B2BSmoke') {
+                path = [
+                    './test/B2B/**/basicE2E.js'
+                ]
             }
         } else {
             path = "./Test/**/*.js";
