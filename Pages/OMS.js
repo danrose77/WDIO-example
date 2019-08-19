@@ -267,6 +267,7 @@ class OMS extends Page {
                 this.returnToSummary[0].click();
             }
         }
+        Screenshot.viewport();
     }
 
     cancelOrder() {

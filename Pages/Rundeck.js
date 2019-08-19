@@ -16,7 +16,7 @@ class Rundeck extends Page {
     }
 
     get rundeck_pjctsrch() {
-        return $("//input[@placeholder='Project search']");
+        return $(".form-control");
     }
 
     get rundeck_export_to_OMS() {
@@ -28,7 +28,7 @@ class Rundeck extends Page {
     }
 
     get rundeck_order() {
-        return $("//input[@name='extra.option.orders']");
+        return $("//input[@name='extra.option.order']");
     }
 
     get rundeck_site() {
@@ -40,7 +40,7 @@ class Rundeck extends Page {
     }
 
     get rundeck_success() {
-        return $("//span[contains(@class,'execstate execstatedisplay overall h4')]");
+        return $("//span[contains(@class,'execstate execstatedisplay overall')]");
     }
 
     // Rundeck projects
@@ -147,13 +147,24 @@ class Rundeck extends Page {
     get rundeck_pjct_Yellow() {
         return $("//span[contains(text(),'Yellow')]");
     }
+    get user_link() {
+        return $(".fa-user");
+    }
+    get logout_link() {
+        return $("//a[contains(text(),'Logout')]");
+    }
 
     login() {
         this.rundeck_username.setValue("danielr");
         this.rundeck_password.setValue("KL8AM67NaJ5d9KvF");
         this.rundeck_submitBTN.click();
     }
-
+    logout() {
+        this.user_link.click();
+        browser.pause(500);
+        this.logout_link.click();
+        browser.pause(500);
+    }
     accessEnvironment(environment) {
         browser.pause(2000);
         let enviroLink = $("//span[contains(text(),'" + environment + "')]");
@@ -236,7 +247,7 @@ class Rundeck extends Page {
     }
 
     orderExport(orderNo) {
-        browser.url("https://rundeck-ext.nonprod.sd.co.uk/user/login");
+        browser.url("https://rundeckrds-ext.nonprod.sd.co.uk/user/login");
         this.rundeck_username.waitForExist();
         this.login();
         this.rundeck_pjctsrch.waitForExist();
@@ -244,25 +255,9 @@ class Rundeck extends Page {
             case 'amber':
                 this.rundeck_pjct_Amber.click();
                 break;
-            /*
-        case 'black':
-            browser.click(this.rundeck_pjct_BlackAP1);
-            break;
-        case 'black':
-        browser.click(this.rundeck_pjct_BlackAP2);
-            break;
-        case 'black':
-        browser.click(this.rundeck_pjct_BlackEC1);
-            break;
-            */
             case 'black':
                 this.rundeck_pjct_BlackEW1.click();
                 break;
-            /*
-        case 'black':
-        browser.click(this.rundeck_pjct_BlackUS2);
-            break;
-            */
             case 'blue':
                 this.rundeck_pjct_Blue.click();
                 break;
@@ -334,10 +329,6 @@ class Rundeck extends Page {
                 break;
             case 'yellow':
                 this.rundeck_pjct_Yellow.click();
-        }
-        try {
-            this.rundeck_export_to_OMS.click();
-        } catch (e) {
         }
         try {
             this.rundeck_export_specific_order_to_OMS.click();

@@ -32,7 +32,7 @@ module.exports = function(grunt) {
                 ]
             } else if (suite === 'B2BSmoke') {
                 path = [
-                    './test/B2B/**/basicE2E.js'
+                    './test/B2B/basicE2E.js'
                 ]
             }
         } else {

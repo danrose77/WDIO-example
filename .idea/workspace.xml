@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cea8097-f04b-4e2a-9d8f-92a64695058e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Test/OMS/Central/Central.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/Gruntfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/AdminPortal.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/AdminPortal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/B2B/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2B/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/B2C/Environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2C/Environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/B2C/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2C/Product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/OMS.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/OMS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Rundeck.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Rundeck.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/customers.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/customers.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/write.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/write.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdio.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/wdio.conf.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +43,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Pages/B2B" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Test/OMS/Central" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -47,19 +58,19 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.2.5\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\webdriverio-v5\Test\OMS\Central" />
+      <recent name="C:\webdriverio-v5\Test\OMS\testpack" />
+      <recent name="C:\webdriverio-v5\Pages\B2B" />
+      <recent name="C:\webdriverio-v5\Test\B2B" />
+      <recent name="C:\webdriverio-v5\Test\PoC" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\webdriverio-v5\Test\OMS\Central" />
       <recent name="C:\webdriverio-v5\Pages\B2C" />
       <recent name="C:\webdriverio-v5\Pages" />
       <recent name="C:\webdriverio-v5\Pages\OMS" />
       <recent name="C:\webdriverio-v5\Test\Superdry_Website\Wishlist" />
-      <recent name="C:\webdriverio-v5\Test\Superdry_Website\Store_finder" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\webdriverio-v5\Pages\B2B" />
-      <recent name="C:\webdriverio-v5\Test\B2B" />
-      <recent name="C:\webdriverio-v5\Test\PoC" />
-      <recent name="C:\webdriverio-v5\functions" />
-      <recent name="C:\webdriverio-v5\config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -160,7 +171,7 @@
       <workItem from="1565610613792" duration="11323000" />
       <workItem from="1565702447321" duration="26536000" />
       <workItem from="1565854494176" duration="30990000" />
-      <workItem from="1565949612894" duration="18875000" />
+      <workItem from="1565949612894" duration="31227000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1556195896755</created>
@@ -365,7 +376,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566206792924</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary=".">
+      <created>1566206909072</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1566206909072</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TestHistory">

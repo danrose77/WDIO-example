@@ -2,12 +2,15 @@ import Page from '../Pages/Page'
 import Screenshot from "./Screenshot";
 
 class write extends Page {
-    toTextFile(text) {
+    toTextFile(text, file) {
         let nl = (process.platform === "win32" ? "\r\n" : "\n");
         let screendate = new Date();
         let month = screendate.getMonth();
         month = month + 1;
         let fileName = "./reports/" + screendate.getFullYear() + "_" + month + "_" + screendate.getDate() + "/test_run_logging_" + screendate.getDate() + "_" + month + "_" + screendate.getFullYear() + ".txt";
+        if (file !== undefined) {
+            fileName = "./reports/" + screendate.getFullYear() + "_" + month + "_" + screendate.getDate() + "/" + file + "_" + screendate.getDate() + "_" + month + "_" + screendate.getFullYear() + ".txt";
+        }
         let hour = screendate.getHours();
         hour = "0" + hour;
         hour = hour.slice(-2);
@@ -39,7 +42,12 @@ class write extends Page {
                 shortURL = urlArray[0] + "//" + urlArray[2];
         }
         let fd = fs.openSync(fileName, 'a');
-        fs.writeSync(fd, hour + ":" + minute + " - " + specname + " - " + text + " - URL: " + shortURL + nl);
+        if (shortURL !== 'https://sup-oms.qa.coc.ibmcloud.com') {
+            fs.writeSync(fd, hour + ":" + minute + " - " + specname + " - " + text + " - URL: " + shortURL + nl);
+        } else {
+            fs.writeSync(fd, hour + ":" + minute + " - " + specname + " - " + text + nl);
+        }
+
         fs.closeSync(fd);
     }
 

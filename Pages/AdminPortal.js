@@ -102,7 +102,11 @@ class AdminPortal extends Page {
     login() {
 
         if (formFactor !== 'mobile') {
-            browser.url('administrator/?source=34885');
+            if (site !== undefined) {
+                browser.url(site + 'administrator/?source=34885');
+            } else {
+                browser.url('administrator/?source=34885');
+            }
             browser.pause(1000);
             this.username.setValue(process.env.ADMIN_USERNAME);
             this.password.setValue(process.env.ADMIN_PASSWORD);
@@ -111,6 +115,28 @@ class AdminPortal extends Page {
             this.configuration.waitForExist(30000);
             browser.pause(5000);
         }
+    }
+    disableCaptcha() {
+        if (formFactor === 'mobile') {
+            this.configuration.click();
+        } else {
+            this.configuration.moveTo();
+        }
+        this.SQLviewer.click();
+        browser.pause(500);
+        this.SQLentry('update system_property set value_string = "false" where name in ("captcha_enabled","captcha_forgottenpw_enabled","captcha_givex_enabled","captcha_registration_enabled");')
+    }
+    ensureStockInFrontEnd(SKU) {
+        if (formFactor === 'mobile') {
+            this.configuration.click();
+        } else {
+            this.configuration.moveTo();
+        }
+        this.SQLviewer.click();
+        browser.pause(1000);
+        this.SQLentry("update jos_vm_product set product_publish = 'Y' where product_sku = '" + SKU + "';");
+        browser.pause(1000);
+        this.SQLentry("update inventory set quantity = '100' where sku = '" + SKU + "';");
     }
 
     setStockLevels(skuArray) {

@@ -132,9 +132,7 @@ class Product extends Page {
             }
         }
         browser.pause(1000);
-        Screenshot.viewport();
         // ATB
-        console.log('addTo = '+ addTo);
         if (addTo === 'Bag') {
             let ATBbutton = this.AddToBagButtons;
             if (numberToAdd === undefined) {
@@ -170,12 +168,9 @@ class Product extends Page {
             let WLbutton = this.WishListButton;
             WLbutton.click();
         }
-        Screenshot.viewport();
         try {
             let ATBmodalDetector = this.atbSizeSelectorModal.getAttribute('class');
             let WLmodalDetector = this.wlSizeSelectorModal.getAttribute('class');
-
-            Screenshot.viewport();
             browser.pause(1000);
             if (ATBmodalDetector === 'modal fade size-select-modal show') {
                 if (this.ATBSizeBoxValid.length > 0) {
@@ -195,7 +190,6 @@ class Product extends Page {
                 browser.pause(500);
                 this.SizeModal_addtowishlist.click();
             }
-            Screenshot.viewport();
             browser.pause(1500);
         } catch (e) {
 

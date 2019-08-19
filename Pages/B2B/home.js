@@ -42,7 +42,7 @@ class home extends Page {
         let categoryFound = false;
         let randomNumber = 0;
         while (categoryFound !== true) {
-            //randomNumber = Math.floor(Math.random() * numberOfTopLevelMenuItems);
+            randomNumber = Math.floor(Math.random() * numberOfTopLevelMenuItems);
 
             this.top_level_category[randomNumber].click();
             let category = this.mens_categories;
@@ -53,7 +53,7 @@ class home extends Page {
             let randomNumberCategories = Math.floor(Math.random() * numberOfCategories);
             if (category[randomNumberCategories].isDisplayed() === true) {
                 //category[randomNumberCategories].click();
-                category[9].click();
+                category[randomNumberCategories].click();
                 results.item_count_left.waitForExist(30000);
                 let itemCountVal = parseInt(results.item_count_left.getHTML(false));
                 if (itemCountVal > 0) {

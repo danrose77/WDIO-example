@@ -79,7 +79,7 @@ exports.config = {
         global.appliedHolds = false;
         global.shopperGroupID = 3;
         global.paymentMethod = "";
-
+        global.OMSquantitiesRecorded = false;
 
         // set specname global
         let specname = String(specs);
