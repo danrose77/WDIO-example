@@ -171,12 +171,10 @@ class Customer extends Page {
                 fillObject.element(this.registerPageFirstName, customerDetails.First_name);
                 fillObject.element(this.registerPageLastName, customerDetails.Last_name);
                 browser.pause(1000);
-                try {
-                    if (this.manualAddress.isDisplayed() === true) {
-                        this.manualAddress.click();
+                if (this.city.isDisplayed() === false) {
+                    this.manualAddress.scrollIntoView();
+                    this.manualAddress.click();
                     }
-                } catch (err) {
-                }
                 browser.pause(1000);
                 try {
                     this.country.selectByVisibleText(customerDetails.cuscountry);

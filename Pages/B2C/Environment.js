@@ -18,7 +18,6 @@ class Environment extends Page {
         browser.deleteCookies();
         browser.url('/');
         this.setSite();
-        console.log("Site changed to " + countryVal + " site as specified in script.");
         let environmentTemp = "";
         switch (countryVal) {
             case 'US':

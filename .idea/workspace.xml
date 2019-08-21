@@ -2,18 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cea8097-f04b-4e2a-9d8f-92a64695058e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Test/OMS/Central/Central.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/B2C/Staff.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/OMS/Central/Belgium.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/OMS/Central/Canada_EN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/OMS/Central/Canada_FR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/OMS/Central/France.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/OMS/Central/Germany.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/OMS/Central/Greece.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/OMS/Central/Hongkong.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/OMS/Central/Ireland.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/OMS/Central/Italy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/OMS/Central/Netherlands.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/OMS/Central/Norway.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/OMS/Central/Poland.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/OMS/Central/Switzerland.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/OMS/Central/USA.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/OMS/Central/United_Kingdom.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/Gruntfile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/AdminPortal.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/AdminPortal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/B2B/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2B/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/B2C/Checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2C/Checkout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/B2C/Customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2C/Customer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/B2C/Environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2C/Environment.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/B2C/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2C/Product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/OMS.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/OMS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/B2C/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2C/Search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/Rundeck.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Rundeck.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/Central/Central.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/Central/Austria.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/wdio.conf.local.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/wdio.conf.local.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/country.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/country.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/customers.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/customers.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/write.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/write.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdio.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/wdio.conf.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +187,8 @@
       <workItem from="1565610613792" duration="11323000" />
       <workItem from="1565702447321" duration="26536000" />
       <workItem from="1565854494176" duration="30990000" />
-      <workItem from="1565949612894" duration="31227000" />
+      <workItem from="1565949612894" duration="69425000" />
+      <workItem from="1566391040496" duration="1704000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1556195896755</created>
@@ -383,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566206909072</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary=".">
+      <created>1566219338084</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1566219338084</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TestHistory">

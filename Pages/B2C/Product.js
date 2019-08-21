@@ -104,6 +104,9 @@ class Product extends Page {
     get SizeModal_addtowishlist() {
         return $('div.wishlist-button button modal-cta');
     }
+    get wasPrice() {
+        return $('.was-price');
+    }
 
     skuObject(No, Quantity, SHIPNODE_KEY, PRIME_LINE_NO, SHIP_ADVICE_NO) {
         this.No = No;
@@ -192,9 +195,14 @@ class Product extends Page {
             }
             browser.pause(1500);
         } catch (e) {
-
         }
-
+    }
+    ensureStaffDiscountOnPrice() {
+        this.wasPrice.waitForDisplayed(10000);
+        expect(this.wasPrice.isDisplayed()).to.be.true;
+        if (this.wasPrice.isDisplayed()) {
+            Screenshot.viewport();
+        }
     }
 }
 

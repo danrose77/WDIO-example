@@ -2,6 +2,7 @@ import Page from './Page'
 import fillObject from '../functions/fillObject'
 import * as yaml from "js-yaml";
 import Screenshot from "../functions/Screenshot";
+import Environment from "./B2C/Environment";
 
 class AdminPortal extends Page {
     get username() {
@@ -23,7 +24,9 @@ class AdminPortal extends Page {
     get SQLviewer() {
         return $("//a[contains(text(),'SQL Viewer')]");
     }
-
+    get System_link() {
+        return $("//a[@class='icon-16-config'][contains(text(),'System')]");
+    }
     get CheckoutMenu() {
         return $("//a[contains(text(),'Checkout')]");
     }
@@ -31,7 +34,12 @@ class AdminPortal extends Page {
     get ParametersMenu() {
         return $("//span[@title='Parameters']");
     }
-
+    get ParametersMenu2() {
+        return $("//span[@class='icon-32-config']");
+    }
+    get ParametersPrefix() {
+        return $("#paramsprefix");
+    }
     get iFrame() {
         return $("//div[@id='sbox-content']/iframe");
     }
@@ -53,7 +61,7 @@ class AdminPortal extends Page {
     }
 
     get Save() {
-        return $("//button[contains(text(),'Save')]");
+        return $("/html[1]/body[1]/form[1]/fieldset[1]/div[1]/button[1]");
     }
 
     get close() {
@@ -100,7 +108,6 @@ class AdminPortal extends Page {
     // Functions
 
     login() {
-
         if (formFactor !== 'mobile') {
             if (site !== undefined) {
                 browser.url(site + 'administrator/?source=34885');
@@ -137,6 +144,29 @@ class AdminPortal extends Page {
         this.SQLentry("update jos_vm_product set product_publish = 'Y' where product_sku = '" + SKU + "';");
         browser.pause(1000);
         this.SQLentry("update inventory set quantity = '100' where sku = '" + SKU + "';");
+    }
+    colOrderPrefix(remove) {
+        Environment.openURL(site + 'administrator/index.php?option=com_supergroupadmin&view=system');
+        browser.pause(2500);
+        this.ParametersMenu2.click();
+        browser.pause(3000);
+        browser.switchToFrame(this.iFrame);
+        this.ParametersPrefix.scrollIntoView();
+        let currentPrefix = this.ParametersPrefix.getValue();
+        if (remove === true) {
+            if (currentPrefix.includes(envcol) === true) {
+                this.ParametersPrefix.setValue(currentPrefix.slice(envcol.length));
+                Screenshot.viewport();
+            }
+            this.Save.click();
+        } else {
+            if (currentPrefix.includes(envcol) === false) {
+                this.ParametersPrefix.setValue(envcol + currentPrefix);
+                Screenshot.viewport();
+            }
+            this.Save.click();
+        }
+        browser.switchToParentFrame();
     }
 
     setStockLevels(skuArray) {

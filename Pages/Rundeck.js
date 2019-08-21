@@ -153,6 +153,9 @@ class Rundeck extends Page {
     get logout_link() {
         return $("//a[contains(text(),'Logout')]");
     }
+    get alert_danger() {
+        return $('div[class^="alert"]');
+    }
 
     login() {
         this.rundeck_username.setValue("danielr");
@@ -345,18 +348,28 @@ class Rundeck extends Page {
                 sitename = "superdry_au";
                 break;
             case 'Belgium':
-                sitename = "superdry_be";
+                sitename = "superdry_benl";
                 break;
             case 'Canada':
-                sitename = "superdry_ca";
+                if (siteSuffix === 'ca-en') {
+                    sitename = "superdry_caen";
+                } else {
+                    sitename = "superdry_cafr";
+                }
                 break;
             case 'Switzerland':
-                sitename = "superdry_cn";
+                sitename = "superdry_chde";
+                break;
+            case 'Hong Kong':
+                sitename = "superdry_hken";
                 break;
             case 'China':
-                sitename = "superdry_ch";
+                sitename = "superdry_cn";
                 break;
             case 'UK':
+                sitename = "superdry_com";
+                break;
+            case 'United Kingdom':
                 sitename = "superdry_com";
                 break;
             case 'Germany':
@@ -399,10 +412,21 @@ class Rundeck extends Page {
                 sitename = "superdry_pl";
         }
         this.rundeck_site.setValue(sitename);
+        browser.pause(2000);
         Screenshot.viewport();
         this.rundeck_execFormRunButton.click();
-        this.rundeck_success.waitForExist();
         browser.pause(5000);
+        let alert_danger_present = this.alert_danger.isDisplayed();
+        console.log('alert_danger_present = ' + alert_danger_present);
+        while (alert_danger_present === true) {
+            this.rundeck_execFormRunButton.click();
+            browser.pause(5000);
+            alert_danger_present = this.alert_danger.isDisplayed();
+        }
+        browser.pause(5000);
+        Screenshot.viewport();
+        this.rundeck_success.waitForExist();
+        browser.pause(3000);
         Screenshot.viewport();
     }
 }

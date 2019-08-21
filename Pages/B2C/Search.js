@@ -84,6 +84,9 @@ class Search extends Page {
     get prices() {
         return $$('span[class="product-details__price price"]');
     }
+    get wasPrices() {
+        return $$('.was-price');
+    }
 
     // Functions
     searchFor(searchTerm) {
@@ -244,6 +247,14 @@ class Search extends Page {
             sizeBoxHTML = Product.SizeBoxText.getHTML(false).trim();
         }
         Screenshot.viewport();
+    }
+    ensureStaffDiscountOnPrices() {
+        this.wasPrices[0].waitForDisplayed(10000);
+        expect(this.wasPrices[0].isDisplayed()).to.be.true;
+        if (this.wasPrices[0].isDisplayed()) {
+            this.wasPrices[0].scrollIntoView();
+            Screenshot.viewport();
+        }
     }
 }
 

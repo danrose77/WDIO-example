@@ -8,16 +8,21 @@ import Customer from "../../../Pages/B2C/Customer";
 import AdminPortal from "../../../Pages/AdminPortal";
 import write from "../../../functions/write";
 
-const SKU1 = '1020200500313OI6003';
-const SKU2 = '1040405000250ZJ9001';
+// Duke
+//const SKU1 = "210302600010724Y001";
+//const SKU2 = "2123833500024WSS006";
+// Baron
+const SKU1 = "210302600006302A006";
+const SKU2 = "2103026000114HQO001";
+
 const Qty1 = 1;
 const Qty2 = 2;
-const username = 'danrosetest+austrian@gmail.com';
+const username = 'danrosetest+french@gmail.com';
 // Available users in data/customers.yml - danrosetest+austrian@gmail.com, danrosetest+austrian@gmail.com, danrosetest+belgian@gmail.com
 // danrosetest+french@gmail.com, danrosetest+german@gmail.com, danrosetest+greek@gmail.com, danrosetest+irish@gmail.com, danrosetest+italian@gmail.com,
 // danrosetest+netherlands@gmail.com, danrosetest+poland@gmail.com, danrosetest+UK@gmail.com, danrosetest+switzerland@gmail.com, danrosetest+hongkong@gmail.com,
 // danrosetest+norway@gmail.com, danrosetest+US@gmail.com, danrosetest+canada@gmail.com
-const countryVal = 'DE';
+const countryVal = 'FR';
 // Leave blank for UK
 // supported country vals at present: 'US' (USA), 'NL' (Netherlands), 'PL' (Poland), 'DE' (Germany), 'BE' (Belgium),
 // 'FR' (France), 'IE' (Ireland), 'IT' (Italy), 'CH' (Switzerland), 'HK' (HongKong EN), 'NO' (Norway), 'CAEN' (Canada EN), 'CAFR' (Canada FR)
@@ -34,12 +39,13 @@ describe(specname+' - setup for user ' + username + ' on site ' + countryVal, ()
         AdminPortal.disableCaptcha();
         AdminPortal.ensureStockInFrontEnd(SKU1);
         AdminPortal.ensureStockInFrontEnd(SKU2);
+        AdminPortal.colOrderPrefix(true);
         Environment.openCountrySiteForColour(countryVal);
         Customer.setUpNewAccount(username);
         Customer.addDeliveryAddress();
     });
 });
-
+/*
 describe(specname+Testname1, () => {
     it('Go to website and log in', () => {
         Environment.openCountrySiteForColour(countryVal);
@@ -92,6 +98,8 @@ describe(specname+Testname2, () => {
     },);
 });
 
+
+ */
 describe(specname+Testname3, () => {
     it('Go to website and log in', () => {
         Environment.openCountrySiteForColour(countryVal);
@@ -122,6 +130,7 @@ describe(specname+Testname3, () => {
         write.toTextFile('Order number: ' + referenceNumber + ' ' + Testname3, "Central_Orders_Creation");
     },);
 });
+/*
 
 describe(specname+Testname4, () => {
     it('Go to website and log in', () => {
@@ -152,4 +161,14 @@ describe(specname+Testname4, () => {
         OMS.logOut();
         write.toTextFile('Order number: ' + referenceNumber + ' ' + Testname4, "Central_Orders_Creation");
     },);
+});
+
+
+ */
+describe(specname+' - post run for environment', () => {
+    it('Change colour prefix back', () => {
+        Environment.openCountrySiteForColour(countryVal);
+        AdminPortal.login();
+        AdminPortal.colOrderPrefix(false);
+    });
 });

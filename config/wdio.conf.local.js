@@ -22,5 +22,5 @@ exports.config = Object.assign(master.config, {
   ],
   specs: ["Test/**/*.js"],
   logLevel: 'error',
-  maxInstances: 5,
+  maxInstances: 2,
 });

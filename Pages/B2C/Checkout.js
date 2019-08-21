@@ -110,7 +110,9 @@ class Checkout extends Page {
     get name_on_card_field() {
         return $("input[id|='order_payment_name']");
     }
-
+    get order_payment_name() {
+        return $("#order_payment_name");
+    }
     get card_number_field() {
         return $("input[id|='card-number']");
     }
@@ -484,6 +486,22 @@ class Checkout extends Page {
         return $('#checkout-section-basket');
     }
 
+    get Staff_Discount() {
+        return $("//div[@id='checkout-section-basket-summary']//div[.='Staff Discount']");
+    }
+
+    get remove_modals() {
+        return $$("a[data-target='#remove-consignment-modal']");
+    }
+    get order_summary() {
+        return $("//h2[contains(text(),'2. Order Summary')]");
+    }
+    get accept_remove() {
+        return $("//button[contains(text(),'Yes')]");
+    }
+    get basket_empty() {
+        return $("//p[@class='basket__empty']");
+    }
     // Functions
     fillTheDeliveryFields(type) {
         let formcountry = country;
@@ -561,8 +579,7 @@ class Checkout extends Page {
         let debit_credit_card_button = this.paymentButtons;
         debit_credit_card_button[0].click();
         browser.pause(500);
-        fillObject.element(this.name_on_card_field, Card_Name);
-        browser.pause(500);
+        this.name_on_card_field.setValue("Test");
         browser.pause(500);
         fillObject.element(this.card_number_field, Card_Number);
         let Card_exp_month = Card_exp.slice(0, 2);
@@ -581,6 +598,10 @@ class Checkout extends Page {
         browser.pause(250);
         this.card_cvv_code_field.setValue(Cvv);
         browser.pause(250);
+        console.log("this.order_payment_name.getValue() = " + this.order_payment_name.getValue());
+        if (this.order_payment_name.getValue() === "") {
+            this.order_payment_name.setValue('Test');
+        }
         this.buy_now_button.click();
         this.orderConfirmation();
     }
@@ -1134,6 +1155,28 @@ class Checkout extends Page {
         } catch (err) {
         }
         this.orderConfirmation();
+    }
+    ensureStaffDiscountApplied() {
+        this.Staff_Discount.waitForDisplayed(10000);
+        expect(this.Staff_Discount.isDisplayed()).to.be.true;
+        if (this.Staff_Discount.isDisplayed()) {
+            this.Staff_Discount.scrollIntoView();
+            Screenshot.viewport();
+        }
+    }
+    emptyBag() {
+        let numberOfModals = this.remove_modals.length;
+        while (numberOfModals !== 0) {
+            this.order_summary.scrollIntoView();
+            this.remove_modals[0].click();
+            browser.pause(1000);
+            this.accept_remove.click();
+            browser.pause(1000);
+            numberOfModals--;
+        }
+        browser.pause(1000);
+        expect(this.basket_empty.isDisplayed()).to.be.true;
+        Screenshot.viewport();
     }
 }
 
