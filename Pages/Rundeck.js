@@ -42,7 +42,12 @@ class Rundeck extends Page {
     get rundeck_success() {
         return $("//span[contains(@class,'execstate execstatedisplay overall')]");
     }
-
+    get rundeck_logoutput() {
+        return $("//a[contains(text(),'Log Output')]");
+    }
+    get rundeck_xmloutput() {
+        return $(".execoutput .node-repeat:nth-of-type(154) [colspan]");
+    }
     // Rundeck projects
     get rundeck_pjct_Amber() {
         return $("//span[contains(text(),'Amber')]");
@@ -416,6 +421,9 @@ class Rundeck extends Page {
         Screenshot.viewport();
         this.rundeck_execFormRunButton.click();
         browser.pause(5000);
+        if (this.rundeck_execFormRunButton.isDisplayed()) {
+            this.rundeck_execFormRunButton.click();
+        }
         let alert_danger_present = this.alert_danger.isDisplayed();
         console.log('alert_danger_present = ' + alert_danger_present);
         while (alert_danger_present === true) {
@@ -426,6 +434,8 @@ class Rundeck extends Page {
         browser.pause(5000);
         Screenshot.viewport();
         this.rundeck_success.waitForExist();
+        this.rundeck_logoutput.click();
+        global.xmloutput = this.rundeck_xmloutput.getHTML(false);
         browser.pause(3000);
         Screenshot.viewport();
     }

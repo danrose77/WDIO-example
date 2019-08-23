@@ -299,10 +299,13 @@ class Customer extends Page {
         if (emailaddress === undefined || emailaddress === "") {
             global.emailaddress = email;
         }
+        this.defineCustomer(emailaddress);
         browser.url(site + 'log-out');
         browser.pause(1000);
         fillObject.element(this.username, emailaddress);
+        browser.pause(1000);
         fillObject.element(this.password, customerDetails.password);
+        browser.pause(1000);
         this.signInButton.click();
         browser.pause(1000);
     }
