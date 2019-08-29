@@ -58,6 +58,16 @@ class write extends Page {
 
         fs.closeSync(fd);
     }
+    toPerformanceLog(text) {
+        let nl = (process.platform === "win32" ? "\r\n" : "\n");
+        let screendate = new Date();
+        let month = screendate.getMonth();
+        month = month + 1;
+        let fileName = "./reports/" + screendate.getFullYear() + "_" + month + "_" + screendate.getDate() + "/performance_logging_" + screendate.getDate() + "_" + month + "_" + screendate.getFullYear() + ".csv";
+        let fd = fs.openSync(fileName, 'a');
+        fs.writeSync(fd, text + nl);
+        fs.closeSync(fd);
+    }
 
     timestamp(text) {
         let screendate = new Date();

@@ -10,9 +10,11 @@ class Navigation extends Page {
     get OrderSummary() {
         return $("[class='col-12 consignment pad-v']");
     }
+
     get checkout_section_giftcard_voucher() {
         return $("#checkout-section-giftcard-voucher");
     }
+
     get checkout_section_basket_summary() {
         return $("#checkout-section-basket-summary");
     }
@@ -20,9 +22,11 @@ class Navigation extends Page {
     get checkout_section_delivery_options() {
         return $("#checkout-section-delivery-options");
     }
+
     get checkout_section_billing_address() {
         return $("#checkout-section-billing-address");
     }
+
     get checkout_section_payment_methods() {
         return $("#checkout-section-payment-methods");
     }
@@ -62,9 +66,11 @@ class Navigation extends Page {
     get wishlistLinks() {
         return $$("//i[@class='custom-icon favourites']");
     }
+
     get WishlistLoad() {
         return $('.send-wish-list');
     }
+
     get closeBasket() {
         return $('div.close-basket > a > i');
     }
@@ -76,21 +82,27 @@ class Navigation extends Page {
     get logo() {
         return $(".logo");
     }
+
     get my_account() {
         return $(".account-actions .my-account");
     }
+
     get favourites() {
         return $(".account-actions .favourites");
     }
+
     get search_container() {
         return $(".banner-column .search-container i");
     }
+
     get navWrapper() {
         return $(".nav-wrapper");
     }
+
     get spinner() {
         return $(".spinner");
     }
+
     get copyright_row() {
         return $(".copyright-row");
     }
@@ -125,6 +137,33 @@ class Navigation extends Page {
         }
     }
 
+    specificSection(tier1, tier2, tier3) {
+        this.hamburger.click();
+        this.acceptCookiesPrompt();
+        try {
+            this.backToBaseMenu();
+        } catch (e) {
+            console.log("Couldnt/or no need to return to main menu")
+        }
+        this.menu_tier1[1].waitForExist();
+        GetRandom.element(this.menu_tier1, undefined, 1, tier1);
+        this.menu_subtiers[1].waitForExist();
+        GetRandom.element(this.menu_subtiers, undefined, 1, tier2);
+        if (tier3 !== undefined) {
+            try {
+                this.menu_subtiers[1].waitForExist();
+                browser.pause(1000);
+                if (this.menu_subtiers[1].isDisplayed() === true) {
+                    GetRandom.element(this.menu_subtiers, undefined, 1, tier3);
+                }
+            } catch (e) {
+            }
+        }
+        browser.pause(1000);
+        this.spinner.waitForExist(30000, true);
+        Screenshot.viewport();
+    }
+
     randomSection() {
         Screenshot.viewport();
         let success = false;
@@ -144,7 +183,7 @@ class Navigation extends Page {
                 this.menu_subtiers[1].waitForExist();
                 browser.pause(1000);
                 if (this.menu_subtiers[1].isDisplayed() === true) {
-                    GetRandom.element(this.menu_subtiers, undefined,4, 1);
+                    GetRandom.element(this.menu_subtiers, undefined, 4, 1);
                 }
             } catch (e) {
 
@@ -155,7 +194,7 @@ class Navigation extends Page {
 
             let classAttrib = this.body.getAttribute('class').trim();
             console.log('classAttrib = ' + classAttrib);
-            if ((classAttrib === 'error-page sana')||(classAttrib === 'error-page sana two-tone')) {
+            if ((classAttrib === 'error-page sana') || (classAttrib === 'error-page sana two-tone')) {
                 browser.url(site);
                 browser.pause(3000);
                 success = false;
@@ -171,7 +210,7 @@ class Navigation extends Page {
         browser.url(site + 'checkout/log-in');
         browser.waitUntil(() => {
             return browser.getUrl().includes("checkout");
-        },5000);
+        }, 5000);
         Screenshot.viewport();
         try {
             if (this.SignIn_Guest.isExisting() === true) {

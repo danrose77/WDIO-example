@@ -8,7 +8,9 @@ describe(specname+' - Search for a product,select a random filter and sort by hi
     });
     it('Search for a term, select a filter option and sort by highest price', () => {
         Search.searchFor('Jacket');
+        // When new category page goes live the below function is to be swapped for the commented function:
         Search.selectFilter();
+        // Search.selectFilterDropDown(1);
         Search.OrderBy('Highest Price');
     });
 });
