@@ -28,7 +28,7 @@ module.exports = function(grunt) {
                 ]
             } else if ((suite === 'visual_regression')||(suite === 'VR')) {
                 path = [
-                    './test/B2C/Visual_regression/**/*.js'
+                    './test/Visual_regression/**/*.js'
                 ]
             } else if (suite === 'B2BSmoke') {
                 path = [
@@ -70,6 +70,18 @@ module.exports = function(grunt) {
                     baseUrl: grunt.config("environment"),
                     capabilities: [{"browserName": "chrome"}],
             },
+            devtools: {
+                configFile: "./config/wdio.conf.devtools.js",
+                specs: grunt.config("spec"),
+                baseUrl: grunt.config("environment"),
+                capabilities: [{"browserName": "chrome"}],
+            },
+            VizReg: {
+                configFile: "./config/wdio.conf.VizReg.js",
+                specs: grunt.config("spec"),
+                baseUrl: grunt.config("environment"),
+                capabilities: [{"browserName": "chrome"}],
+            },
             browserstack: {
                 configFile: "./config/wdio.conf.browserstack.js",
                     specs: grunt.config("spec"),
@@ -83,5 +95,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-webdriver");
     grunt.registerTask("default", ["webdriver:test"]);
     grunt.registerTask("local", ["webdriver:test"]);
+    grunt.registerTask("devtools", ["webdriver:devtools"]);
+    grunt.registerTask("VizReg", ["webdriver:VizReg"]);
     grunt.registerTask("browserstack", ["webdriver:browserstack"]);
 };

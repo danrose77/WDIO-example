@@ -1,8 +1,8 @@
-import VizCheck from "../../../functions/VizCheck";
-import Navigation from "../../../Pages/B2C/Navigation";
-import Environment from "../../../Pages/B2C/Environment";
-import Search from "../../../Pages/B2C/Search";
-import Product from "../../../Pages/B2C/Product";
+import VizCheck from "../../functions/VizCheck";
+import Navigation from "../../Pages/B2C/Navigation";
+import Environment from "../../Pages/B2C/Environment";
+import Search from "../../Pages/B2C/Search";
+import Product from "../../Pages/B2C/Product";
 
 describe('Visual Regression test for ' + specname, () => {
 

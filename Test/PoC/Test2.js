@@ -2,7 +2,7 @@ import performance from "../../functions/performance";
 import write from "../../functions/write";
 
 // Set mobile = true to emulate mobile conditions
-let mobile = true;
+let mobile = false;
 // Available profile options are: 'offline','GPRS','Regular 2G','Good 2G','Regular 3G','Good 3G','Regular 4G','DSL','Wifi','online'
 let mobileprofile = 'Good 3G';
 

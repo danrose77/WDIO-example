@@ -1,4 +1,4 @@
-import VizCheck from "../../../functions/VizCheck";
+import VizCheck from "../../functions/VizCheck";
 
 describe('Visual Regression test for ' + specname, () => {
 

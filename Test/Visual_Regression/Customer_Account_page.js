@@ -1,8 +1,8 @@
-import VizCheck from "../../../functions/VizCheck";
-import Environment from "../../../Pages/B2C/Environment";
-import Customer from "../../../Pages/B2C/Customer";
-import Storefinder from "../../../Pages/B2C/Storefinder";
-import Navigation from "../../../Pages/B2C/Navigation";
+import VizCheck from "../../functions/VizCheck";
+import Environment from "../../Pages/B2C/Environment";
+import Customer from "../../Pages/B2C/Customer";
+import Storefinder from "../../Pages/B2C/Storefinder";
+import Navigation from "../../Pages/B2C/Navigation";
 
 let username = 'danrosetest+DC_user@gmail.com';
 

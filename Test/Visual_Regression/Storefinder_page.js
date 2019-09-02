@@ -1,7 +1,7 @@
-import Environment from '../../../Pages/B2C/Environment.js';
-import Navigation from "../../../Pages/B2C/Navigation";
-import VizCheck from "../../../functions/VizCheck";
-import Storefinder from "../../../Pages/B2C/Storefinder";
+import Environment from '../../Pages/B2C/Environment.js';
+import Navigation from "../../Pages/B2C/Navigation";
+import VizCheck from "../../functions/VizCheck";
+import Storefinder from "../../Pages/B2C/Storefinder";
 
 describe('Visual Regression test for ' + specname, () => {
     it('Go to the storefinder', () => {
