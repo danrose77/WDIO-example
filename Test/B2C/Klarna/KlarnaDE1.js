@@ -10,7 +10,7 @@ let username = 'danrosetest+klarnaDE_user@gmail.com';
 
 describe(specname + ' - setup test', () => {
     it('Set up in admin portal', () => {
-        Environment.openBaseURL(); 
+        Environment.openCountrySiteForColour('DE');
         AdminPortal.login();
         AdminPortal.disableCaptcha();
     });

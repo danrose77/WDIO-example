@@ -9,7 +9,7 @@ import AdminPortal from "../../../Pages/AdminPortal";
 let username = 'danrosetest+klarnaUS_user@gmail.com';
 describe(specname + ' - setup test', () => {
     it('Set up in admin portal', () => {
-        Environment.openBaseURL(); 
+        Environment.openCountrySiteForColour('US');
         AdminPortal.login();
         AdminPortal.disableCaptcha();
     });
