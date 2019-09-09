@@ -8,6 +8,13 @@ import AdminPortal from "../../../Pages/AdminPortal";
 
 let username = 'danrosetest+DCCC2@gmail.com';
 
+describe(specname + ' - setup test', () => {
+    it('Set up in admin portal', () => {
+        Environment.openBaseURL(); 
+        AdminPortal.login();
+        AdminPortal.disableCaptcha();
+    });
+});
 describe(specname+' - Paypal and customer credit payment from an existing user', () => {
     it('Set up a customer account', () => {
         Environment.openBaseURL();

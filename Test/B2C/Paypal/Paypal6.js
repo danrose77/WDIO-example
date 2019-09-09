@@ -10,6 +10,13 @@ import Givex from "../../../Pages/Givex";
 let giftcard = '6338901547310003689';
 let username = 'danrosetest+DC_user@gmail.com';
 
+describe(specname + ' - setup test', () => {
+    it('Set up in admin portal', () => {
+        Environment.openBaseURL(); 
+        AdminPortal.login();
+        AdminPortal.disableCaptcha();
+    });
+});
 describe(specname+' - Paypal and giftcard payment from an existing user', () => {
     it('Set up a customer account', () => {
         Environment.openBaseURL();
