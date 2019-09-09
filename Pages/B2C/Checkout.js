@@ -502,7 +502,23 @@ class Checkout extends Page {
     get basket_empty() {
         return $("//p[@class='basket__empty']");
     }
+
+    get bankTransferLink() {
+        return $("[data-template='checkout\/payment\/bank-transfer-form'] .payment-method-label div");
+    }
+
     // Functions
+    selectLocalDelivery() {
+        this.deliveryTypeOptions[0].click();
+    }
+    payByBankTransfer() {
+        global.paymentMethod = "BankTransfer";
+        this.bankTransferLink.waitForDisplayed(30000);
+        this.bankTransferLink.click();
+        browser.pause(1000);
+        this.klarnaBuyNow.click();
+        this.orderConfirmation();
+    }
     fillTheDeliveryFields(type) {
         let formcountry = country;
         if (country === "UK") {
@@ -514,7 +530,9 @@ class Checkout extends Page {
             formcountry = 'Albania';
         }
         //Read customer data
-        Customer.defineCustomer();
+        if ((customerData.First_name === "")||(customerData.First_name === undefined)) {
+            Customer.defineCustomer();
+        }
         let clickAndCollectDetect = this.collection_location.isDisplayed();
         fillObject.element(this.shipping_first_name, customerData.First_name);
         fillObject.element(this.shipping_last_name, customerData.Last_name);
@@ -833,22 +851,22 @@ class Checkout extends Page {
 
     orderConfirmation() {
         browser.pause(1500);
-
         if (this.staffdiscountconfirm.isDisplayed() === true) {
             this.staffdiscountconfirm.click();
             browser.pause(1500);
             this.staffdiscountsubmit.click();
             browser.pause(1500);
         }
-
         if (paymentMethod !== "Giropay") {
-            this.view_order.click();
-            browser.pause(1000);
+            if (paymentMethod !== "BankTransfer") {
+                this.view_order.waitForDisplayed(30000);
+                this.view_order.click();
+                browser.pause(1000);
+            }
             let referenceNumber = browser.getUrl();
             referenceNumber = referenceNumber.split("=");
             global.referenceNumber = referenceNumber[1];
         }
-
         console.log("Order Number: " + referenceNumber + " generated on " + site);
         write.toTextFile("Order Number: " + referenceNumber + " - " + paymentMethod);
         Screenshot.viewport();

@@ -1,150 +1,86 @@
 import Page from './Page'
-import Screenshot from "../functions/Screenshot";
-import Environment from "./B2C/Environment";
-import Product from "./B2C/Product";
-import objectLength from "../functions/objectLength";
 
-class IBMse extends Page {
-    get Username() {
-        return $("#username");
+class IE_IBMsterling extends Page {
+
+    get expandCollapse() {
+        return $("//*[contains(@href, 'expandCollapse')]");
+    }
+
+    get overridelink() {
+        return $("//*[contains(@id, 'overridelink')]");
+    }
+
+    get UserId() {
+        return $("//input[@name='UserId']");
     }
 
     get Password() {
-        return $$("#password");
+        return $("//*[contains(@name, 'Password')]");
     }
 
-    get Submit() {
-        return $("#loginBtn");
+    get btnLogin() {
+        return $("//*[contains(@name, 'btnLogin')]");
     }
 
-    get CustomerServiceViewButton() {
-        return $("#dijit_form_Button_1_label");
+    get ApplicationConsoleTopMenu() {
+        // Options are: 
+        // 0 - Alerts
+        // 1 - Order
+        // 2 - Inventory
+        // 3 - Supply
+        // 4 - Logistics
+        // 5 - Reverse Logistics
+        // 6 - Business Intelligence
+        // 7 - Configuration
+        // 8 - System
+        // 9 - Help
+        return $$("//tr[@id='mytr'] //td");
     }
 
-    get returns_ORDER_scanField() {
-        return $("#returns_ORDER_scanField");
+    get OrderSearch() {
+        return $('*=Order Search');
+    }
+    get OrderNo() {
+        return $("//*[contains(@name, 'xml:/Order/@OrderNo')]");
     }
 
-    get returns_ORDER_scanButton() {
-        return $("#returns_ORDER_scanButton");
-    }
-
-    get loadOverlay() {
-        return $("div.loading-overlay");
-    }
-
-    get return_exchange() {
-        return $('#return_exchange_0');
-    }
-
-    get return_reason() {
-        return $('#return_reason_0');
-    }
-
-    get bin_ID() {
-        return $('#bin_ID_0');
-    }
-
-    get addToReturnButton_0() {
-        return $('#addToReturnButton_0');
-    }
-
-    get return_continue() {
-        return $('#reviewReturnBtn > span.btn-text');
-    }
-
-    get return_complete() {
-        return $('#processReturnButton > span.btn-text');
-    }
-
-    get exchange_option() {
-        return $$('#grayBtn');
-    }
-
-    get confirm_exchange_options() {
-        return $('#okReturnReasonMultipleLinesBtn');
-    }
-
-    get logout() {
-        return $("#dijit_MenuItem_1_text");
-    }
-
-    get CSuserDD() {
-        return $("//span[@class='glyphicon glyphicon-chevron-down']");
-    }
-
-    get CSlogout() {
-        return $("//span[@isc-i18n='globals.ACTION_Logout']");
-    }
-
-
-    login() {
-        browser.url('https://sup-oms.qa.coc.ibmcloud.com/wsc/store/login.do');
-        browser.pause(3000);
-        this.Username.setValue('CSQAtest');
-        browser.pause(1000);
-        this.Password[1].setValue('CSQApassword*');
-        browser.pause(500);
-        this.Submit.click();
-    }
-
-    returnOrExchangeAnItem(type) {
-        this.CustomerServiceViewButton.waitForExist();
-        browser.pause(1000);
-        this.CustomerServiceViewButton.click();
-        this.returns_ORDER_scanField.waitForExist();
-        this.returns_ORDER_scanField.setValue(referenceNumber);
-        this.returns_ORDER_scanButton.click();
-        browser.pause(1000);
-        this.loadOverlay.waitForExist(30000, true);
-        browser.pause(1000);
-        if (type === 'return') {
-            this.return_exchange.selectByAttribute('value', 'string:Return');
-        } else if (type === 'exchange') {
-            this.return_exchange.selectByAttribute('value', 'string:Exchange');
-        } else {
-        }
-        browser.pause(500);
-        this.return_reason.selectByAttribute('value', 'string:500');
-        browser.pause(500);
-        this.bin_ID.setValue('Bin500');
-        Screenshot.viewport();
-        browser.pause(1000);
-        this.addToReturnButton_0.click();
-        browser.pause(7000);
-        this.return_continue.click();
-        browser.pause(1000);
-        try {
-            browser.acceptAlert();
-        } catch (e) {
-            console.log("No alert to accept")
-        }
+    goToOrderNumber(OrderNo) {
+        this.OrderSearch.click();
         browser.pause(2000);
-        if (type === 'exchange') {
-            let count = objectLength.element(this.exchange_option);
-            console.log('count = ' + count);
-            let randomNumber = Math.floor(Math.random() * count);
-            randomNumber = randomNumber - 1;
-            if (randomNumber < 0) {
-                randomNumber = 0;
-            }
-            let element = this.exchange_option[randomNumber];
-            element.click();
-            browser.pause(1000);
-            Screenshot.viewport();
-            this.confirm_exchange_options.click();
-            browser.pause(1000);
-        }
-        browser.pause(3000);
-        this.return_complete.click();
-        browser.pause(7000);
-        this.CSuserDD.click();
-        browser.pause(1000);
-        this.CSlogout.click();
-        browser.pause(1000);
-        browser.acceptAlert();
+        browser.keys('\uE004');
+        browser.keys('\uE004');
+        browser.keys('\uE004');
+        browser.keys('\uE004');
+        browser.keys('\uE004');
+        browser.keys('\uE004');
+        browser.keys('\uE004');
+        browser.keys('\uE004');
+        browser.keys('\uE004');
+        browser.keys('\uE004');
+        browser.keys(OrderNo);
+        browser.keys('\uE006');
     }
 
+    handleWarningPage() {
+        try {
+            this.expandCollapse.click();
+            browser.pause(1000);
+            this.overridelink.click();
+            browser.pause(1000);
+        } catch (e) {
+            console.log("No need to handle warning page")
+        }
+    }
+    login() {
+        browser.pause(1000);
+        this.UserId.setValue("admin");
+        browser.pause(1000);
+        this.Password.setValue(" ");
+        this.Password.clearValue();
+        this.Password.setValue("password");
+        this.btnLogin.click();
+        browser.pause(5000);
+    }
 }
 
-export default new IBMse();
+export default new IE_IBMsterling();

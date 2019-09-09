@@ -22,3 +22,5 @@ describe(specname+' - Debit card payment from a guest user', () => {
         Checkout.payByCard();
     });
 });
+
+

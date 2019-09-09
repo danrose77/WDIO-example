@@ -107,6 +107,9 @@ class Product extends Page {
     get wasPrice() {
         return $('.was-price');
     }
+    get gtm_close() {
+        return $('.gtm_close');
+    }
 
     skuObject(No, Quantity, SHIPNODE_KEY, PRIME_LINE_NO, SHIP_ADVICE_NO) {
         this.No = No;
@@ -117,6 +120,13 @@ class Product extends Page {
     }
     logUsedSKU(SKU) {
         skuslist[skuslist.length] = new this.skuObject(SKU, "", "", "", "");
+    }
+
+    closeGoToCountry() {
+        browser.pause(1000);
+        if (this.gtm_close.isDisplayed() === true) {
+            this.gtm_close.click();
+        }
     }
 
     SelectASizeAndAddTo(addTo, numberToAdd, SKU_used) {
@@ -139,33 +149,25 @@ class Product extends Page {
         if (addTo === 'Bag') {
             let ATBbutton = this.AddToBagButtons;
             if (numberToAdd === undefined) {
-                let quantity1 = parseInt(ShoppingBag.get1stItemQty.getHTML(false));
-                let quantity2 = quantity1 + 1;
-                while (quantity1 !== quantity2) {
-                    try {
-                        ATBbutton[0].click();
-                    } catch (e) {
+                numberToAdd = 1
+            }
+            let quantity1 = parseInt(ShoppingBag.get1stItemQty.getHTML(false));
+            console.log("Initial bag quantity = " + quantity1);
+            let quantity2 = quantity1 + numberToAdd;
+            console.log("Total bag quantity to be = " + quantity2);
+            while (quantity1 !== quantity2) {
+                try {
+                    ATBbutton[0].click();
+                } catch (e) {
 
-                    }
-                    browser.pause(1000);
-                    quantity1 = parseInt(ShoppingBag.get1stItemQty.getHTML(false));
                 }
-            } else {
-                let quantity1 = parseInt(ShoppingBag.get1stItemQty.getHTML(false));
-                let quantity2 = quantity1 + numberToAdd;
-                while (quantity1 !== quantity2) {
-                    try {
-                        ATBbutton[0].click();
-                    } catch (e) {
-
-                    }
-                    browser.pause(1200);
-                    quantity1 = parseInt(ShoppingBag.get1stItemQty.getHTML(false));
-                    if (formFactor !== 'mobile') {
-                        ShoppingBag.closeBasket.click();
-                    }
-                    browser.pause(1200);
+                browser.pause(1200);
+                quantity1 = parseInt(ShoppingBag.get1stItemQty.getHTML(false));
+                console.log("New bag quantity = " + quantity1);
+                if (formFactor !== 'mobile') {
+                    ShoppingBag.closeBasket.click();
                 }
+                browser.pause(1200);
             }
         } else if (addTo === 'Wishlist') {
             let WLbutton = this.WishListButton;

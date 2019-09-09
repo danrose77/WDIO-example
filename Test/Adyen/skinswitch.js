@@ -5,7 +5,7 @@ describe('Change Adyen skin', () => {
     it('Open adyen and login', () => {
         Environment.openBaseURL();
         Environment.openURL('https://ca-test.adyen.com/');
-        Adyen.adyenLogin("Dan.rose", "!yL2SjGAZ!TU&Kn6");
+        Adyen.adyenLogin();
     });
     it('Switch skins for listed sites', () => {
         // Adyen.changeSkin("au");

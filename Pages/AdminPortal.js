@@ -115,10 +115,14 @@ class AdminPortal extends Page {
                 browser.url('administrator/?source=34885');
             }
             browser.pause(1000);
-            this.username.setValue(process.env.ADMIN_USERNAME);
-            this.password.setValue(process.env.ADMIN_PASSWORD);
-            browser.pause(500);
-            this.adminSiteLogin.click();
+            try {
+                this.username.setValue(process.env.ADMIN_USERNAME);
+                this.password.setValue(process.env.ADMIN_PASSWORD);
+                browser.pause(500);
+                this.adminSiteLogin.click();
+            } catch (e) {
+                console.log("No need to log in")
+            }
             this.configuration.waitForExist(30000);
             browser.pause(5000);
         }
@@ -133,7 +137,10 @@ class AdminPortal extends Page {
         browser.pause(500);
         this.SQLentry('update system_property set value_string = "false" where name in ("captcha_enabled","captcha_forgottenpw_enabled","captcha_givex_enabled","captcha_registration_enabled");')
     }
-    ensureStockInFrontEnd(SKU) {
+    ensureStockInFrontEnd(SKU, QTY) {
+        if (QTY === undefined) {
+            QTY = 1000;
+        }
         if (formFactor === 'mobile') {
             this.configuration.click();
         } else {
@@ -143,10 +150,14 @@ class AdminPortal extends Page {
         browser.pause(1000);
         this.SQLentry("update jos_vm_product set product_publish = 'Y' where product_sku = '" + SKU + "';");
         browser.pause(1000);
-        this.SQLentry("update inventory set quantity = '100' where sku = '" + SKU + "';");
+        this.SQLentry("update inventory set quantity = '"+QTY+"' where sku = '" + SKU + "';");
     }
     colOrderPrefix(remove) {
-        Environment.openURL(site + 'administrator/index.php?option=com_supergroupadmin&view=system');
+        if (site !== undefined) {
+            browser.url(site + 'administrator/index.php?option=com_supergroupadmin&view=system');
+        } else {
+            browser.url('administrator/index.php?option=com_supergroupadmin&view=system');
+        }
         browser.pause(2500);
         this.ParametersMenu2.click();
         browser.pause(3000);

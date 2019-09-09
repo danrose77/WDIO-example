@@ -34,6 +34,10 @@ module.exports = function(grunt) {
                 path = [
                     './test/B2B/basicE2E.js'
                 ]
+            } else if (suite === 'OMS') {
+                path = [
+                    './test/OMS/testpack/**/*.js'
+                ]
             }
         } else {
             path = "./Test/**/*.js";
@@ -45,6 +49,8 @@ module.exports = function(grunt) {
         if (grunt.option("platform") !== undefined) {
             if (grunt.option("platform") === 'chrome') {
                 platform = [{'os' : 'Windows','os_version' : '10','browserName' : 'Chrome','resolution' : '1920x1200','browserstack.local' : 'false','browserstack.debug' : 'true','browserstack.timezone' : 'UK','browserstack.geoLocation' : 'GB',"goog:chromeOptns": {"args": ["disable-infobars"]}}]
+            } else if (grunt.option("platform") === 'ie') {
+                platform = [{'os' : 'Windows','os_version' : '7','browserName' : 'IE','browserstack.ie.driver' : '2.31','browser_version' : '8.0','browserstackLocal' : 'true','resolution' : '1920x1200','browserstack.debug' : 'true','browserstack.timezone' : 'UK','browserstack.geoLocation' : 'GB',}]
             } else if (grunt.option("platform") === 'ios') {
                 platform = [{'os_version' : '10','device' : 'iPhone 7','real_mobile' : 'true','browserstack.timezone' : 'UK','browserstack.local' : 'false','browserstack.debug' : 'true','browserstack.geoLocation' : 'GB','browserstack.appiumVersion': '1.9.1',}]
             } else if (grunt.option("platform") === 'android') {
@@ -69,6 +75,11 @@ module.exports = function(grunt) {
                     specs: grunt.config("spec"),
                     baseUrl: grunt.config("environment"),
                     capabilities: [{"browserName": "chrome"}],
+            },
+            ie: {
+                configFile: "./config/wdio.conf.local.ie.js",
+                specs: grunt.config("spec"),
+                baseUrl: grunt.config("environment"),
             },
             devtools: {
                 configFile: "./config/wdio.conf.devtools.js",
@@ -95,6 +106,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-webdriver");
     grunt.registerTask("default", ["webdriver:test"]);
     grunt.registerTask("local", ["webdriver:test"]);
+    grunt.registerTask("test", ["webdriver:test"]);
+    grunt.registerTask("ie", ["webdriver:ie"]);
     grunt.registerTask("devtools", ["webdriver:devtools"]);
     grunt.registerTask("VizReg", ["webdriver:VizReg"]);
     grunt.registerTask("browserstack", ["webdriver:browserstack"]);

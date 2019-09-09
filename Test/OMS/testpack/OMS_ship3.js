@@ -5,6 +5,7 @@ import Checkout from "../../../Pages/B2C/Checkout";
 import Rundeck from "../../../Pages/Rundeck";
 import OMS from "../../../Pages/OMS";
 import Customer from "../../../Pages/B2C/Customer";
+import AdminPortal from "../../../Pages/AdminPortal";
 
 // US Run only to get Eagle DC
 // Will pass on other locations but Eagle DC needs to be tested
@@ -12,6 +13,20 @@ import Customer from "../../../Pages/B2C/Customer";
 let SKU1 = '1020200500313OI6003';
 let Qty1 = 3;
 let username = 'danrosetest+US_user@gmail.com';
+
+describe(specname+' - setup test', () => {
+    it('Set up in admin portal', () => {
+        Environment.openCountrySiteForColour('US');
+        AdminPortal.login();
+        AdminPortal.disableCaptcha();
+        AdminPortal.ensureStockInFrontEnd(SKU1);
+        AdminPortal.colOrderPrefix(true);
+        Environment.openURL("https://sup-oms.qa.coc.ibmcloud.com/smcfs/yfshttpapi/yantrahttpapitester.jsp");
+        OMS.inventoryAdjuster(SKU1, 0, '080');
+        OMS.inventoryAdjuster(SKU1, 1000, '090');
+        OMS.inventoryAdjuster(SKU1, 0, '110');
+    });
+});
 
 describe(specname+' - Line: Single - Quantity: Multi - Payment: Card - Created -> Scheduled -> Released -> Shipped', () => {
     it('Set up a customer account for email '+username, () => {
@@ -61,4 +76,15 @@ describe(specname+' - Line: Single - Quantity: Multi - Payment: Card - Created -
         OMS.retrieveOrder();
         OMS.checkForStatus('Shipped')
     },);
+    it('OMS logout', () => {
+        OMS.logOut();
+    },);
+});
+
+describe(specname+' - post run for environment', () => {
+    it('Change colour prefix back', () => {
+        Environment.openBaseURL();
+        AdminPortal.login();
+        AdminPortal.colOrderPrefix(false);
+    });
 });

@@ -3,6 +3,8 @@ import Navigation from "./Navigation";
 import * as yaml from "js-yaml";
 import Screenshot from "../../functions/Screenshot";
 
+
+
 class Environment extends Page {
     setSite() {
         global.site = browser.getUrl();
@@ -23,6 +25,15 @@ class Environment extends Page {
             case 'US':
                 environmentTemp = "https://com-" + envcol + ".nonprod.sd.co.uk/us/";
                 break;
+            case 'ES':
+                environmentTemp = "https://es-" + envcol + ".nonprod.sd.co.uk/";
+                break;
+            case 'SE':
+                environmentTemp = "https://se-" + envcol + ".nonprod.sd.co.uk/";
+                break;
+            case 'FI':
+                environmentTemp = "https://fi-" + envcol + ".nonprod.sd.co.uk/";
+                break;
             case 'NL':
                 environmentTemp = "https://nl-" + envcol + ".nonprod.sd.co.uk/";
                 break;
@@ -33,7 +44,7 @@ class Environment extends Page {
                 environmentTemp = "https://de-" + envcol + ".nonprod.sd.co.uk/";
                 break;
             case 'BE':
-                environmentTemp = "https://be-" + envcol + ".nonprod.sd.co.uk/be-nl/";
+                environmentTemp = "https://be-" + envcol + ".nonprod.sd.co.uk/be-fr/";
                 break;
             case 'FR':
                 environmentTemp = "https://fr-" + envcol + ".nonprod.sd.co.uk/";

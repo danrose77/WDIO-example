@@ -1,15 +1,29 @@
-import Environment from '../../Pages/B2C/Environment.js';
-import Product from '../../Pages/B2C/Product.js';
-import Navigation from '../../Pages/B2C/Navigation.js';
-import Checkout from "../../Pages/B2C/Checkout";
-import Rundeck from "../../Pages/Rundeck";
-import OMS from "../../Pages/OMS";
-import IBMse from "../../Pages/IBMse";
+import Environment from '../../../Pages/B2C/Environment.js';
+import Product from '../../../Pages/B2C/Product.js';
+import Navigation from '../../../Pages/B2C/Navigation.js';
+import Checkout from "../../../Pages/B2C/Checkout";
+import Rundeck from "../../../Pages/Rundeck";
+import OMS from "../../../Pages/OMS";
+import IBMse from "../../../Pages/IBMse";
+import AdminPortal from "../../../Pages/AdminPortal";
 
 let SKU1 = '1020200500313OI6003';
 let Qty1 = 1;
 
-describe(specname+' - Create order with a specific SKU', () => {
+describe(specname+' - setup test', () => {
+    it('Set up in admin portal', () => {
+        Environment.openBaseURL();
+        AdminPortal.login();
+        AdminPortal.disableCaptcha();
+        AdminPortal.ensureStockInFrontEnd(SKU1);
+        AdminPortal.colOrderPrefix(true);
+        Environment.openURL("https://sup-oms.qa.coc.ibmcloud.com/smcfs/yfshttpapi/yantrahttpapitester.jsp");
+        OMS.inventoryAdjuster(SKU1, 1000, '080');
+        OMS.inventoryAdjuster(SKU1, 1000, '090');
+        OMS.inventoryAdjuster(SKU1, 1000, '110');
+    });
+});
+describe(specname+' - Create order with a specific SKU and return', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });
@@ -22,7 +36,7 @@ describe(specname+' - Create order with a specific SKU', () => {
         Navigation.GoToCheckout();
         Checkout.selectLocalDelivery();
         Checkout.fillTheDeliveryFields();
-        Checkout.payByCard();
+        Checkout.payByPaypal();
     });
     it('Export order in Rundeck', () => {
         Rundeck.orderExport();
@@ -59,4 +73,15 @@ describe(specname+' - Create order with a specific SKU', () => {
         OMS.retrieveOrder();
         OMS.checkForStatus('Return Refunded')
     },);
+    it('OMS logout', () => {
+        OMS.logOut();
+    },);
+});
+
+describe(specname+' - post run for environment', () => {
+    it('Change colour prefix back', () => {
+        Environment.openBaseURL();
+        AdminPortal.login();
+        AdminPortal.colOrderPrefix(false);
+    });
 });

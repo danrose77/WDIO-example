@@ -5,18 +5,34 @@ import Checkout from "../../../Pages/B2C/Checkout";
 import Rundeck from "../../../Pages/Rundeck";
 import OMS from "../../../Pages/OMS";
 import Customer from "../../../Pages/B2C/Customer";
+import AdminPortal from "../../../Pages/AdminPortal";
 
 let SKU1 = '1020200500313OI6003';
 let Qty1 = 1;
 let username = 'danrosetest+dotpay@gmail.com';
+const countryVal = 'PL';
+
+describe(specname+' - setup test', () => {
+    it('Set up in admin portal', () => {
+        Environment.openCountrySiteForColour(countryVal);
+        AdminPortal.login();
+        AdminPortal.disableCaptcha();
+        AdminPortal.ensureStockInFrontEnd(SKU1);
+        AdminPortal.colOrderPrefix(true);
+        Environment.openURL("https://sup-oms.qa.coc.ibmcloud.com/smcfs/yfshttpapi/yantrahttpapitester.jsp");
+        OMS.inventoryAdjuster(SKU1, 1000, '080');
+        OMS.inventoryAdjuster(SKU1, 1000, '090');
+        OMS.inventoryAdjuster(SKU1, 1000, '110');
+    });
+});
 
 describe(specname+' - Line: Single - Quantity: Single - Payment: Dotpay - Created -> Scheduled -> Released -> Shipped', () => {
     it('Set up a customer account for email '+username, () => {
-        Environment.openBaseURL();
+        Environment.openCountrySiteForColour(countryVal);
         Customer.setUpNewAccount(username);
     });
     it('Go to website and log in', () => {
-        Environment.openBaseURL();
+        Environment.openCountrySiteForColour(countryVal);
         Customer.signIn(username);
     });
     it('Go to SKU: '+SKU1+' and add ('+Qty1+') product to the shopping bag', () => {
@@ -55,4 +71,15 @@ describe(specname+' - Line: Single - Quantity: Single - Payment: Dotpay - Create
         OMS.retrieveOrder();
         OMS.checkForStatus('Shipped')
     },);
+    it('OMS logout', () => {
+        OMS.logOut();
+    },);
+});
+
+describe(specname+' - post run for environment', () => {
+    it('Change colour prefix back', () => {
+        Environment.openBaseURL();
+        AdminPortal.login();
+        AdminPortal.colOrderPrefix(false);
+    });
 });

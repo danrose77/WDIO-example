@@ -353,7 +353,7 @@ class Rundeck extends Page {
                 sitename = "superdry_au";
                 break;
             case 'Belgium':
-                sitename = "superdry_benl";
+                sitename = "superdry_befr";
                 break;
             case 'Canada':
                 if (siteSuffix === 'ca-en') {
@@ -402,7 +402,7 @@ class Rundeck extends Page {
                 sitename = "superdry_no";
                 break;
             case 'Sweden':
-                sitename = "superdry_sw";
+                sitename = "superdry_se";
                 break;
             case 'Taiwan':
                 sitename = "superdry_tw";

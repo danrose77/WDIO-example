@@ -145,14 +145,54 @@ class Adyen extends Page {
         return $("//input[contains(@value,'Save Skin to Test')]");
     }
 
-    adyenLogin(username, password) {
+    get Adyen_transactions() {
+        return $("[data-canonical='transactions'] .ca-header-title");
+    }
+    get Adyen_offers() {
+        return $("[data-event='go-to-offers'] .ca-header-popup-link-text");
+    }
+    get Adyen_table() {
+        return $$("//tr //td //a");
+    }
+    get Adyen_submit() {
+        return $("[type='submit']");
+    }
+    get Adyen_successalert() {
+        return $("//div[@class='adl-alert adl-alert--success u-margin-y-medium']");
+    }
+    adyenLogin() {
         browser.pause(1250);
         this.Test.click();
         //this.Account.clearElement();
         this.Account.setValue("SuperGroup");
-        this.Username.setValue(username);
-        this.Password.setValue(password);
+        this.Username.setValue(process.env.ADYEN_USERNAME);
+        this.Password.setValue(process.env.ADYEN_PASSWORD);
         this.Submit.click();
+    }
+
+    confirmBankTransfer() {
+        let submitFound = false;
+        while (submitFound === false) {
+            this.Adyen_transactions.click();
+            this.Adyen_offers.click();
+            browser.pause(1000);
+            this.Adyen_table[0].click();
+            browser.pause(1000);
+            submitFound = this.Adyen_submit.isDisplayed();
+        }
+        this.Adyen_submit.click();
+        try {
+            browser.pause(1000);
+            browser.acceptAlert();
+        } catch (e) {
+            console.log("No alert to accept")
+        }
+        try {
+            browser.pause(1000);
+            expect((this.Adyen_successalert).isDisplayed()).to.be.true;
+        } catch (e) {
+            console.log("Success element not found in Adyen")
+        }
     }
 
     changeSkin(site) {

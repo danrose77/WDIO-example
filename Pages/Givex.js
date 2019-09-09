@@ -71,6 +71,7 @@ class Storefinder extends Page {
     login() {
         if (formFactor !== 'mobile') {
             browser.url('https://beta-wwws.givex.com/portal/login.py');
+            $('#consent-button').click();
             this.username.setValue("Daniel.rose");
             this.password.setValue("Pineapple77");
             this.submit.click();

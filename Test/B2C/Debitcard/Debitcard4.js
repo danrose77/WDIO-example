@@ -20,7 +20,7 @@ describe(specname+' - Debit card and Gift card payment from a guest user', () =>
     it('Go to a random section and add a product to the shopping bag', () => {
         Navigation.randomSection();
         Search.PickRandomProduct();
-        Product.SelectASizeAndAddTo('Bag');
+        Product.SelectASizeAndAddTo('Bag', 4);
     });
     it('Go to the checkout as a guest and pay by card and giftcard', () => {
         Navigation.GoToCheckout();

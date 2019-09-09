@@ -112,15 +112,22 @@ class IBMse extends Page {
         browser.pause(1000);
         this.addToReturnButton_0.click();
         browser.pause(7000);
-        try {
-            this.return_continue.click();
-        } catch (e) {
-            console.log(e);
-        }
+        this.return_continue.click();
         browser.pause(1000);
+        try {
+            browser.acceptAlert();
+        } catch (e) {
+            console.log("No alert to accept")
+        }
+        browser.pause(2000);
         if (type === 'exchange') {
             let count = objectLength.element(this.exchange_option);
+            console.log('count = ' + count);
             let randomNumber = Math.floor(Math.random() * count);
+            randomNumber = randomNumber - 1;
+            if (randomNumber < 0) {
+                randomNumber = 0;
+            }
             let element = this.exchange_option[randomNumber];
             element.click();
             browser.pause(1000);

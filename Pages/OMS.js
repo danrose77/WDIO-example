@@ -78,7 +78,7 @@ class OMS extends Page {
     }
 
     get OMS_SQL_run() {
-        return $("//span[contains(text(),'Run query')]");
+        return $("[colspan] > [type] span");
     }
 
     get OMS_SQL_results() {
@@ -173,11 +173,11 @@ class OMS extends Page {
         return $$("//td[4]//div[1]//div[1]//span[1]");
     }
 
-    checkForStatus(include) {
+    checkForStatus(include, singleCheck) {
         browser.pause(1000);
         let source = browser.getPageSource();
         let status = source.includes(include);
-        while (status === false) {
+        if (singleCheck === true) {
             browser.pause(500);
             this.CloseOrder.click();
             this.OrderNumber.waitForEnabled();
@@ -188,7 +188,38 @@ class OMS extends Page {
             browser.pause(1000);
             source = browser.getPageSource();
             status = source.includes(include);
+            console.log(include + " status is " + status);
+            if (status === true) {
+                console.log("Found expected status - " + include);
+                return 'pass';
+            }
+        } else {
+            while (status === false) {
+                browser.pause(500);
+                this.CloseOrder.click();
+                this.OrderNumber.waitForEnabled();
+                browser.pause(3000);
+                this.OrderNumber.setValue(referenceNumber);
+                this.FindOrderBTN.click();
+                this.TableItem.waitForExist();
+                browser.pause(1000);
+                source = browser.getPageSource();
+                status = source.includes(include);
+                console.log(include + " status is " + status);
+                if (status === true) {
+                    console.log("Found expected status - " + include);
+                    return 'pass';
+                } else {
+                    // If scheduled check if bypassed to released and then sop if already released
+                    if (include === 'Scheduled') {
+                        status = source.includes('Released');
+                        console.log("Released status is " + status);
+                        return 'pass';
+                    }
+                }
+            }
         }
+
         Screenshot.viewport();
     }
 
@@ -237,15 +268,33 @@ class OMS extends Page {
         }
         if (appliedHolds === false) {
             let holdlockNumber = objectLength.element(this.holdLock);
+            console.log('holdlockNumber = ' + holdlockNumber);
             let counter = 0;
             let resolvedHolds = false;
             while (counter < holdlockNumber) {
                 resolvedHolds = this.holdLock[counter].isDisplayed();
-                counter++;
+                console.log('resolvedHolds = ' + resolvedHolds);
                 if (resolvedHolds === true) {
+                    browser.pause(10000);
+                    browser.back();
+                    browser.acceptAlert();
+                    this.logIn();
+                    if (inputOrder !== undefined) {
+                        this.OrderNumber.setValue(inputOrder);
+                        this.FindOrderBTN.click();
+                        this.CloseOrder.waitForDisplayed();
+                    } else {
+                        this.OrderNumber.setValue(referenceNumber);
+                        this.FindOrderBTN.click();
+                        this.CloseOrder.waitForDisplayed();
+                    }
+                    resolvedHolds = this.holdLock[counter].isDisplayed();
+                    console.log('resolvedHolds = ' + resolvedHolds);
                     break;
                 }
+                counter++;
             }
+
             if (resolvedHolds === true) {
                 this.resolveHolds.click();
                 browser.pause(1000);
@@ -267,7 +316,9 @@ class OMS extends Page {
                 this.returnToSummary[0].click();
             }
         }
-        Screenshot.viewport();
+            Screenshot.viewport();
+
+
     }
 
     cancelOrder() {
@@ -289,15 +340,17 @@ class OMS extends Page {
     }
 
     scheduleOrder() {
-        this.TableItem.waitForExist();
-        browser.pause(1000);
-        this.checkForStatus('Scheduled');
+        if (this.checkForStatus('Released', true) !== 'pass') {
+            this.TableItem.waitForExist();
+            browser.pause(1000);
+            this.checkForStatus('Scheduled');
+        }
     }
 
     logIn() {
         Environment.openURL('https://sup-oms.qa.coc.ibmcloud.com/isccs/isccs/login.do?scFlag=Y');
-        this.Username.setValue("admin");
-        this.Password.setValue("password");
+        this.Username.setValue(process.env.OMS_USERNAME);
+        this.Password.setValue(process.env.OMS_PASSWORD);
         browser.keys("Enter");
     }
 
@@ -316,6 +369,7 @@ class OMS extends Page {
         this.OMS_SQL_password.setValue('password');
         let SQLline = "select ol.prime_line_no, ol.item_id, or.release_no, or.shipnode_key, or.ship_advice_no from yfs_order_line ol join yfs_order_header oh on ol.order_header_key = oh.order_header_key join yfs_order_release or on ol.order_header_key = or.order_header_key where oh.order_no = '" + referenceNumber + "';";
         this.OMS_SQL_entry.setValue(SQLline);
+        browser.pause(2000);
         this.OMS_SQL_run.click();
         browser.pause(3000);
         Screenshot.viewport();
@@ -323,7 +377,8 @@ class OMS extends Page {
         let stepCount = 0;
         let loopMax = skuslist.length;
         let resultsCount = objectLength.element(this.OMS_SQL_results);
-        resultsCount = resultsCount / 5;
+        resultsCount = resultsCount / 6;
+        browser.pause(2000);
         if (loopMax !== resultsCount) {
             let duplicateTimes = resultsCount / loopMax - 1;
             let counter = 0;
@@ -340,6 +395,7 @@ class OMS extends Page {
         }
         let resultPosition = 0;
         while (counterTick !== resultsCount) {
+            stepCount = stepCount + 1;
             let PRIME_LINE_NO = this.OMS_SQL_results[stepCount].getHTML(false);
             stepCount = stepCount + 1;
             let ITEM_ID = this.OMS_SQL_results[stepCount].getHTML(false);
@@ -368,6 +424,27 @@ class OMS extends Page {
             counterTick = counterTick + 1;
         }
     }
+    APItesterInput(serviceName,APIname,APIMessage) {
+        if (serviceName !== undefined) {
+            this.API_InvokeFlow.click();
+            this.API_ServiceName.setValue(serviceName);
+        }
+        this.API_ApiName.selectByAttribute('value', APIname);
+        this.API_userId.setValue('admin');
+        this.API_password.setValue('password');
+        this.API_Message.setValue(APIMessage);
+        Screenshot.viewport();
+        this.API_run.click();
+    }
+    inventoryAdjuster(SKU,QTY,ShipNode) {
+        let nl = (process.platform === "win32" ? "\r\n" : "\n");
+        let APIMessage = '<Items>' + nl + '<Item ItemID="'+SKU+'" OrganizationCode="SUPERDRY" ShipNode="'+ShipNode+'" SupplyType="ONHAND" Quantity="'+QTY+'" AdjustmentType="ABSOLUTE" Availability="TRACK" />' + nl + '</Items>';
+        browser.pause(1000);
+        this.APItesterInput(undefined, "adjustInventory", APIMessage);
+        browser.pause(1000);
+        browser.back();
+        console.log(SKU + " set to " + QTY + " for ship node " + ShipNode);
+    }
 
     APITesterShipOrder(zeroShip) {
         let nl = (process.platform === "win32" ? "\r\n" : "\n");
@@ -390,14 +467,7 @@ class OMS extends Page {
             let ShipmentLines = '<ShipmentLine ItemID="' + skuslist[ticks].No + '" PrimeLineNo="' + skuslist[ticks].PRIME_LINE_NO + '" SubLineNo="1" Quantity="' + quantityVal + '" ShipAdviceNo="' + skuslist[ticks].SHIP_ADVICE_NO + '">' + nl + '</ShipmentLine>';
             let APIMessage = '<ShippingAdvice Closed="' + closeOrder + '" ShipAdviceNo="' + skuslist[ticks].SHIP_ADVICE_NO + '">' + nl + ' <Shipment ConfirmShip="Y" ActualShipmentDate="' + year + '-' + month + '-' + day + '" ActualCarrierServiceCode="DOMSTD" DocumentType="0001" EnterpriseCode="SUPERDRY" ShipNode="' + skuslist[ticks].SHIPNODE_KEY + '" TrackingNo="' + d.getTime() + '">' + nl + '  <ShipmentLines>' + nl + ShipmentLines + nl + '</ShipmentLines>' + nl + '</Shipment>' + nl + '</ShippingAdvice>';
             browser.pause(3000);
-            this.API_InvokeFlow.click();
-            this.API_ServiceName.setValue('SG_Process_Shipment_Notification');
-            this.API_ApiName.selectByAttribute('value', 'acceptOrderLineReservation');
-            this.API_userId.setValue('admin');
-            this.API_password.setValue('password');
-            this.API_Message.setValue(APIMessage);
-            Screenshot.viewport();
-            this.API_run.click();
+            this.APItesterInput('SG_Process_Shipment_Notification','acceptOrderLineReservation',APIMessage);
             browser.pause(3000);
             Screenshot.viewport();
             ticks = ticks + 1;

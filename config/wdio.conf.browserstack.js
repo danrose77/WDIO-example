@@ -24,5 +24,6 @@ exports.config = Object.assign(master.config, {
   maxInstances: 2,
   user: process.env.REMOTE_USER,
   key: process.env.REMOTE_PASSWORD,
+  browserstackLocal: true,
  capabilities: [],
 });

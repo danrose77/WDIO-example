@@ -10,7 +10,12 @@ class Navigation extends Page {
     get OrderSummary() {
         return $("[class='col-12 consignment pad-v']");
     }
-
+    get basket_icon() {
+        return $(".account-actions .js-basket-item-count");
+    }
+    get checkout_submit() {
+        return $("//a[@id='checkout-submit']");
+    }
     get checkout_section_giftcard_voucher() {
         return $("#checkout-section-giftcard-voucher");
     }
@@ -207,7 +212,12 @@ class Navigation extends Page {
     }
 
     GoToCheckout() {
-        browser.url(site + 'checkout/log-in');
+        this.acceptCookiesPrompt();
+        browser.pause(1500);
+        this.basket_icon.waitForDisplayed(30000);
+        this.basket_icon.click();
+        this.checkout_submit.waitForDisplayed(30000);
+        this.checkout_submit.click();
         browser.waitUntil(() => {
             return browser.getUrl().includes("checkout");
         }, 5000);

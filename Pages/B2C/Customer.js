@@ -133,11 +133,13 @@ class Customer extends Page {
 
     // Functions
     defineCustomer(email) {
+        console.log('email = '+ email);
         // Establish customer details from yaml file
         let customerSheet = yaml.load(fs.readFileSync('./data/customers.yml', 'utf8'));
         if ((email === undefined)||(email === "")) {
             let screenDate = new Date();
             global.emailaddress = "danrosetest+" + screenDate.getTime() + "@gmail.com";
+            console.log('Setting up user as = '+ country);
             global.customerData = customerSheet[country];
         } else {
             global.customerData = customerSheet[emailaddress];
@@ -299,7 +301,9 @@ class Customer extends Page {
         if (emailaddress === undefined || emailaddress === "") {
             global.emailaddress = email;
         }
-        this.defineCustomer(emailaddress);
+        if ((customerDetails.First_name === "") || (customerDetails.First_name === undefined)) {
+            this.defineCustomer(emailaddress);
+        }
         browser.url(site + 'log-out');
         browser.pause(1000);
         fillObject.element(this.username, emailaddress);
