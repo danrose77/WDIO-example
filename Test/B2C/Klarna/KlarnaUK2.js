@@ -7,7 +7,13 @@ import Customer from "../../../Pages/B2C/Customer";
 import AdminPortal from "../../../Pages/AdminPortal";
 
 let username = 'danrosetest+klarnaUK_user@gmail.com';
-
+describe(specname + ' - setup test', () => {
+    it('Set up in admin portal', () => {
+        Environment.openBaseURL(); 
+        AdminPortal.login();
+        AdminPortal.disableCaptcha();
+    });
+});
 describe(specname+' - Klarna UK pay later payment from an existing user', () => {
     it('Set up a customer account', () => {
         Environment.openBaseURL();

@@ -8,6 +8,14 @@ import AdminPortal from "../../../Pages/AdminPortal";
 
 let username = 'danrosetest+klarnaDE_user@gmail.com';
 
+describe(specname + ' - setup test', () => {
+    it('Set up in admin portal', () => {
+        Environment.openBaseURL(); 
+        AdminPortal.login();
+        AdminPortal.disableCaptcha();
+    });
+});
+
 describe(specname+' - Klarna DE pay later payment from an existing user', () => {
     it('Set up a customer account', () => {
         Environment.openCountrySiteForColour('DE');
