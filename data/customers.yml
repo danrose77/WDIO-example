@@ -377,6 +377,27 @@ Denmark:
   giftcardCode2: ""
   giftcardPIN2: ""
 
+danrosetest+denmark@gmail.com:
+  First_name: "Test"
+  Last_name: "Danish"
+  Phone: "31-80-98131"
+  Address_line1: "Søndergade 85"
+  City: "Brørup"
+  Postcode: "6650"
+  Country: "Denmark"
+  del_YorN: "N"
+  del_address1: ""
+  del_city: ""
+  del_postcode: ""
+  del_country: ""
+  creditAmount: ""
+  creditTimes: ""
+  staffPercent: "0"
+  giftcardCode1: ""
+  giftcardPIN1: ""
+  giftcardCode2: ""
+  giftcardPIN2: ""
+
 Spain:
   First_name: "Test"
   Last_name: "Spanish"

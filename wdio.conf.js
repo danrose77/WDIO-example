@@ -118,7 +118,16 @@ exports.config = {
         //console.dir(test, {depth: null, colors: true});
         if (!test.passed) {
             let screendate = new Date();
-            browser.saveScreenshot('./reports/ErrorShots/' + test.fullTitle + screendate.getTime() + '.png');
+            global.fs = require('fs');
+            const mkdirSync = function (dirPath) {
+                try {
+                    fs.mkdirSync(dirPath)
+                } catch (err) {
+                    if (err.code !== 'EEXIST') throw err
+                }
+            };
+            mkdirSync("./reports/ErrorShots/");
+            browser.saveScreenshot('./reports/ErrorShots/' + screendate.getTime() + '.png');
         }
     },
     after() {

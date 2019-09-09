@@ -17,7 +17,7 @@ const SKU2 = '2102421500481GEQ006';
 
 const Qty1 = 1;
 const Qty2 = 2;
-const username = 'danrosetest+german@gmail.com';
+const username = 'danrosetest+denmark@gmail.com';
 // Available users in data/customers.yml - danrosetest+austrian@gmail.com, danrosetest+austrian@gmail.com, danrosetest+belgian@gmail.com
 // danrosetest+french@gmail.com, danrosetest+german@gmail.com, danrosetest+greek@gmail.com, danrosetest+irish@gmail.com, danrosetest+italian@gmail.com,
 // danrosetest+netherlands@gmail.com, danrosetest+poland@gmail.com, danrosetest+UK@gmail.com, danrosetest+switzerland@gmail.com, danrosetest+hongkong@gmail.com,

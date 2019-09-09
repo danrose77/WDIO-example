@@ -7,19 +7,7 @@ let month = screendate.getMonth() + 1;
 let dateString = screendate.getFullYear() + "_" + month + "_" + screendate.getDate();
 
 exports.config = Object.assign(master.config, {
-  services: ["browserstack",['image-comparison',
-    // The options
-    {
-      // Some options, see the docs for more
-      baselineFolder: join(process.cwd(), './Reports/Visual_Regression_Browserstack/Baseline/'),
-      formatImageName: '{tag}-{width}x{height}',
-      screenshotPath: join(process.cwd(), './Reports/Visual_Regression_Browserstack/'+dateString+'/'),
-      savePerInstance: true,
-      autoSaveBaseline: true,
-      blockOutStatusBar: true,
-      blockOutToolBar: true,
-      // ... more options
-    }]],
+  services: ["browserstack"],
   logLevel: 'error',
   maxInstances: 2,
   user: process.env.REMOTE_USER,
