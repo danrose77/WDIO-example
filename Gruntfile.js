@@ -76,6 +76,15 @@ module.exports = function(grunt) {
                     baseUrl: grunt.config("environment"),
                     capabilities: [{"browserName": "chrome"}],
             },
+            chromeheadless: {
+                configFile: "./config/wdio.conf.local.js",
+                    specs: grunt.config("spec"),
+                    baseUrl: grunt.config("environment"),
+                    capabilities: [{"browserName": "chrome",
+                    'goog:chromeOptions': {
+                        args: ['--headless','--window-size=1920,1080'],
+                      }}],
+            },
             ie: {
                 configFile: "./config/wdio.conf.local.ie.js",
                 specs: grunt.config("spec"),
@@ -107,6 +116,7 @@ module.exports = function(grunt) {
     grunt.registerTask("default", ["webdriver:test"]);
     grunt.registerTask("local", ["webdriver:test"]);
     grunt.registerTask("test", ["webdriver:test"]);
+    grunt.registerTask("headless", ["webdriver:chromeheadless"]);
     grunt.registerTask("ie", ["webdriver:ie"]);
     grunt.registerTask("devtools", ["webdriver:devtools"]);
     grunt.registerTask("VizReg", ["webdriver:VizReg"]);

@@ -11,7 +11,7 @@ let Qty1 = 1;
 
 describe(specname + ' - setup test', () => {
     it('Set up in admin portal', () => {
-        Environment.openBaseURL();
+        Environment.openBaseURL(); 
         AdminPortal.login();
         AdminPortal.disableCaptcha();
         AdminPortal.ensureStockInFrontEnd(SKU1);

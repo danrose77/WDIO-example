@@ -2,57 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cea8097-f04b-4e2a-9d8f-92a64695058e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Pages/IE_IBMsterling.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/OMS/InventoryAdjuster.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_Backorder_cancelled_1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_Backorder_cancelled_2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_exchange_1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_exchange_2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_releasecancelled_1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_releasecancelled_2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_return_1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_return_2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_return_3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_return_4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_zeroship_1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_zeroship_2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/wdio.conf.local.ie.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/Gruntfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/AdminPortal.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/AdminPortal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Adyen.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Adyen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/B2C/Checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2C/Checkout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/B2C/Customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2C/Customer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/B2C/Environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2C/Environment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/B2C/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2C/Navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/B2C/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2C/Product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Givex.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Givex.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/IBMse.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/IBMse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/OMS.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/OMS.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Rundeck.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Rundeck.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Adyen/skinswitch.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Adyen/skinswitch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard4.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/B2C/Search/Search1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Search/Search1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/B2C/Search/Search2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Search/Search2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship10.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship10.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship11.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship11.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship12.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship12.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship13.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship13.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship14.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship14.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship4.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship5.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship6.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship6.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship7.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship7.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship8.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship8.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship9.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship9.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/PoC/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/PoC/Test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/wdio.conf.browserstack.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/wdio.conf.browserstack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/wdio.conf.local.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/wdio.conf.local.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/customers.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/customers.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -218,6 +169,8 @@
       <workItem from="1567406986855" duration="14665000" />
       <workItem from="1567434966818" duration="250000" />
       <workItem from="1567435778404" duration="81067000" />
+      <workItem from="1568015348469" duration="3000" />
+      <workItem from="1568017546146" duration="605000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1556195896755</created>
