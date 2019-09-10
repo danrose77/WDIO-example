@@ -1,7 +1,7 @@
 import Environment from '../../Pages/B2C/Environment.js';
 
 const sitename = 'https://www.superdry.com/';
-const sitetitle = 'Superdry - Jackets, T Shirts, Hoodies, Shorts, Mens & Womens Clothing - Superdry';
+const sitetitle = 'Superfly - Jackets, T Shirts, Hoodies, Shorts, Mens & Womens Clothing - Superdry';
 
 
 describe(specname+' - Staff user checking that relevant discount is applied', () => {
