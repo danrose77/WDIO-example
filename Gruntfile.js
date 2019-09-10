@@ -100,10 +100,7 @@ module.exports = function(grunt) {
                 configFile: "./config/wdio.conf.VizReg.js",
                 specs: grunt.config("spec"),
                 baseUrl: grunt.config("environment"),
-                capabilities: [{"browserName": "chrome",
-                    'goog:chromeOptions': {
-                        args: ['--headless','--window-size=1920,1080'],
-                    }}],
+                capabilities: [{'os' : 'Windows','os_version' : '10','browserName' : 'Chrome','resolution' : '1920x1200','browserstack.local' : 'false','browserstack.debug' : 'true','browserstack.timezone' : 'UK','browserstack.geoLocation' : 'GB',"goog:chromeOptns": {"args": ["disable-infobars"]}}],
             },
             browserstack: {
                 configFile: "./config/wdio.conf.browserstack.js",

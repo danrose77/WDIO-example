@@ -1,23 +1,27 @@
 const master = require("../wdio.conf");
 const {join} = require('path');
+require('dotenv').config();
 
 let screendate = new Date();
 let month = screendate.getMonth() + 1;
 let dateString = screendate.getFullYear() + "_" + month + "_" + screendate.getDate();
 
 exports.config = Object.assign(master.config, {
-  services: ["selenium-standalone",
+  services: [["browserstack"],
     ['image-comparison', {
-      baselineFolder: join(process.cwd(), './Reports/Visual_Regression_Local/Baseline/'),
+      baselineFolder: join(process.cwd(), './Visual_Regression/Baseline/'),
       formatImageName: '{tag}-{width}x{height}',
-      screenshotPath: join(process.cwd(), './Reports/Visual_Regression_Local/'+dateString+'/'),
+      screenshotPath: join(process.cwd(), './Visual_Regression/'+dateString+'/'),
       savePerInstance: true,
       autoSaveBaseline: true,
       blockOutStatusBar: true,
       blockOutToolBar: true,
     }]
   ],
-  specs: ["Test/**/*.js"],
   logLevel: 'error',
   maxInstances: 2,
+  user: process.env.REMOTE_USER,
+  key: process.env.REMOTE_PASSWORD,
+  browserstackLocal: true,
+  capabilities: [],
 });

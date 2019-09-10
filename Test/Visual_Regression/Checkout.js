@@ -11,7 +11,7 @@ describe('Visual Regression test for ' + specname, () => {
         Navigation.randomSection();
         Search.PickRandomProduct();
         Product.SelectASizeAndAddTo('Bag');
-        browser.url(site + 'checkout');
+        Navigation.GoToCheckout();
         browser.pause(1500);
     });
     /*
