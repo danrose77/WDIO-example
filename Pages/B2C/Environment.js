@@ -1,11 +1,17 @@
 import Page from '../Page'
 import Navigation from "./Navigation";
-import * as yaml from "js-yaml";
-import Screenshot from "../../functions/Screenshot";
 
 
 
 class Environment extends Page {
+
+    get siteLogoElement() {
+        return $('.logo');
+    }
+    get siteMenuElement() {
+        return $('//i[@class="custom-icon burger"]');
+    }
+
     setSite() {
         global.site = browser.getUrl();
         global.environment = global.site;

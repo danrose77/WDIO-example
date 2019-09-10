@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4cea8097-f04b-4e2a-9d8f-92a64695058e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/Gruntfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Visual_Regression/Checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Visual_Regression/Checkout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/wdio.conf.VizReg.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/wdio.conf.VizReg.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdio.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/wdio.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/B2C/Environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2C/Environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Sitealert/superdrycom.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Sitealert/superdrycom.test.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +34,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Test/OMS/testpack" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Test/Sitealert" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -51,19 +49,19 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.2.5\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\webdriverio-v5\Test\OMS\testpack" />
-      <recent name="C:\webdriverio-v5\Test\OMS" />
-      <recent name="C:\webdriverio-v5\Pages" />
-      <recent name="C:\webdriverio-v5\config" />
-      <recent name="C:\webdriverio-v5\Test\OMS\Central\CarrierNetworkTest" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\webdriverio-v5\Test" />
       <recent name="C:\webdriverio-v5\Test\OMS\Central" />
       <recent name="C:\webdriverio-v5\Pages\B2C" />
       <recent name="C:\webdriverio-v5\Pages" />
       <recent name="C:\webdriverio-v5\Pages\OMS" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\webdriverio-v5\Test\Sitealert" />
+      <recent name="C:\webdriverio-v5\Test\OMS\testpack" />
+      <recent name="C:\webdriverio-v5\Test\OMS" />
+      <recent name="C:\webdriverio-v5\Pages" />
+      <recent name="C:\webdriverio-v5\config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -176,7 +174,7 @@
       <workItem from="1568017546146" duration="605000" />
       <workItem from="1568039569613" duration="170000" />
       <workItem from="1568039813166" duration="10000" />
-      <workItem from="1568039838601" duration="5914000" />
+      <workItem from="1568039838601" duration="11980000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1556195896755</created>
@@ -437,7 +435,21 @@
       <option name="project" value="LOCAL" />
       <updated>1568106868318</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary=".">
+      <created>1568109022915</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1568109022915</updated>
+    </task>
+    <task id="LOCAL-00039" summary=".">
+      <created>1568117564507</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1568117564507</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TestHistory">
