@@ -172,7 +172,7 @@
       <workItem from="1568017546146" duration="605000" />
       <workItem from="1568039569613" duration="170000" />
       <workItem from="1568039813166" duration="10000" />
-      <workItem from="1568039838601" duration="12707000" />
+      <workItem from="1568039838601" duration="13263000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1556195896755</created>
@@ -461,7 +461,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568118125488</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary=".">
+      <created>1568119794518</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1568119794519</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TestHistory">
