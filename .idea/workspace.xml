@@ -3,7 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="4cea8097-f04b-4e2a-9d8f-92a64695058e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/Gruntfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Afterpay1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Afterpay1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Dotpay1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Dotpay1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Giropay1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Giropay1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Ideal1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Ideal1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Sofort1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Sofort1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report.20190903.113501.19820.0.001.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report.20190903.115501.19884.0.001.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report.20190906.144724.33772.0.001.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report.20190906.150148.1696.0.001.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report.20190909.110431.4268.0.001.json" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +54,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.2.5\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -171,6 +181,9 @@
       <workItem from="1567435778404" duration="81067000" />
       <workItem from="1568015348469" duration="3000" />
       <workItem from="1568017546146" duration="605000" />
+      <workItem from="1568039569613" duration="170000" />
+      <workItem from="1568039813166" duration="10000" />
+      <workItem from="1568039838601" duration="3912000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1556195896755</created>

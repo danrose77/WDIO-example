@@ -4,7 +4,7 @@ import Search from '../../Pages/B2C/Search.js';
 import Navigation from '../../Pages/B2C/Navigation.js';
 import Checkout from "../../Pages/B2C/Checkout";
 import Customer from "../../Pages/B2C/Customer";
-import AdminPortal from "../../../Pages/AdminPortal";
+import AdminPortal from "../../Pages/AdminPortal";
 
 let username = 'danrosetest+ideal@gmail.com';
 describe(specname + ' - setup test', () => {
