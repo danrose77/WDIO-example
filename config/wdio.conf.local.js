@@ -6,3 +6,4 @@ exports.config = Object.assign(master.config, {
   logLevel: 'error',
   maxInstances: 5,
 });
+2

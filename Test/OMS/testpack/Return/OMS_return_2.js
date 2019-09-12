@@ -1,44 +1,31 @@
-import Environment from '../../../Pages/B2C/Environment.js';
-import Product from '../../../Pages/B2C/Product.js';
-import Navigation from '../../../Pages/B2C/Navigation.js';
-import Checkout from "../../../Pages/B2C/Checkout";
-import Rundeck from "../../../Pages/Rundeck";
-import OMS from "../../../Pages/OMS";
-import Customer from "../../../Pages/B2C/Customer";
-import AdminPortal from "../../../Pages/AdminPortal";
-
-// US Run only to get Eagle DC
-// Will pass on other locations but Eagle DC needs to be tested
+import Environment from '../../../../Pages/B2C/Environment.js';
+import Product from '../../../../Pages/B2C/Product.js';
+import Navigation from '../../../../Pages/B2C/Navigation.js';
+import Checkout from "../../../../Pages/B2C/Checkout";
+import Rundeck from "../../../../Pages/Rundeck";
+import OMS from "../../../../Pages/OMS";
+import IBMse from "../../../../Pages/IBMse";
+import AdminPortal from "../../../../Pages/AdminPortal";
 
 let SKU1 = '1020200500313OI6003';
-let Qty1 = 3;
-let username = 'danrosetest+US_user@gmail.com';
+let Qty1 = 1;
 
 describe(specname+' - setup test', () => {
     it('Set up in admin portal', () => {
-        Environment.openCountrySiteForColour('US');
+        Environment.openBaseURL();
         AdminPortal.login();
         AdminPortal.disableCaptcha();
         AdminPortal.ensureStockInFrontEnd(SKU1);
         AdminPortal.colOrderPrefix(true);
         Environment.openURL("https://sup-oms.qa.coc.ibmcloud.com/smcfs/yfshttpapi/yantrahttpapitester.jsp");
-        OMS.inventoryAdjuster(SKU1, 0, '080');
+        OMS.inventoryAdjuster(SKU1, 1000, '080');
         OMS.inventoryAdjuster(SKU1, 1000, '090');
-        OMS.inventoryAdjuster(SKU1, 0, '110');
+        OMS.inventoryAdjuster(SKU1, 1000, '110');
     });
 });
-
-describe(specname+' - Line: Single - Quantity: Multi - Payment: Card - Created -> Scheduled -> Released -> Shipped', () => {
-    it('Set up a customer account for email '+username, () => {
-        Environment.openCountrySiteForColour('US');
-        // Environment.openBaseURL(); --> If script is to be run on non us remove uncomment here and comment above
-        Customer.setUpNewAccount(username);
-        Customer.addDeliveryAddress();
-    });
-    it('Go to website and log in', () => {
-        Environment.openCountrySiteForColour('US');
-        // Environment.openBaseURL(); --> If script is to be run on non us remove uncomment here and comment above
-        Customer.signIn(username);
+describe(specname+' - Create order with a specific SKU and return', () => {
+    it('Open the environment', () => {
+        Environment.openBaseURL();
     });
     it('Go to SKU: '+SKU1+' and add ('+Qty1+') product to the shopping bag', () => {
         Environment.goToBasePlus('products/?sku='+SKU1);
@@ -49,7 +36,7 @@ describe(specname+' - Line: Single - Quantity: Multi - Payment: Card - Created -
         Navigation.GoToCheckout();
         Checkout.selectLocalDelivery();
         Checkout.fillTheDeliveryFields();
-        Checkout.payByCard();
+        Checkout.payByPaypal();
     });
     it('Export order in Rundeck', () => {
         Rundeck.orderExport();
@@ -74,7 +61,17 @@ describe(specname+' - Line: Single - Quantity: Multi - Payment: Card - Created -
     it('Confirm shipped status', () => {
         OMS.logIn();
         OMS.retrieveOrder();
-        OMS.checkForStatus('Shipped')
+        OMS.checkForStatus('Shipped');
+        OMS.logOut();
+    },);
+    it('Return the order in IBMse', () => {
+        IBMse.login();
+        IBMse.returnOrExchangeAnItem('return');
+    },);
+    it('Confirm Return Refunded status', () => {
+        OMS.logIn();
+        OMS.retrieveOrder();
+        OMS.checkForStatus('Return Refunded')
     },);
     it('OMS logout', () => {
         OMS.logOut();

@@ -41,7 +41,7 @@ class ShoppingBag extends Page {
         while (counter <= numberToRemove) {
             let control = this.DecreaseQtyCtrl[1];
             control.click();
-            browser.pause(1000);
+            browser.pause(2000);
             counter = counter + 1;
         }
         quantityItem1 = this.get1stItemQty;

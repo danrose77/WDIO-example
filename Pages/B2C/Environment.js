@@ -14,7 +14,9 @@ class Environment extends Page {
 
     setSite() {
         global.site = browser.getUrl();
+        console.log(site);
         global.environment = global.site;
+        console.log(environment);
         let envcol = environment;
         envcol = envcol.split("-");
         envcol = envcol[1];
@@ -102,7 +104,12 @@ class Environment extends Page {
     }
 
     goToBasePlus(basePlus) {
-        browser.url(basePlus);
+        if (country === 'UK') {
+            browser.url(basePlus);
+        } else {
+            browser.url(site + basePlus);
+        }
+
         global.site = browser.getUrl();
         browser.pause(2000);
         this.country();

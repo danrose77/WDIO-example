@@ -1,11 +1,12 @@
-import Environment from '../../../Pages/B2C/Environment.js';
-import Product from '../../../Pages/B2C/Product.js';
-import Navigation from '../../../Pages/B2C/Navigation.js';
-import Checkout from "../../../Pages/B2C/Checkout";
-import Rundeck from "../../../Pages/Rundeck";
-import OMS from "../../../Pages/OMS";
-import Customer from "../../../Pages/B2C/Customer";
-import AdminPortal from "../../../Pages/AdminPortal";
+import Environment from '../../../../Pages/B2C/Environment.js';
+import Product from '../../../../Pages/B2C/Product.js';
+import Navigation from '../../../../Pages/B2C/Navigation.js';
+import Checkout from "../../../../Pages/B2C/Checkout";
+import Rundeck from "../../../../Pages/Rundeck";
+import OMS from "../../../../Pages/OMS";
+import IBMse from "../../../../Pages/IBMse";
+import Customer from "../../../../Pages/B2C/Customer";
+import AdminPortal from "../../../../Pages/AdminPortal";
 
 let SKU1 = '1020200500313OI6003';
 let Qty1 = 1;
@@ -24,13 +25,8 @@ describe(specname+' - setup test', () => {
         OMS.inventoryAdjuster(SKU1, 1000, '110');
     });
 });
-
-describe(specname+' - Line: Single - Quantity: Single - Payment: Sofort - Created -> Scheduled -> Released -> Shipped', () => {
-    it('Set up a customer account for email '+username, () => {
-        Environment.openBaseURL();
-        Customer.setUpNewAccount(username);
-    });
-    it('Go to website and log in', () => {
+describe(specname+' - Create order with a specific SKU and return', () => {
+    it('Open the environment', () => {
         Environment.openBaseURL();
         Product.closeGoToCountry();
         Customer.signIn(username);
@@ -41,9 +37,8 @@ describe(specname+' - Line: Single - Quantity: Single - Payment: Sofort - Create
         Product.SelectASizeAndAddTo('Bag', Qty1, true);
         Product.logUsedSKU(SKU1);
     });
-    it('Go to the checkout as a guest and pay by Sofort', () => {
+    it('Go to the checkout as a guest and pay by card', () => {
         Navigation.GoToCheckout();
-        Checkout.selectLocalDelivery();
         Checkout.fillTheDeliveryFields();
         Checkout.payBySofort();
     });
@@ -70,7 +65,17 @@ describe(specname+' - Line: Single - Quantity: Single - Payment: Sofort - Create
     it('Confirm shipped status', () => {
         OMS.logIn();
         OMS.retrieveOrder();
-        OMS.checkForStatus('Shipped')
+        OMS.checkForStatus('Shipped');
+        OMS.logOut();
+    },);
+    it('Return the order in IBMse', () => {
+        IBMse.login();
+        IBMse.returnOrExchangeAnItem('return');
+    },);
+    it('Confirm Return Refunded status', () => {
+        OMS.logIn();
+        OMS.retrieveOrder();
+        OMS.checkForStatus('Return Refunded')
     },);
     it('OMS logout', () => {
         OMS.logOut();

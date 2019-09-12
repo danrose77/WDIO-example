@@ -1,10 +1,10 @@
-import Environment from '../../../Pages/B2C/Environment.js';
-import Product from '../../../Pages/B2C/Product.js';
-import Navigation from '../../../Pages/B2C/Navigation.js';
-import Checkout from "../../../Pages/B2C/Checkout";
-import Rundeck from "../../../Pages/Rundeck";
-import OMS from "../../../Pages/OMS";
-import AdminPortal from "../../../Pages/AdminPortal";
+import Environment from '../../../../Pages/B2C/Environment.js';
+import Product from '../../../../Pages/B2C/Product.js';
+import Navigation from '../../../../Pages/B2C/Navigation.js';
+import Checkout from "../../../../Pages/B2C/Checkout";
+import Rundeck from "../../../../Pages/Rundeck";
+import OMS from "../../../../Pages/OMS";
+import AdminPortal from "../../../../Pages/AdminPortal";
 
 let SKU1 = '102020200021802A004';
 let Qty1 = 1;

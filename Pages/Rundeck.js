@@ -30,6 +30,9 @@ class Rundeck extends Page {
     get rundeck_order() {
         return $("//input[@name='extra.option.order']");
     }
+    get rundeck_orders() {
+        return $("//input[@name='extra.option.orders']");
+    }
 
     get rundeck_site() {
         return $("//input[@name='extra.option.site']");
@@ -342,10 +345,20 @@ class Rundeck extends Page {
             this.rundeck_export_specific_order_to_OMS.click();
         } catch (e) {
         }
+        console.log('this.rundeck_order.isDisplayed() = ' + this.rundeck_order.isDisplayed());
+        console.log('this.rundeck_orders.isDisplayed() = ' + this.rundeck_orders.isDisplayed());
         if (orderNo !== undefined) {
-            this.rundeck_order.setValue(orderNo);
+            if (this.rundeck_order.isDisplayed()) {
+                this.rundeck_order.setValue(orderNo);
+            } else {
+                this.rundeck_orders.setValue(orderNo);
+            }
         } else {
-            this.rundeck_order.setValue(referenceNumber);
+            if (this.rundeck_order.isDisplayed()) {
+                this.rundeck_order.setValue(referenceNumber);
+            } else {
+                this.rundeck_orders.setValue(referenceNumber);
+            }
         }
         let sitename = "";
         switch (country) {

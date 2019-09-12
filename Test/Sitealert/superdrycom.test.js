@@ -15,7 +15,6 @@ describe(specname+' - Staff user checking that relevant discount is applied', ()
         expect(browser.getUrl()).to.equal(sitename);
     });
     it('Check logo', () => {
-        console.log(Environment.siteLogoElement.getSize('width'));
         expect(Environment.siteLogoElement.getSize('width')).to.least(200);
         expect(Environment.siteLogoElement.getSize('height')).to.least(40);
     });

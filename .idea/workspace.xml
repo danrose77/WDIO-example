@@ -2,7 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cea8097-f04b-4e2a-9d8f-92a64695058e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/B2C/Environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2C/Environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/B2C/ShoppingBag.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/B2C/ShoppingBag.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Rundeck.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Rundeck.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/B2C/Debitcard/Debitcard1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/InventoryAdjuster.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/InventoryAdjuster.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_Backorder_cancelled_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/Cancel/OMS_Backorder_cancelled_1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_Backorder_cancelled_2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/Cancel/OMS_Backorder_cancelled_2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_exchange_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/Exchange/OMS_exchange_1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_exchange_2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/Exchange/OMS_exchange_2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_releasecancelled_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/Cancel/OMS_releasecancelled_1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_releasecancelled_2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/Cancel/OMS_releasecancelled_2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_return_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/Return/OMS_return_1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_return_2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/Return/OMS_return_2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_return_3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/Return/OMS_return_3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_return_4.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/Return/OMS_return_4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/temp/OMS_ship1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship10.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/Ship/OMS_ship10.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship11.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/Ship/OMS_ship11.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship12.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/Ship/OMS_ship12.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship13.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/Ship/OMS_ship13.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship14.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/Ship/OMS_ship14.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/temp/OMS_ship2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/temp/OMS_ship3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship4.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/temp/OMS_ship4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship5.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/temp/OMS_ship5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship6.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/temp/OMS_ship6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship7.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/temp/OMS_ship7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship8.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/Ship/OMS_ship8.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_ship9.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/Ship/OMS_ship9.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_zeroship_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/Cancel/OMS_zeroship_1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/OMS/testpack/OMS_zeroship_2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/OMS/testpack/Cancel/OMS_zeroship_2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Sitealert/superdrycom.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Sitealert/superdrycom.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/wdio.conf.local.ie.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/wdio.conf.local.ie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/wdio.conf.local.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/wdio.conf.local.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,16 +77,16 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.2.5\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\webdriverio-v5\Test" />
-      <recent name="C:\webdriverio-v5\Test\OMS\Central" />
-      <recent name="C:\webdriverio-v5\Pages\B2C" />
-      <recent name="C:\webdriverio-v5\Pages" />
-      <recent name="C:\webdriverio-v5\Pages\OMS" />
+      <recent name="C:\webdriverio-v5\Test\OMS\testpack\temp" />
+      <recent name="C:\webdriverio-v5\Test\OMS\testpack\Cancel" />
+      <recent name="C:\webdriverio-v5\Test\OMS\testpack\Ship" />
+      <recent name="C:\webdriverio-v5\Test\OMS\testpack\Return" />
+      <recent name="C:\webdriverio-v5\Test\OMS\testpack\Exchange" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\webdriverio-v5\Test\Sitealert" />
@@ -172,7 +206,12 @@
       <workItem from="1568017546146" duration="605000" />
       <workItem from="1568039569613" duration="170000" />
       <workItem from="1568039813166" duration="10000" />
-      <workItem from="1568039838601" duration="13263000" />
+      <workItem from="1568039838601" duration="17114000" />
+      <workItem from="1568126715805" duration="323000" />
+      <workItem from="1568127052657" duration="256000" />
+      <workItem from="1568187300038" duration="6755000" />
+      <workItem from="1568202150700" duration="708000" />
+      <workItem from="1568203524856" duration="6261000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1556195896755</created>
@@ -468,22 +507,15 @@
       <option name="project" value="LOCAL" />
       <updated>1568119794519</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary=".">
+      <created>1568120348422</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1568120348422</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="Load_page_and_search - 2019.05.24 at 14h 53m 58s.xml">
-      <configuration name="Load page and search" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />

@@ -1,15 +1,14 @@
-import Environment from '../../../Pages/B2C/Environment.js';
-import Product from '../../../Pages/B2C/Product.js';
-import Navigation from '../../../Pages/B2C/Navigation.js';
-import Checkout from "../../../Pages/B2C/Checkout";
-import Rundeck from "../../../Pages/Rundeck";
-import OMS from "../../../Pages/OMS";
-import AdminPortal from "../../../Pages/AdminPortal";
+import Environment from '../../../../Pages/B2C/Environment.js';
+import Product from '../../../../Pages/B2C/Product.js';
+import Navigation from '../../../../Pages/B2C/Navigation.js';
+import Checkout from "../../../../Pages/B2C/Checkout";
+import Rundeck from "../../../../Pages/Rundeck";
+import OMS from "../../../../Pages/OMS";
+import AdminPortal from "../../../../Pages/AdminPortal";
 
 let SKU1 = '1020200500313OI6003';
 let Qty1 = 1;
-let SKU2 = '104040500024226C003';
-let Qty2 = 1;
+
 describe(specname+' - setup test', () => {
     it('Set up in admin portal', () => {
         Environment.openBaseURL();
@@ -23,6 +22,7 @@ describe(specname+' - setup test', () => {
         OMS.inventoryAdjuster(SKU1, 1000, '110');
     });
 });
+
 describe(specname+' - Create order with a specific SKU and zeroship', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
@@ -31,11 +31,6 @@ describe(specname+' - Create order with a specific SKU and zeroship', () => {
         Environment.goToBasePlus('products/?sku='+SKU1);
         Product.SelectASizeAndAddTo('Bag', Qty1, true);
         Product.logUsedSKU(SKU1);
-    });
-    it('Go to SKU: '+SKU2+' and add ('+Qty2+') product to the shopping bag', () => {
-        Environment.goToBasePlus('products/?sku='+SKU2);
-        Product.SelectASizeAndAddTo('Bag', Qty2, true);
-        Product.logUsedSKU(SKU2);
     });
     it('Go to the checkout as a guest and pay by card', () => {
         Navigation.GoToCheckout();

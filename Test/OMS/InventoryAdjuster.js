@@ -2,7 +2,7 @@ import Environment from '../../Pages/B2C/Environment.js';
 import OMS from "../../Pages/OMS";
 import AdminPortal from "../../Pages/AdminPortal";
 
-let SKULIST = ['2103026000148GVU002','2103026000148GVU003'];
+let SKULIST = ['1098518700002JOG028'];
 let SKUQTY = 2000;
 let ShipNode = '080';
 

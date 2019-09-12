@@ -1,38 +1,43 @@
-import Environment from '../../../Pages/B2C/Environment.js';
-import Product from '../../../Pages/B2C/Product.js';
-import Navigation from '../../../Pages/B2C/Navigation.js';
-import Checkout from "../../../Pages/B2C/Checkout";
-import Rundeck from "../../../Pages/Rundeck";
-import OMS from "../../../Pages/OMS";
-import Customer from "../../../Pages/B2C/Customer";
-import AdminPortal from "../../../Pages/AdminPortal";
+import Environment from '../../../../Pages/B2C/Environment.js';
+import Product from '../../../../Pages/B2C/Product.js';
+import Navigation from '../../../../Pages/B2C/Navigation.js';
+import Checkout from "../../../../Pages/B2C/Checkout";
+import Rundeck from "../../../../Pages/Rundeck";
+import OMS from "../../../../Pages/OMS";
+import Customer from "../../../../Pages/B2C/Customer";
+import AdminPortal from "../../../../Pages/AdminPortal";
+
+// US Run only to get Eagle DC
+// Will pass on other locations but Eagle DC needs to be tested
 
 let SKU1 = '1020200500313OI6003';
-let Qty1 = 1;
-let username = 'danrosetest+dotpay@gmail.com';
-const countryVal = 'PL';
+let Qty1 = 3;
+let username = 'danrosetest+US_user@gmail.com';
 
 describe(specname+' - setup test', () => {
     it('Set up in admin portal', () => {
-        Environment.openCountrySiteForColour(countryVal);
+        Environment.openCountrySiteForColour('US');
         AdminPortal.login();
         AdminPortal.disableCaptcha();
         AdminPortal.ensureStockInFrontEnd(SKU1);
         AdminPortal.colOrderPrefix(true);
         Environment.openURL("https://sup-oms.qa.coc.ibmcloud.com/smcfs/yfshttpapi/yantrahttpapitester.jsp");
-        OMS.inventoryAdjuster(SKU1, 1000, '080');
+        OMS.inventoryAdjuster(SKU1, 0, '080');
         OMS.inventoryAdjuster(SKU1, 1000, '090');
-        OMS.inventoryAdjuster(SKU1, 1000, '110');
+        OMS.inventoryAdjuster(SKU1, 0, '110');
     });
 });
 
-describe(specname+' - Line: Single - Quantity: Single - Payment: Dotpay - Created -> Scheduled -> Released -> Shipped', () => {
+describe(specname+' - Line: Single - Quantity: Multi - Payment: Card - Created -> Scheduled -> Released -> Shipped', () => {
     it('Set up a customer account for email '+username, () => {
-        Environment.openCountrySiteForColour(countryVal);
+        Environment.openCountrySiteForColour('US');
+        // Environment.openBaseURL(); --> If script is to be run on non us remove uncomment here and comment above
         Customer.setUpNewAccount(username);
+        Customer.addDeliveryAddress();
     });
     it('Go to website and log in', () => {
-        Environment.openCountrySiteForColour(countryVal);
+        Environment.openCountrySiteForColour('US');
+        // Environment.openBaseURL(); --> If script is to be run on non us remove uncomment here and comment above
         Customer.signIn(username);
     });
     it('Go to SKU: '+SKU1+' and add ('+Qty1+') product to the shopping bag', () => {
@@ -40,11 +45,11 @@ describe(specname+' - Line: Single - Quantity: Single - Payment: Dotpay - Create
         Product.SelectASizeAndAddTo('Bag', Qty1, true);
         Product.logUsedSKU(SKU1);
     });
-    it('Go to the checkout as a guest and pay by Dotpay', () => {
+    it('Go to the checkout as a guest and pay by card', () => {
         Navigation.GoToCheckout();
         Checkout.selectLocalDelivery();
-        Checkout.fillTheDeliveryFields();
-        Checkout.payByDotpay();
+        //Checkout.fillTheDeliveryFields();
+        Checkout.payByCard();
     });
     it('Export order in Rundeck', () => {
         Rundeck.orderExport();

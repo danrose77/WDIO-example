@@ -1,11 +1,10 @@
-import Environment from '../../../Pages/B2C/Environment.js';
-import Product from '../../../Pages/B2C/Product.js';
-import Navigation from '../../../Pages/B2C/Navigation.js';
-import Checkout from "../../../Pages/B2C/Checkout";
-import Rundeck from "../../../Pages/Rundeck";
-import OMS from "../../../Pages/OMS";
-import IBMse from "../../../Pages/IBMse";
-import AdminPortal from "../../../Pages/AdminPortal";
+import Environment from '../../../../Pages/B2C/Environment.js';
+import Product from '../../../../Pages/B2C/Product.js';
+import Navigation from '../../../../Pages/B2C/Navigation.js';
+import Checkout from "../../../../Pages/B2C/Checkout";
+import Rundeck from "../../../../Pages/Rundeck";
+import OMS from "../../../../Pages/OMS";
+import AdminPortal from "../../../../Pages/AdminPortal";
 
 let SKU1 = '1020200500313OI6003';
 let Qty1 = 1;
@@ -24,7 +23,7 @@ describe(specname+' - setup test', () => {
     });
 });
 
-describe(specname+' - Create order with a specific SKU and return', () => {
+describe(specname+' - Create order with a specific SKU and release and cancel', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });
@@ -43,6 +42,7 @@ describe(specname+' - Create order with a specific SKU and return', () => {
         Rundeck.orderExport();
     });
     it('Go to OMS and retrieve order', () => {
+        Environment.openURL('https://sup-oms.qa.coc.ibmcloud.com/isccs/isccs/login.do?scFlag=Y');
         OMS.logIn();
         OMS.retrieveOrder();
     },);
@@ -52,27 +52,22 @@ describe(specname+' - Create order with a specific SKU and return', () => {
     it('Then release order', () => {
         OMS.releaseOrder();
     }, 9);
+    it('Then apply a hold to the order', () => {
+        OMS.applyOrderHold();
+    }, 9);
     it('Then logout of OMS', () => {
         OMS.logOut();
     });
-    it('Then ship the order', () => {
+    it('Then cancel the order', () => {
         OMS.sterlingQueryForShipDetails();
-        OMS.APITesterShipOrder();
+        OMS.APITesterShipOrder(true);
     });
-    it('Confirm shipped status', () => {
+    it('Confirm cancelled status', () => {
         OMS.logIn();
         OMS.retrieveOrder();
-        OMS.checkForStatus('Shipped');
-        OMS.logOut();
+        OMS.checkForStatus('Cancelled')
     },);
-    it('Return the order in IBMse', () => {
-        IBMse.login();
-        IBMse.returnOrExchangeAnItem('return');
-    },);
-    it('Confirm Return Refunded status', () => {
-        OMS.logIn();
-        OMS.retrieveOrder();
-        OMS.checkForStatus('Return Refunded');
+    it('OMS logout', () => {
         OMS.logOut();
     },);
 });
