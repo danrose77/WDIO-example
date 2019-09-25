@@ -8,14 +8,14 @@ import AdminPortal from "../../../Pages/AdminPortal";
 import Givex from "../../../Pages/Givex";
 
 let username = 'danrosetest+DCCC2@gmail.com';
-describe(specname + ' - setup test', () => {
+describe('setup test', () => {
     it('Set up in admin portal', () => {
         Environment.openBaseURL(); 
         AdminPortal.login();
         AdminPortal.disableCaptcha();
     });
 });
-describe(specname+' - Debit card and Customer credit payment from an existing user', () => {
+describe('Debit card and Customer credit payment from an existing user', () => {
     it('Set up a customer account', () => {
         Environment.openBaseURL();
         Customer.setUpNewAccount(username);

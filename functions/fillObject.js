@@ -14,9 +14,9 @@ class fillObject extends Page {
             element.setValue(value);
 // CHECKBOX HANDLING
           } else if  (typeAttribute === 'checkbox') {
-            console.log('In checkbox statement')
+            console.log('In checkbox statement');
             let currentState = element.getValue();
-            console.log('currentState = '+currentState)
+            console.log('currentState = '+currentState);
             if (currentState === 'on') {
               if (value === 'off') {
                 element.click();

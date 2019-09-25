@@ -12,14 +12,14 @@ Current issue with android and iOS - run on chrome only until resolved (Manual t
 */
 
 let username = 'danrosetest+afterpay@gmail.com';
-describe(specname + ' - setup test', () => {
+describe('setup test', () => {
     it('Set up in admin portal', () => {
         Environment.openBaseURL(); 
         AdminPortal.login();
         AdminPortal.disableCaptcha();
     });
 });
-describe(specname+' - Afterpay payment from an existing user', () => {
+describe('Afterpay payment from an existing user', () => {
 
     it('Set up a customer account for email '+username, () => {
         Environment.openCountrySiteForColour('NL');

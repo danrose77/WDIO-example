@@ -12,7 +12,7 @@ let Qty1 = 1;
 let username = 'danrosetest+dotpay@gmail.com';
 const countryVal = 'PL';
 
-describe(specname+' - setup test', () => {
+describe('setup test', () => {
     it('Set up in admin portal', () => {
         Environment.openCountrySiteForColour(countryVal);
         AdminPortal.login();
@@ -26,7 +26,7 @@ describe(specname+' - setup test', () => {
     });
 });
 
-describe(specname+' - Line: Single - Quantity: Single - Payment: Dotpay - Created -> Scheduled -> Released -> Shipped', () => {
+describe('Line: Single - Quantity: Single - Payment: Dotpay - Created -> Scheduled -> Released -> Shipped', () => {
     it('Set up a customer account for email '+username, () => {
         Environment.openCountrySiteForColour(countryVal);
         Customer.setUpNewAccount(username);
@@ -77,7 +77,7 @@ describe(specname+' - Line: Single - Quantity: Single - Payment: Dotpay - Create
     },);
 });
 
-describe(specname+' - post run for environment', () => {
+describe('post run for environment', () => {
     it('Change colour prefix back', () => {
         Environment.openBaseURL();
         AdminPortal.login();

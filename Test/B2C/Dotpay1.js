@@ -11,14 +11,14 @@ DOTPAY available on PL site only.
 */
 
 let username = 'danrosetest+dotpay@gmail.com';
-describe(specname + ' - setup test', () => {
+describe('setup test', () => {
     it('Set up in admin portal', () => {
         Environment.openBaseURL(); 
         AdminPortal.login();
         AdminPortal.disableCaptcha();
     });
 });
-describe(specname+' - Dotpay payment from an existing user', () => {
+describe('Dotpay payment from an existing user', () => {
     it('Set up a customer account for email '+username, () => {
         Environment.openCountrySiteForColour('PL');
         Customer.setUpNewAccount(username);

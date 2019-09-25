@@ -2,7 +2,7 @@ import Environment from '../../Pages/B2C/Environment.js';
 import Navigation from "../../Pages/B2C/Navigation";
 import VizCheck from "../../functions/VizCheck";
 
-describe(specname+' - Debit card payment from a guest user', () => {
+describe('Debit card payment from a guest user', () => {
 
     it('Open the environment', () => {
         Environment.openBaseURL();

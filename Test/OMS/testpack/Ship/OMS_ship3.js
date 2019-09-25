@@ -14,7 +14,7 @@ let SKU1 = '1020200500313OI6003';
 let Qty1 = 3;
 let username = 'danrosetest+US_user@gmail.com';
 
-describe(specname+' - setup test', () => {
+describe('setup test', () => {
     it('Set up in admin portal', () => {
         Environment.openCountrySiteForColour('US');
         AdminPortal.login();
@@ -28,7 +28,7 @@ describe(specname+' - setup test', () => {
     });
 });
 
-describe(specname+' - Line: Single - Quantity: Multi - Payment: Card - Created -> Scheduled -> Released -> Shipped', () => {
+describe('Line: Single - Quantity: Multi - Payment: Card - Created -> Scheduled -> Released -> Shipped', () => {
     it('Set up a customer account for email '+username, () => {
         Environment.openCountrySiteForColour('US');
         // Environment.openBaseURL(); --> If script is to be run on non us remove uncomment here and comment above
@@ -81,7 +81,7 @@ describe(specname+' - Line: Single - Quantity: Multi - Payment: Card - Created -
     },);
 });
 
-describe(specname+' - post run for environment', () => {
+describe('post run for environment', () => {
     it('Change colour prefix back', () => {
         Environment.openBaseURL();
         AdminPortal.login();

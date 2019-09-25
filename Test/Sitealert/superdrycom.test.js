@@ -4,7 +4,7 @@ const sitename = 'https://www.superdry.com/';
 const sitetitle = 'Superdry - Jackets, T Shirts, Hoodies, Shorts, Mens & Womens Clothing - Superdry';
 
 
-describe(specname+' - Staff user checking that relevant discount is applied', () => {
+describe('Staff user checking that relevant discount is applied', () => {
     it('Open site - ' + sitename, () => {
         Environment.openURL(sitename);
     });

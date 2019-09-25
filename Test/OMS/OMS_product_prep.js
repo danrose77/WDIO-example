@@ -9,7 +9,7 @@ import AdminPortal from "../../Pages/AdminPortal";
 let environment = 'kiwi';
 let skuArray = ['1020200500313OI6003','104040500024226C003','1040405000250ZJ9001'];
 
-describe(specname+' - Create order with a specific SKU', () => {
+describe('Create order with a specific SKU', () => {
     it('Open the environment', () => {
         Environment.openURL('http://rundeckrds.nonprod.laguna.sd.co.uk:4440/user/login');
         Rundeck.login();

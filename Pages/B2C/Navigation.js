@@ -186,7 +186,6 @@ class Navigation extends Page {
             GetRandom.element(this.menu_subtiers, undefined, 4, 2);
             try {
                 this.menu_subtiers[1].waitForExist();
-                browser.pause(1000);
                 if (this.menu_subtiers[1].isDisplayed() === true) {
                     GetRandom.element(this.menu_subtiers, undefined, 4, 1);
                 }
@@ -194,14 +193,13 @@ class Navigation extends Page {
 
             }
 
-            browser.pause(1000);
             this.spinner.waitForExist(30000, true);
 
             let classAttrib = this.body.getAttribute('class').trim();
             console.log('classAttrib = ' + classAttrib);
             if ((classAttrib === 'error-page sana') || (classAttrib === 'error-page sana two-tone')) {
                 browser.url(site);
-                browser.pause(3000);
+                browser.waitUntil(() => browser.getUrl().includes(site));
                 success = false;
             } else {
                 let count = Search.ResultsLinks.length;
@@ -213,14 +211,13 @@ class Navigation extends Page {
 
     GoToCheckout() {
         this.acceptCookiesPrompt();
-        browser.pause(1500);
         this.basket_icon.waitForDisplayed(30000);
         this.basket_icon.click();
         this.checkout_submit.waitForDisplayed(30000);
         this.checkout_submit.click();
         browser.waitUntil(() => {
             return browser.getUrl().includes("checkout");
-        }, 5000);
+        }, 30000);
         Screenshot.viewport();
         try {
             if (this.SignIn_Guest.isExisting() === true) {

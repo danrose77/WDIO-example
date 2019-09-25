@@ -1,8 +1,6 @@
 import Page from '../Page'
 import Navigation from "./Navigation";
 
-
-
 class Environment extends Page {
 
     get siteLogoElement() {
@@ -14,9 +12,7 @@ class Environment extends Page {
 
     setSite() {
         global.site = browser.getUrl();
-        console.log(site);
         global.environment = global.site;
-        console.log(environment);
         let envcol = environment;
         envcol = envcol.split("-");
         envcol = envcol[1];
@@ -98,7 +94,6 @@ class Environment extends Page {
         browser.url('/?a' + urlString + 'a');
         browser.waitUntil(() => browser.getUrl().includes(urlString));
         browser.deleteCookies();
-        browser.pause(2000);
         Navigation.acceptCookiesPrompt();
         this.country();
     }
@@ -120,10 +115,7 @@ class Environment extends Page {
     }
 
     country() {
-        browser.pause(3000);
         global.sitePrefix = this.returnPrefix();
-        let yaml = require('js-yaml');
-        let fs = require('fs');
         let countryFile = yaml.load(fs.readFileSync('./data/country.yml', 'utf8'));
         global.country = countryFile[sitePrefix];
         global.siteSuffix = this.returnSuffix();

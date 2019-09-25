@@ -10,7 +10,7 @@ let Qty1 = 1;
 let SKU2 = '104040500024226C003';
 let Qty2 = 1;
 
-describe(specname+' - Create order with a specific SKU', () => {
+describe('Create order with a specific SKU', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });
@@ -32,6 +32,7 @@ describe(specname+' - Create order with a specific SKU', () => {
     });
     it('Export order in Rundeck', () => {
         Rundeck.orderExport();
+        browser.pause(30000);
     });
     it('Go to OMS and retrieve order', () => {
         OMS.logIn();

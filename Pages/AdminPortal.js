@@ -103,29 +103,43 @@ class AdminPortal extends Page {
     get adminSiteLogin() {
         return $('[onclick]');
     }
-
+    get adminSiteTitle() {
+        return $('#border-top .title');
+    }
 
     // Functions
 
     login() {
-        if (formFactor !== 'mobile') {
+        let success = false;
+        let attempts = 0;
+        let successURL;
+        let url;
+        while (success === false) {
             if (site !== undefined) {
-                browser.url(site + 'administrator/?source=34885');
+                url = site + 'administrator/?source=34885';
             } else {
-                browser.url('administrator/?source=34885');
+                url = 'administrator/?source=34885';
             }
-            browser.pause(1000);
+            browser.url(url);
+            this.username.waitForDisplayed(30000);
+            this.username.setValue(process.env.ADMIN_USERNAME);
+            this.password.setValue(process.env.ADMIN_PASSWORD2);
+            this.adminSiteLogin.click();
+
             try {
-                this.username.setValue(process.env.ADMIN_USERNAME);
-                this.password.setValue(process.env.ADMIN_PASSWORD);
-                browser.pause(500);
-                this.adminSiteLogin.click();
+                let titlePresent = this.adminSiteTitle.isDisplayed();
+                expect(titlePresent).to.equal(true);
+                success = true;
             } catch (e) {
-                console.log("No need to log in")
+                console.log('Admin site not found, trying again');
+                attempts++;
+                if (attempts === 10) {
+                    console.log('Admin site not found, after 10 tries. Giving up.');
+                    break;
+                }
             }
-            this.configuration.waitForExist(30000);
-            browser.pause(5000);
         }
+        this.configuration.waitForExist(30000);
     }
     disableCaptcha() {
         if (formFactor === 'mobile') {

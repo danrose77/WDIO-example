@@ -5,7 +5,7 @@ import ElementVerification from "../../functions/ElementVerification"
 
 let searchTerm = 'Bag';
 
-describe(specname + ' - testbed JS file', () => {
+describe('testbed JS file', () => {
     it('Open the product page for ' + searchTerm + ' - ' + specname, () => {
         Environment.openBaseURL();
         Search.searchFor(searchTerm);

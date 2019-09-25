@@ -7,14 +7,14 @@ import Customer from "../../Pages/B2C/Customer";
 import AdminPortal from "../../Pages/AdminPortal";
 
 let username = 'danrosetest+giropay@gmail.com';
-describe(specname + ' - setup test', () => {
+describe('setup test', () => {
     it('Set up in admin portal', () => {
         Environment.openBaseURL(); 
         AdminPortal.login();
         AdminPortal.disableCaptcha();
     });
 });
-describe(specname+' - Giropay payment from an existing user', () => {
+describe('Giropay payment from an existing user', () => {
     it('Set up a customer account for email '+username, () => {
         Environment.openBaseURL();
         Customer.setUpNewAccount(username);

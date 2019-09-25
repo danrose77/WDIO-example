@@ -10,14 +10,14 @@ import Givex from "../../../Pages/Givex";
 let username = 'danrosetest+DC_user@gmail.com';
 
 // If a mobile test giftcard needs to be set up with script "./test/setupGiftcard.js"
-describe(specname + ' - setup test', () => {
+describe('setup test', () => {
     it('Set up in admin portal', () => {
         Environment.openBaseURL(); 
         AdminPortal.login();
         AdminPortal.disableCaptcha();
     });
 });
-describe(specname+' - Debit card and Gift card payment from an existing user', () => {
+describe('Debit card and Gift card payment from an existing user', () => {
     it('Set up a customer account', () => {
         Environment.openBaseURL();
         Customer.setUpNewAccount(username);

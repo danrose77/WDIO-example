@@ -10,7 +10,7 @@ let SKU1 = '1020200500313OI6003';
 let Qty1 = 1;
 let SKU2 = '104040500024226C003';
 let Qty2 = 1;
-describe(specname+' - setup test', () => {
+describe('setup test', () => {
     it('Set up in admin portal', () => {
         Environment.openBaseURL();
         AdminPortal.login();
@@ -23,7 +23,7 @@ describe(specname+' - setup test', () => {
         OMS.inventoryAdjuster(SKU1, 1000, '110');
     });
 });
-describe(specname+' - Create order with a specific SKU and zeroship', () => {
+describe('Create order with a specific SKU and zeroship', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });
@@ -77,7 +77,7 @@ describe(specname+' - Create order with a specific SKU and zeroship', () => {
     },);
 });
 
-describe(specname+' - post run for environment', () => {
+describe('post run for environment', () => {
     it('Change colour prefix back', () => {
         Environment.openBaseURL();
         AdminPortal.login();

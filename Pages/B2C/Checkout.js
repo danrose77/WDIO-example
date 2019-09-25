@@ -539,7 +539,6 @@ class Checkout extends Page {
         fillObject.element(this.billing_phone, customerData.Phone);
         fillObject.element(this.billing_email, emailaddress);
         fillObject.element(this.billing_confirmemail, emailaddress);
-        browser.pause(500);
         if (clickAndCollectDetect !== true) {
             let shippingAddress1displayed = this.shipping_address_input1.isDisplayed();
             try{
@@ -558,25 +557,20 @@ class Checkout extends Page {
             if (formcountry === "United States") {
                 this.shipping_state.selectByVisibleText("Alabama");
             }
-            browser.pause(250);
             let countryChanged = this.countryChanged.isDisplayed();
             if (countryChanged === true) {
                 this.countryChanged.click();
             }
-            browser.pause(250);
             fillObject.element(this.shipping_address_input1, customerData.Address_line1);
             fillObject.element(this.shipping_address_city, customerData.City);
             fillObject.element(this.shipping_address_zip, customerData.Postcode);
         }
-        browser.pause(250);
         if (clickAndCollectDetect === true) {
             let billingAddress1displayed = this.billing_address_1.isDisplayed();
             if (billingAddress1displayed !== true) {
                 this.billing_address_manual.click();
             }
-            browser.pause(250);
             fillObject.element(this.billing_country, formcountry);
-            browser.pause(250);
             fillObject.element(this.billing_first_name, customerData.First_name);
             fillObject.element(this.billing_last_name, customerData.Last_name);
             fillObject.element(this.billing_address_1, customerData.Address_line1);
@@ -596,14 +590,12 @@ class Checkout extends Page {
         let Cvv = creditCardData["cvv"];
         let debit_credit_card_button = this.paymentButtons;
         debit_credit_card_button[0].click();
-        browser.pause(500);
+        this.name_on_card_field.waitForDisplayed(30000);
         this.name_on_card_field.setValue("Test");
-        browser.pause(500);
         fillObject.element(this.card_number_field, Card_Number);
         let Card_exp_month = Card_exp.slice(0, 2);
         Card_exp_month = parseInt(Card_exp_month, 10);
         this.card_expiry_date_dd_month.selectByIndex(Card_exp_month);
-        browser.pause(500);
         let Card_exp_year = Card_exp.slice(3);
         Card_exp_year = parseInt(Card_exp_year, 10);
         Card_exp_year = Card_exp_year - 2000;
@@ -613,13 +605,16 @@ class Checkout extends Page {
         let yearDif = Card_exp_year - currentYear;
         yearDif++;
         this.card_expiry_date_dd_year.selectByIndex(yearDif);
-        browser.pause(250);
         this.card_cvv_code_field.setValue(Cvv);
-        browser.pause(250);
-        console.log("this.order_payment_name.getValue() = " + this.order_payment_name.getValue());
-        if (this.order_payment_name.getValue() === "") {
+        try {
+            console.log("this.order_payment_name.getValue() = " + this.order_payment_name.getValue());
+            if (this.order_payment_name.getValue() === "") {
+                this.order_payment_name.setValue('Test');
+            }
+        } catch (e) {
             this.order_payment_name.setValue('Test');
         }
+
         this.buy_now_button.click();
         this.orderConfirmation();
     }
@@ -853,15 +848,12 @@ class Checkout extends Page {
         browser.pause(1500);
         if (this.staffdiscountconfirm.isDisplayed() === true) {
             this.staffdiscountconfirm.click();
-            browser.pause(1500);
             this.staffdiscountsubmit.click();
-            browser.pause(1500);
         }
         if (paymentMethod !== "Giropay") {
             if (paymentMethod !== "BankTransfer") {
                 this.view_order.waitForDisplayed(30000);
                 this.view_order.click();
-                browser.pause(1000);
             }
             let referenceNumber = browser.getUrl();
             referenceNumber = referenceNumber.split("=");
@@ -978,6 +970,7 @@ class Checkout extends Page {
     }
 
     selectInternationalShippingNonStandardSpeedAndPay() {
+        this.deliveryTypeOptions[2].scrollIntoView();
         this.deliveryTypeOptions[2].click();
         let countDelOptions = objectLength.element(this.deliverySpeedOptions);
         let randomNumber = 1;

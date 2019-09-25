@@ -7,7 +7,7 @@ import Givex from "../../../Pages/Givex";
 
 let giftcard = '6338901547310003689';
 
-describe(specname+' - Paypal and giftcard payment from a guest user', () => {
+describe('Paypal and giftcard payment from a guest user', () => {
     it('Set up a gift card', () => {
         Givex.login();
         Givex.setupGiftcards(giftcard);

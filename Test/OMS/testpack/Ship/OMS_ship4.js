@@ -6,12 +6,12 @@ import Rundeck from "../../../../Pages/Rundeck";
 import OMS from "../../../../Pages/OMS";
 import AdminPortal from "../../../../Pages/AdminPortal";
 
-let SKU1 = '104040500024226C003';
+let SKU1 = '1020200500313OI6003';
 let Qty1 = 2;
 let SKU2 = '1040405000250ZJ9001';
 let Qty2 = 2;
 
-describe(specname+' - setup test', () => {
+describe('setup test', () => {
     it('Set up in admin portal', () => {
         Environment.openBaseURL();
         AdminPortal.login();
@@ -20,16 +20,16 @@ describe(specname+' - setup test', () => {
         AdminPortal.ensureStockInFrontEnd(SKU2);
         AdminPortal.colOrderPrefix(true);
         Environment.openURL("https://sup-oms.qa.coc.ibmcloud.com/smcfs/yfshttpapi/yantrahttpapitester.jsp");
-        OMS.inventoryAdjuster(SKU1, 1000, '080');
+        OMS.inventoryAdjuster(SKU1, 0, '080');
         OMS.inventoryAdjuster(SKU1, 0, '090');
-        OMS.inventoryAdjuster(SKU1, 0, '110');
-        OMS.inventoryAdjuster(SKU2, 0, '080');
+        OMS.inventoryAdjuster(SKU1, 1000, '110');
+        OMS.inventoryAdjuster(SKU2, 1000, '080');
         OMS.inventoryAdjuster(SKU2, 0, '090');
-        OMS.inventoryAdjuster(SKU2, 1000, '110');
+        OMS.inventoryAdjuster(SKU2, 0, '110');
     });
 });
 
-describe(specname+' - Line: Multi - Quantity: Multi - Payment: Paypal - Created -> Scheduled -> Released -> Shipped', () => {
+describe('Line: Multi - Quantity: Multi - Payment: Card - Created -> Scheduled -> Released -> Shipped', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });
@@ -43,11 +43,11 @@ describe(specname+' - Line: Multi - Quantity: Multi - Payment: Paypal - Created 
         Product.SelectASizeAndAddTo('Bag', Qty2, true);
         Product.logUsedSKU(SKU2);
     });
-    it('Go to the checkout as a guest and pay by paypal', () => {
+    it('Go to the checkout as a guest and pay by card', () => {
         Navigation.GoToCheckout();
         Checkout.selectLocalDelivery();
         Checkout.fillTheDeliveryFields();
-        Checkout.payByPaypal();
+        Checkout.payByCard();
     });
     it('Export order in Rundeck', () => {
         Rundeck.orderExport();
@@ -79,7 +79,7 @@ describe(specname+' - Line: Multi - Quantity: Multi - Payment: Paypal - Created 
     },);
 });
 
-describe(specname+' - post run for environment', () => {
+describe('post run for environment', () => {
     it('Change colour prefix back', () => {
         Environment.openBaseURL();
         AdminPortal.login();

@@ -1,7 +1,7 @@
 import Environment from '../../../Pages/B2C/Environment.js';
 import Storefinder from "../../../Pages/B2C/Storefinder";
 
-describe(specname+' - Search for stores by partial postcode', () => {
+describe('Search for stores by partial postcode', () => {
     it('Go to the storefinder', () => {
         Environment.goToBasePlus('/stores');
     });

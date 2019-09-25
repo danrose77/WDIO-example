@@ -6,7 +6,7 @@ import ShoppingBag from "../../../Pages/B2C/ShoppingBag";
 
 let Qty6 = 20;
 
-describe(specname + ' - 20+ products can be added to the shopping bag', () => {
+describe('20+ products can be added to the shopping bag', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });

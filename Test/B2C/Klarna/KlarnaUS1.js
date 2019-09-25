@@ -7,14 +7,14 @@ import Customer from "../../../Pages/B2C/Customer";
 import AdminPortal from "../../../Pages/AdminPortal";
 
 let username = 'danrosetest+klarnaUS_user@gmail.com';
-describe(specname + ' - setup test', () => {
+describe('setup test', () => {
     it('Set up in admin portal', () => {
         Environment.openCountrySiteForColour('US');
         AdminPortal.login();
         AdminPortal.disableCaptcha();
     });
 });
-describe(specname+' - Klarna US pay in 4 payment from an existing user', () => {
+describe('Klarna US pay in 4 payment from an existing user', () => {
     it('Set up a customer account', () => {
         Environment.openCountrySiteForColour('US');
         Customer.setUpNewAccount(username);

@@ -3,11 +3,8 @@ import Product from '../../../Pages/B2C/Product.js';
 import Search from '../../../Pages/B2C/Search.js';
 import Navigation from '../../../Pages/B2C/Navigation.js';
 import Checkout from "../../../Pages/B2C/Checkout";
-import write from "../../../functions/write";
-import Rundeck from "../../../Pages/Rundeck";
-import OMS from "../../../Pages/OMS";
 
-describe(specname+' - Debit card payment from a guest user', () => {
+describe('Debit card payment from a guest user', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });
@@ -16,7 +13,6 @@ describe(specname+' - Debit card payment from a guest user', () => {
         Search.PickRandomProduct();
         Product.SelectASizeAndAddTo('Bag');
     }, 3);
-
     it('Go to the checkout as a guest', () => {
         Navigation.GoToCheckout();
     });
@@ -24,16 +20,6 @@ describe(specname+' - Debit card payment from a guest user', () => {
         Checkout.fillTheDeliveryFields();
         Checkout.payByCard();
     });
-    it('Export order in Rundeck', () => {
-        Rundeck.orderExport();
-        Rundeck.logout();
-    });
-    it('Go to OMS and retrieve order', () => {
-        OMS.logIn();
-        OMS.retrieveOrder();
-        OMS.logOut();
-        write.jsonOrderFiles('ZALANDOzaat_');
-    },);
 });
 
 

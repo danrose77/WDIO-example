@@ -4,7 +4,7 @@ import Search from '../../../Pages/B2C/Search.js';
 import Navigation from '../../../Pages/B2C/Navigation.js';
 import Checkout from "../../../Pages/B2C/Checkout";
 
-describe(specname+' - Klarna UK pay later payment from a guest user', () => {
+describe('Klarna UK pay later payment from a guest user', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });

@@ -14,7 +14,7 @@ let finishedpt2 = false;
 let finishedpt3 = false;
 let finishedpt4 = false;
 
-describe(specname + ' - Check all menu links', () => {
+describe('Check all menu links', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });

@@ -4,7 +4,7 @@ import Search from '../../../Pages/B2C/Search.js';
 import Navigation from '../../../Pages/B2C/Navigation.js';
 import Checkout from "../../../Pages/B2C/Checkout";
 
-describe(specname+' - Paypal payment from a guest user', () => {
+describe('Paypal payment from a guest user', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });

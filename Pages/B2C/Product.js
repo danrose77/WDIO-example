@@ -131,7 +131,7 @@ class Product extends Page {
 
     SelectASizeAndAddTo(addTo, numberToAdd, SKU_used) {
         if ((SKU_used === false) || (SKU_used === undefined)) {
-            browser.pause(3000);
+            this.SizeBoxText.waitForDisplayed(30000);
             if (this.SizeBoxValid.length > 1) {
                     GetRandom.sizeBox(this.SizeBoxValid);
             } else if (this.SizeSelectorDD.isDisplayed() === true) {

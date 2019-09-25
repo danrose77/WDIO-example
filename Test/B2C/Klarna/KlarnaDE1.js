@@ -8,7 +8,7 @@ import AdminPortal from "../../../Pages/AdminPortal";
 
 let username = 'danrosetest+klarnaDE_user@gmail.com';
 
-describe(specname + ' - setup test', () => {
+describe('setup test', () => {
     it('Set up in admin portal', () => {
         Environment.openCountrySiteForColour('DE');
         AdminPortal.login();
@@ -16,7 +16,7 @@ describe(specname + ' - setup test', () => {
     });
 });
 
-describe(specname+' - Klarna DE pay later payment from an existing user', () => {
+describe('Klarna DE pay later payment from an existing user', () => {
     it('Set up a customer account', () => {
         Environment.openCountrySiteForColour('DE');
         Customer.setUpNewAccount(username);

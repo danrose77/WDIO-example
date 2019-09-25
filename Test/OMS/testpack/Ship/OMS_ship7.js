@@ -7,11 +7,11 @@ import OMS from "../../../../Pages/OMS";
 import AdminPortal from "../../../../Pages/AdminPortal";
 
 let SKU1 = '104040500024226C003';
-let Qty1 = 1;
+let Qty1 = 2;
 let SKU2 = '1040405000250ZJ9001';
-let Qty2 = 1;
+let Qty2 = 2;
 
-describe(specname+' - setup test', () => {
+describe('setup test', () => {
     it('Set up in admin portal', () => {
         Environment.openBaseURL();
         AdminPortal.login();
@@ -28,7 +28,8 @@ describe(specname+' - setup test', () => {
         OMS.inventoryAdjuster(SKU2, 1000, '110');
     });
 });
-describe(specname+' - Line: Multi - Quantity: Single - Payment: Paypal - Created -> Scheduled -> Released -> Shipped', () => {
+
+describe('Line: Multi - Quantity: Multi - Payment: Paypal - Created -> Scheduled -> Released -> Shipped', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });
@@ -78,7 +79,7 @@ describe(specname+' - Line: Multi - Quantity: Single - Payment: Paypal - Created
     },);
 });
 
-describe(specname+' - post run for environment', () => {
+describe('post run for environment', () => {
     it('Change colour prefix back', () => {
         Environment.openBaseURL();
         AdminPortal.login();

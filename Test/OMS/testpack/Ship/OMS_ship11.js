@@ -11,7 +11,7 @@ let SKU1 = '1020200500313OI6003';
 let Qty1 = 1;
 let username = 'danrosetest+giropay@gmail.com';
 
-describe(specname+' - setup test', () => {
+describe('setup test', () => {
     it('Set up in admin portal', () => {
         Environment.openCountrySiteForColour('DE');
         AdminPortal.login();
@@ -25,7 +25,7 @@ describe(specname+' - setup test', () => {
     });
 });
 
-describe(specname+' - Line: Single - Quantity: Single - Payment: Giropay - Created -> Scheduled -> Released -> Shipped', () => {
+describe('Line: Single - Quantity: Single - Payment: Giropay - Created -> Scheduled -> Released -> Shipped', () => {
     it('Set up a customer account for email '+username, () => {
         Environment.openCountrySiteForColour('DE');
         Customer.setUpNewAccount(username);
@@ -76,7 +76,7 @@ describe(specname+' - Line: Single - Quantity: Single - Payment: Giropay - Creat
     },);
 });
 
-describe(specname+' - post run for environment', () => {
+describe('post run for environment', () => {
     it('Change colour prefix back', () => {
         Environment.openCountrySiteForColour('DE');
         AdminPortal.login();

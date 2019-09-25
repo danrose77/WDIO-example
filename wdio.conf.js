@@ -1,9 +1,9 @@
 let timeout = 48 * 10000;
 const {join} = require('path');
 
-let screendate = new Date();
-let month = screendate.getMonth() + 1;
-let dateString = screendate.getFullYear() + "_" + month + "_" + screendate.getDate();
+let screenDate = new Date();
+let month = screenDate.getMonth() + 1;
+let dateString = screenDate.getFullYear() + "_" + month + "_" + screenDate.getDate();
 
 exports.config = {
     reporters: [
@@ -83,6 +83,7 @@ exports.config = {
         global.paymentMethod = "";
         global.OMSquantitiesRecorded = false;
         global.xmloutput;
+        global.yaml = require('js-yaml');
 
         // set specname global
         let specname = String(specs);
@@ -90,13 +91,6 @@ exports.config = {
         let specnamelength = specname.length - 1;
         specname = specname[specnamelength];
         global.specname = specname;
-
-        // set runStartTime global
-        screendate = new Date();
-        let hour = ("0" + screendate.getHours()).slice(-2);
-        let minute = ("0" + screendate.getMinutes()).slice(-2);
-        let seconds = ("0" + screendate.getSeconds()).slice(-2);
-        runStartTime = hour + "_" + minute + "_" + seconds;
 
         // determine form factor
         let formFactor = 'desktop';
@@ -119,17 +113,7 @@ exports.config = {
     afterTest(test) {
         //console.dir(test, {depth: null, colors: true});
         if (!test.passed) {
-            let screendate = new Date();
-            global.fs = require('fs');
-            const mkdirSync = function (dirPath) {
-                try {
-                    fs.mkdirSync(dirPath)
-                } catch (err) {
-                    if (err.code !== 'EEXIST') throw err
-                }
-            };
-            mkdirSync("./reports/ErrorShots/");
-            browser.saveScreenshot('./reports/ErrorShots/' + screendate.getTime() + '.png');
+            browser.saveScreenshot('./reports/ErrorShots/' + screenDate.getTime() + '.png');
         }
     },
     after() {

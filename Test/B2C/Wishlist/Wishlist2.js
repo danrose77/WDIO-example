@@ -4,7 +4,7 @@ import Search from "../../../Pages/B2C/Search";
 import Product from "../../../Pages/B2C/Product";
 import Wishlist from "../../../Pages/B2C/Wishlist";
 
-describe(specname+' - A product can be added to the wishlist', () => {
+describe('A product can be added to the wishlist', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });

@@ -11,7 +11,7 @@ let Qty4 = 4;
 let Qty5 = 5;
 let Qty6 = 6;
 
-describe(specname+' - A product can be removed from the shopping bag', () => {
+describe('A product can be removed from the shopping bag', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });

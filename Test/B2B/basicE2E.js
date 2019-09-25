@@ -6,7 +6,7 @@ import shoppingbag from "../../Pages/B2B/shoppingbag";
 const email = "danrosetest+B2B@gmail.com";
 const password = "9Hzghb$v0i5";
 
-describe(specname+' - end to end smoke test script for B2B', () => {
+describe('End to end smoke test script for B2B', () => {
     it('Open the environment and log in as specified user', () => {
         browser.url('/login');
         login.login(email, password);

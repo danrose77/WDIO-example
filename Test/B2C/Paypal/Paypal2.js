@@ -6,14 +6,14 @@ import Checkout from "../../../Pages/B2C/Checkout";
 import Customer from "../../../Pages/B2C/Customer";
 import AdminPortal from "../../../Pages/AdminPortal";
 
-describe(specname + ' - setup test', () => {
+describe('setup test', () => {
     it('Set up in admin portal', () => {
         Environment.openBaseURL(); 
         AdminPortal.login();
         AdminPortal.disableCaptcha();
     });
 });
-describe(specname+' - Paypal payment from a new user', () => {
+describe('Paypal payment from a new user', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });
