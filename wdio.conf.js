@@ -58,8 +58,6 @@ exports.config = {
         mkdirSync("./reports/");
         mkdirSync("./reports/ErrorShots/");
         mkdirSync("./reports/" + dateString + "/");
-        mkdirSync("./Visual_Regression/");
-        mkdirSync("./Visual_Regression/" + dateString + "/");
 
         // declared globals
         global.country = "";

@@ -85,23 +85,6 @@ module.exports = function(grunt) {
                         args: ['--headless','--window-size=1920,1080'],
                       }}],
             },
-            ie: {
-                configFile: "./config/wdio.conf.local.ie.js",
-                specs: grunt.config("spec"),
-                baseUrl: grunt.config("environment"),
-            },
-            devtools: {
-                configFile: "./config/wdio.conf.devtools.js",
-                specs: grunt.config("spec"),
-                baseUrl: grunt.config("environment"),
-                capabilities: [{"browserName": "chrome"}],
-            },
-            VizReg: {
-                configFile: "./config/wdio.conf.VizReg.js",
-                specs: grunt.config("spec"),
-                baseUrl: grunt.config("environment"),
-                capabilities: [{'os' : 'Windows','os_version' : '10','browserName' : 'Chrome','resolution' : '1920x1200','browserstack.local' : 'false','browserstack.debug' : 'true','browserstack.timezone' : 'UK','browserstack.geoLocation' : 'GB',"goog:chromeOptns": {"args": ["disable-infobars"]}}],
-            },
             browserstack: {
                 configFile: "./config/wdio.conf.browserstack.js",
                     specs: grunt.config("spec"),

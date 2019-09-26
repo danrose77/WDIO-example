@@ -9,7 +9,7 @@ import AdminPortal from "../../../Pages/AdminPortal";
 
 let giftcard = '6338901547310003689';
 
-// If a mobile test giftcard needs to be set up with script "./test/setupGiftcard.js"
+// If a mobile test giftcard needs to be set up with script "./test/setupGiftcard.js" on desktop
 describe('setup test', () => {
     it('Set up in admin portal', () => {
         Environment.openBaseURL(); 

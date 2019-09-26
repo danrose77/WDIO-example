@@ -5,7 +5,8 @@ paypal:
 creditCard:
     name: "Test"
     number: "4111111111111111"
-    exp: "10/2020"
+    expM: "10"
+    expY: "2020"
     cvv: "737"
 giropay:
     giroAccName: "Test DE Bank"

@@ -1,5 +1,5 @@
-import Environment from '../../Pages/B2C/Environment.js';
-import Adyen from "../../Pages/Adyen";
+import Environment from '../../../Pages/B2C/Environment.js';
+import Adyen from "../../../Pages/Adyen";
 
 describe('Change Adyen skin', () => {
     it('Open adyen and login', () => {

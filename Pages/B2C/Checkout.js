@@ -586,36 +586,31 @@ class Checkout extends Page {
         global.paymentMethod = "Debit Card";
         let Card_Name = creditCardData["name"];
         let Card_Number = creditCardData["number"];
-        let Card_exp = creditCardData["exp"];
+        let Card_expM = creditCardData["expM"];
+        let Card_expY = creditCardData["expY"];
         let Cvv = creditCardData["cvv"];
         let debit_credit_card_button = this.paymentButtons;
         debit_credit_card_button[0].click();
-        this.name_on_card_field.waitForDisplayed(30000);
-        this.name_on_card_field.setValue("Test");
-        fillObject.element(this.card_number_field, Card_Number);
-        let Card_exp_month = Card_exp.slice(0, 2);
-        Card_exp_month = parseInt(Card_exp_month, 10);
-        this.card_expiry_date_dd_month.selectByIndex(Card_exp_month);
-        let Card_exp_year = Card_exp.slice(3);
-        Card_exp_year = parseInt(Card_exp_year, 10);
+        browser.pause(500);
+        this.card_number_field.setValue(Card_Number);
+        browser.pause(500);
+        this.card_expiry_date_dd_month.selectByIndex(Card_expM);
+        let Card_exp_year = parseInt(Card_expY, 10);
         Card_exp_year = Card_exp_year - 2000;
-        let screendate = new Date();
-        let currentYear = screendate.getFullYear();
+        let screenDate = new Date();
+        let currentYear = screenDate.getFullYear();
         currentYear = currentYear - 2000;
         let yearDif = Card_exp_year - currentYear;
         yearDif++;
+        browser.pause(500);
         this.card_expiry_date_dd_year.selectByIndex(yearDif);
+        browser.pause(500);
         this.card_cvv_code_field.setValue(Cvv);
-        try {
-            console.log("this.order_payment_name.getValue() = " + this.order_payment_name.getValue());
-            if (this.order_payment_name.getValue() === "") {
-                this.order_payment_name.setValue('Test');
-            }
-        } catch (e) {
-            this.order_payment_name.setValue('Test');
-        }
-
+        browser.pause(500);
+        this.name_on_card_field.setValue("Test");
+        browser.pause(500);
         this.buy_now_button.click();
+        browser.pause(500);
         this.orderConfirmation();
     }
 
