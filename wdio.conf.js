@@ -5,15 +5,29 @@ let screenDate = new Date();
 let month = screenDate.getMonth() + 1;
 let dateString = screenDate.getFullYear() + "_" + month + "_" + screenDate.getDate();
 
+function addValueInObject(object, key, value) {
+    let res = {};
+    let textObject = JSON.stringify(object);
+    if (textObject === '{}') {
+        res = JSON.parse('{"' + key + '":"' + value + '"}');
+    } else {
+        res = JSON.parse('{' + textObject.substring(1, textObject.length - 1) + ',"' + key + '":"' + value + '"}');
+    }
+    return res;
+}
+
 exports.config = {
     reporters: [
-        'spec',
+        'spec'
+        /*,
         ['junit', {
             outputDir: './reports/',
             outputFileFormat: function() {
                 return `testresult.xml`
             }
         }]
+
+         */
     ],
     updateJob: false,
     exclude: [],
@@ -38,13 +52,8 @@ exports.config = {
     // Gets executed before test execution begins. At this point you will have access to all global
     // variables like `browser`. It is the perfect place to define custom commands.
     before(capabilities, specs) {
-        console.log(specs);
         require('dotenv').config();
-        // Chai section
-        const chai = require("chai");
-        global.expect = chai.expect;
-        global.assert = chai.assert;
-        chai.Should();
+
 
         // create reporting folders
         global.fs = require('fs');
@@ -59,6 +68,7 @@ exports.config = {
         mkdirSync("./reports/ErrorShots/");
         mkdirSync("./reports/" + dateString + "/");
 
+        //console.dir(capabilities, {depth: null, colors: true});
         // declared globals
         global.country = "";
         global.formcountry = "";
@@ -105,8 +115,7 @@ exports.config = {
             platform = capabilities.device;
         }
         global.platform = platform;
-        //console.dir(capabilities, {depth: null, colors: true});
-        //console.dir(specs, {depth: null, colors: true});
+
     },
     afterTest(test) {
         //console.dir(test, {depth: null, colors: true});

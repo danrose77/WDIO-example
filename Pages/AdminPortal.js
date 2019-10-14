@@ -110,22 +110,34 @@ class AdminPortal extends Page {
     // Functions
 
     login() {
-        let success = false;
-        let attempts = 0;
-        let successURL;
+        //let success = false;
+        //let attempts = 0;
         let url;
-        while (success === false) {
+        //while (success === false) {
             if (site !== undefined) {
                 url = site + 'administrator/?source=34885';
             } else {
                 url = 'administrator/?source=34885';
             }
             browser.url(url);
-            this.username.waitForDisplayed(30000);
-            this.username.setValue(process.env.ADMIN_USERNAME);
-            this.password.setValue(process.env.ADMIN_PASSWORD2);
-            this.adminSiteLogin.click();
+            try {
+                this.username.waitForDisplayed(30000);
+                this.username.setValue(process.env.ADMIN_USERNAME);
+//                this.password.setValue(process.env.ADMIN_PASSWORD);
+//                this.password.setValue(process.env.ADMIN_PASSWORD2);
+                this.password.setValue(process.env.ADMIN_PASSWORD3);
 
+                this.adminSiteLogin.click();
+                console.log('formFactor = ' + formFactor);
+                if (formFactor === 'mobile') {
+                    browser.pause(8000);
+                } else {
+                    browser.pause(2000);
+                }
+            } catch(e) {
+
+            }
+/*
             try {
                 let titlePresent = this.adminSiteTitle.isDisplayed();
                 expect(titlePresent).to.equal(true);
@@ -138,8 +150,8 @@ class AdminPortal extends Page {
                     break;
                 }
             }
-        }
-        this.configuration.waitForExist(30000);
+            */
+       // }
     }
     disableCaptcha() {
         if (formFactor === 'mobile') {
@@ -167,7 +179,9 @@ class AdminPortal extends Page {
         this.SQLentry("update inventory set quantity = '"+QTY+"' where sku = '" + SKU + "';");
     }
     colOrderPrefix(remove) {
+        /*
         if (site !== undefined) {
+
             browser.url(site + 'administrator/index.php?option=com_supergroupadmin&view=system');
         } else {
             browser.url('administrator/index.php?option=com_supergroupadmin&view=system');
@@ -179,10 +193,11 @@ class AdminPortal extends Page {
         this.ParametersPrefix.scrollIntoView();
         let currentPrefix = this.ParametersPrefix.getValue();
         if (remove === true) {
-            if (currentPrefix.includes(envcol) === true) {
+            //console.log('envcol = ' + envcol);
+            //if (currentPrefix.includes(envcol) === true) {
                 this.ParametersPrefix.setValue(currentPrefix.slice(envcol.length));
                 Screenshot.viewport();
-            }
+            //}
             this.Save.click();
         } else {
             if (currentPrefix.includes(envcol) === false) {
@@ -192,6 +207,8 @@ class AdminPortal extends Page {
             this.Save.click();
         }
         browser.switchToParentFrame();
+
+         */
     }
 
     setStockLevels(skuArray) {

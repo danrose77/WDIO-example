@@ -57,8 +57,12 @@ class Rundeck extends Page {
     }
 
     get rundeck_pjct_BlackEW1() {
-        return $("//span[contains(text(),'Black_eu-west-1')]");
+        return $("//span[contains(text(),'Black_EU-West-1')]");
     }
+    get rundeck_pjct_BlackUS() {
+        return $("//span[contains(text(),'Black_US-West-2')]");
+    }
+
 
     get rundeck_pjct_Blue() {
         return $("//span[contains(text(),'Blue')]");
@@ -268,6 +272,7 @@ class Rundeck extends Page {
                 break;
             case 'black':
                 this.rundeck_pjct_BlackEW1.click();
+                //this.rundeck_pjct_BlackUS.click();
                 break;
             case 'blue':
                 this.rundeck_pjct_Blue.click();

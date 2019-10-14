@@ -8,16 +8,4 @@ describe('Debit card payment from a guest user', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
     });
-    it('Go to a random section and add a product to the shopping bag', () => {
-        Navigation.randomSection();
-        Search.PickRandomProduct();
-        Product.SelectASizeAndAddTo('Bag');
-    }, 3);
-    it('Go to the checkout as a guest', () => {
-        Navigation.GoToCheckout();
-    });
-    it('Pay by card', () => {
-        Checkout.fillTheDeliveryFields();
-        Checkout.payByCard();
-    });
 });

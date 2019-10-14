@@ -12,7 +12,7 @@ import write from "../../../../../functions/write";
 //const SKU1 = '210302600012371D003';
 //const SKU2 = '2103027000124QOG001';
 //Baron
-const SKU1 = '2103027000123CA2002';
+const SKU1 = '2103026000114HQO001';
 const SKU2 = '212403500004002A001';
 
 const Qty1 = 1;
@@ -137,7 +137,8 @@ describe(specname+Testname4, () => {
         Customer.signIn(username);
     });
     it('Go to SKU: '+SKU1+' and add ('+Qty2+') product to the shopping bag', () => {
-        Environment.openURL(site + 'products/?sku='+SKU1);
+        console.log(site + 'products/?sku='+SKU1);
+        browser.url(site + 'products/?sku='+SKU1);
         Product.SelectASizeAndAddTo('Bag', Qty2, true);
         Product.logUsedSKU(SKU1);
     });

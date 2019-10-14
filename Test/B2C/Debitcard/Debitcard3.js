@@ -10,21 +10,23 @@ let username = 'danrosetest+DC_user@gmail.com';
 
 describe('setup test', () => {
     it('Set up in admin portal', () => {
-        Environment.openBaseURL(); 
+        Environment.openBaseURL();
         AdminPortal.login();
         AdminPortal.disableCaptcha();
     });
 });
+
 describe('Debit card payment from an existing user', () => {
     it('Set up a customer account', () => {
         Environment.openBaseURL();
+    });
+        it('Set up a customer account2', () => {
         Customer.setUpNewAccount(username);
+        });
+        it('Set up a customer account3', () => {
         Customer.addDeliveryAddress();
     });
-    it('Set up in admin portal', () => {
-        AdminPortal.login();
-        AdminPortal.performSetup();
-    });
+
     it('Go to website and log in', () => {
         Environment.openBaseURL();
         Customer.signIn(username);

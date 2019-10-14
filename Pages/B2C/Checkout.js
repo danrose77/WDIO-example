@@ -581,6 +581,7 @@ class Checkout extends Page {
     }
 
     payByCard() {
+        browser.pause(3000);
         let paymentData = yaml.load(fs.readFileSync('./data/payments.yml', 'utf8'));
         let creditCardData = paymentData["creditCard"];
         global.paymentMethod = "Debit Card";
@@ -589,8 +590,13 @@ class Checkout extends Page {
         let Card_expM = creditCardData["expM"];
         let Card_expY = creditCardData["expY"];
         let Cvv = creditCardData["cvv"];
-        let debit_credit_card_button = this.paymentButtons;
-        debit_credit_card_button[0].click();
+        try {
+            let debit_credit_card_button = this.paymentButtons;
+            debit_credit_card_button[0].click();
+        } catch (e) {
+            console.log(e)
+        }
+
         browser.pause(500);
         this.card_number_field.setValue(Card_Number);
         browser.pause(500);
@@ -607,7 +613,9 @@ class Checkout extends Page {
         browser.pause(500);
         this.card_cvv_code_field.setValue(Cvv);
         browser.pause(500);
-        this.name_on_card_field.setValue("Test");
+        this.name_on_card_field.setValue(Card_Name);
+        browser.pause(500);
+        this.card_number_field.setValue(Card_Number);
         browser.pause(500);
         this.buy_now_button.click();
         browser.pause(500);
@@ -1034,26 +1042,29 @@ class Checkout extends Page {
         } catch (e) {
             console.log("Klarna klarnaBuyNow not clicked")
         }
-        this.klarnaTotalPurchaseValue.waitForDisplayed(30000);
-        let klarnaTotalPurchaseValue = this.klarnaTotalPurchaseValue.getHTML(false);
+        if (formFactor === "desktop") {
+            this.klarnaTotalPurchaseValue.waitForDisplayed(30000);
+            let klarnaTotalPurchaseValue = this.klarnaTotalPurchaseValue.getHTML(false);
 
-        klarnaTotalPurchaseValue = klarnaTotalPurchaseValue.replace(/[^0-9]+|\s+/gmi, "");
-        klarnaTotalPurchaseValue = parseInt(klarnaTotalPurchaseValue);
+            klarnaTotalPurchaseValue = klarnaTotalPurchaseValue.replace(/[^0-9]+|\s+/gmi, "");
+            klarnaTotalPurchaseValue = parseInt(klarnaTotalPurchaseValue);
 
-        expect(OrderTotalValue).to.equal(klarnaTotalPurchaseValue);
-        console.log("Confirmed that order total value (" + OrderTotalValue + ") is equal to the Klarna total purchase value (" + klarnaTotalPurchaseValue + ").");
+            expect(OrderTotalValue).to.equal(klarnaTotalPurchaseValue);
+            console.log("Confirmed that order total value (" + OrderTotalValue + ") is equal to the Klarna total purchase value (" + klarnaTotalPurchaseValue + ").");
 
-        let deliveryZero = parseInt(OrderDeliveryValue.slice(1));
-        OrderDeliveryValue = parseInt(OrderDeliveryValue);
-        if (deliveryZero !== 0) {
-            let klarnaDeliveryPurchaseValue = this.klarnaDeliveryPurchaseValue.getHTML(false);
-            klarnaDeliveryPurchaseValue = klarnaDeliveryPurchaseValue.replace(/[^0-9]+|\s+/gmi, "");
-            klarnaDeliveryPurchaseValue = parseInt(klarnaDeliveryPurchaseValue);
-            expect(OrderDeliveryValue).to.equal(klarnaDeliveryPurchaseValue);
-            console.log("Confirmed that order delivery value (" + OrderDeliveryValue + ") is equal to the Klarna delivery purchase value (" + klarnaDeliveryPurchaseValue + ").");
-        } else {
-            console.log("Delivery cost 0 so no delivery cost displayed in Klarna")
+            let deliveryZero = parseInt(OrderDeliveryValue.slice(1));
+            OrderDeliveryValue = parseInt(OrderDeliveryValue);
+            if (deliveryZero !== 0) {
+                let klarnaDeliveryPurchaseValue = this.klarnaDeliveryPurchaseValue.getHTML(false);
+                klarnaDeliveryPurchaseValue = klarnaDeliveryPurchaseValue.replace(/[^0-9]+|\s+/gmi, "");
+                klarnaDeliveryPurchaseValue = parseInt(klarnaDeliveryPurchaseValue);
+                expect(OrderDeliveryValue).to.equal(klarnaDeliveryPurchaseValue);
+                console.log("Confirmed that order delivery value (" + OrderDeliveryValue + ") is equal to the Klarna delivery purchase value (" + klarnaDeliveryPurchaseValue + ").");
+            } else {
+                console.log("Delivery cost 0 so no delivery cost displayed in Klarna")
+            }
         }
+
 
         try{
             browser.pause(3000);

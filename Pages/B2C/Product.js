@@ -2,6 +2,8 @@ import Page from '../Page'
 import Screenshot from '../../functions/Screenshot';
 import GetRandom from "../../functions/GetRandom";
 import ShoppingBag from "./ShoppingBag";
+import Navigation from "./Navigation";
+import Search from "./Search";
 
 class Product extends Page {
     get breadcrumbs_container() {
@@ -54,7 +56,7 @@ class Product extends Page {
     }
 
     get atbSizeSelectorModal() {
-        return $('#atb-size-selector-modal');
+        return $("div[class='modal-size-container'] div[class*='size-box']:not([class*='size-box invalid'])>p");
     }
 
     get wlSizeSelectorModal() {
@@ -92,7 +94,9 @@ class Product extends Page {
     get SizeBoxValid() {
         return $$('div.size-box-container:not([class$=hidden]) > div.size-box:not([class$="size-box invalid"])');
     }
-
+    get SizeBoxSelected() {
+        return $("//div[@class='size-box-container']//div[@class='size-box selected']");
+    }
     get ATBSizeBoxValid() {
         return $$('#atb-size-selector-modal > div > div > div.modal-body.row > div.col-12.col-md-7 > div > div > div.size-box');
     }
@@ -131,19 +135,20 @@ class Product extends Page {
 
     SelectASizeAndAddTo(addTo, numberToAdd, SKU_used) {
         if ((SKU_used === false) || (SKU_used === undefined)) {
-            this.SizeBoxText.waitForDisplayed(30000);
+            //this.SizeBoxText.waitForDisplayed(30000);
             if (this.SizeBoxValid.length > 1) {
-                    GetRandom.sizeBox(this.SizeBoxValid);
+                GetRandom.sizeBox(this.SizeBoxValid);
             } else if (this.SizeSelectorDD.isDisplayed() === true) {
                 GetRandom.selectByIndex(this.SizeSelectorDD, this.SizeSelectorDDoptions)
             } else {
                 try {
                     this.SizeBoxValid[0].click();
                 }catch (e) {
-                    
+
                 }
             }
         }
+
         browser.pause(1000);
         // ATB
         if (addTo === 'Bag') {
@@ -155,6 +160,7 @@ class Product extends Page {
             console.log("Initial bag quantity = " + quantity1);
             let quantity2 = quantity1 + numberToAdd;
             console.log("Total bag quantity to be = " + quantity2);
+            let counter = 0;
             while (quantity1 !== quantity2) {
                 try {
                     ATBbutton[0].click();
@@ -168,25 +174,24 @@ class Product extends Page {
                     ShoppingBag.closeBasket.click();
                 }
                 browser.pause(1200);
+                if (counter === numberToAdd + 1) {
+                    break;
+                }
+                counter++;
             }
         } else if (addTo === 'Wishlist') {
             let WLbutton = this.WishListButton;
             WLbutton.click();
         }
         try {
-            let ATBmodalDetector = this.atbSizeSelectorModal.getAttribute('class');
+            GetRandom.sizeBox(this.atbSizeSelectorModal);
+        } catch (e) {
+
+        }
+        try {
             let WLmodalDetector = this.wlSizeSelectorModal.getAttribute('class');
             browser.pause(1000);
-            if (ATBmodalDetector === 'modal fade size-select-modal show') {
-                if (this.ATBSizeBoxValid.length > 0) {
-                    GetRandom.sizeBox(this.ATBSizeBoxValid);
-                } else if (this.ATBSizeSelectorDD.isDisplayed() === true) {
-                    GetRandom.selectByIndex(this.ATBSizeSelectorDD, this.ATBSizeSelectorDDoptions)
-                }
-                browser.pause(500);
-                let ATBbutton = this.AddToBagButtons;
-                ATBbutton[1].click();
-            } else if (WLmodalDetector === 'modal fade size-select-modal show') {
+            if (WLmodalDetector === 'modal fade size-select-modal show') {
                 if (this.WLSizeBoxValid.length > 0) {
                     GetRandom.sizeBox(this.WLSizeBoxValid);
                 } else if (this.wlSizeSelectorDD.isDisplayed() === true) {
@@ -197,6 +202,7 @@ class Product extends Page {
             }
             browser.pause(1500);
         } catch (e) {
+            console.log("Unable to select WL modal, probably not present");
         }
     }
     ensureStaffDiscountOnPrice() {

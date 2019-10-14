@@ -5,6 +5,7 @@ import Screenshot from "../../functions/Screenshot";
 import GetRandom from "../../functions/GetRandom";
 import write from "../../functions/write";
 import Checkout from "./Checkout";
+import Product from "./Product";
 
 class Navigation extends Page {
     get OrderSummary() {
@@ -12,6 +13,10 @@ class Navigation extends Page {
     }
     get basket_icon() {
         return $(".account-actions .js-basket-item-count");
+    }
+
+    get basket_item_image() {
+        return $$("//div[@id='basket-content']/div[@class='basket-item js-basket-item']/div[@class='item-image']");
     }
     get checkout_submit() {
         return $("//a[@id='checkout-submit']");
@@ -173,6 +178,7 @@ class Navigation extends Page {
         Screenshot.viewport();
         let success = false;
         while (success === false) {
+            this.hamburger.waitForDisplayed(30000);
             this.hamburger.click();
             this.acceptCookiesPrompt();
             try {
@@ -213,6 +219,21 @@ class Navigation extends Page {
         this.acceptCookiesPrompt();
         this.basket_icon.waitForDisplayed(30000);
         this.basket_icon.click();
+
+        // Check basket contains items:
+        console.log("basket_item_image - " + this.basket_item_image.length);
+        while (this.basket_item_image.length < 1) {
+            browser.pause(250);
+            this.closeBasket.click();
+
+            this.randomSection();
+            Search.PickRandomProduct();
+            Product.SelectASizeAndAddTo('Bag');
+            this.acceptCookiesPrompt();
+            this.basket_icon.waitForDisplayed(30000);
+            this.basket_icon.click();
+        }
+
         this.checkout_submit.waitForDisplayed(30000);
         this.checkout_submit.click();
         browser.waitUntil(() => {

@@ -7,8 +7,9 @@ import Checkout from "../../../Pages/B2C/Checkout";
 describe('Debit card payment from a guest user', () => {
     it('Open the environment', () => {
         Environment.openBaseURL();
+        Product.closeGoToCountry();
     });
-    it('Go to a random section and add a product to the shopping bag', () => {
+    it('Go to a random section, Pick a product, Add to shopping bag', () => {
         Navigation.randomSection();
         Search.PickRandomProduct();
         Product.SelectASizeAndAddTo('Bag');
@@ -21,5 +22,3 @@ describe('Debit card payment from a guest user', () => {
         Checkout.payByCard();
     });
 });
-
-

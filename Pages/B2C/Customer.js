@@ -1,5 +1,5 @@
 import Page from '../Page'
-import Navigation from './/Navigation.js';
+import Navigation from './Navigation.js';
 import fillObject from '../../functions/fillObject'
 import * as yaml from "js-yaml";
 import shopperGroupIDfunc from "../../functions/shopperGroupID";
@@ -164,6 +164,7 @@ class Customer extends Page {
                 } catch (e) {
                     this.registerPageEmail.waitForExist(60000);
                 }
+                Navigation.acceptCookiesPrompt();
                 Screenshot.viewport();
                 fillObject.element(this.registerPageEmail, emailaddress);
                 fillObject.element(this.registerPagePassword1, customerDetails.password);
@@ -306,6 +307,7 @@ class Customer extends Page {
         }
         browser.url(site + 'log-out');
         browser.pause(1000);
+        Navigation.acceptCookiesPrompt();
         fillObject.element(this.username, emailaddress);
         browser.pause(1000);
         fillObject.element(this.password, customerDetails.password);

@@ -258,13 +258,17 @@ class Search extends Page {
 
     PickRandomProduct() {
         GetRandom.element(this.ResultsLinks);
-        Product.ProductTitle.waitForDisplayed(30000);
-        let sizeBoxHTML = Product.SizeBoxText.getHTML(false).trim();
-        while (sizeBoxHTML === "Sorry, this item is currently out of stock.") {
-            Navigation.randomSection();
-            GetRandom.element(this.ResultsLinks);
-            Product.ProductTitle.waitForDisplayed();
-            sizeBoxHTML = Product.SizeBoxText.getHTML(false).trim();
+        //Product.ProductTitle.waitForDisplayed(30000);
+        try {
+            let sizeBoxHTML = Product.SizeBoxText.getHTML(false).trim();
+            while (sizeBoxHTML === "Sorry, this item is currently out of stock.") {
+                Navigation.randomSection();
+                GetRandom.element(this.ResultsLinks);
+                Product.ProductTitle.waitForDisplayed();
+                sizeBoxHTML = Product.SizeBoxText.getHTML(false).trim();
+            }
+        } catch (e) {
+
         }
         Screenshot.viewport();
     }

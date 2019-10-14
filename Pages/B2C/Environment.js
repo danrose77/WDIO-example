@@ -12,6 +12,20 @@ class Environment extends Page {
 
     setSite() {
         global.site = browser.getUrl();
+        if (browser.getUrl().includes('?')) {
+            let siteArray = site.split("/");
+            let counter = 0;
+            let siteTemp = "";
+            while (counter !== siteArray.length - 1) {
+                if (counter === 0) {
+                    siteTemp = siteArray[counter] + "//";
+                } else {
+                    siteTemp = siteTemp + siteArray[counter] + "/";
+                }
+                counter++;
+            }
+            global.site = siteTemp;
+        }
         global.environment = global.site;
         let envcol = environment;
         envcol = envcol.split("-");
@@ -23,6 +37,7 @@ class Environment extends Page {
     openCountrySiteForColour(countryVal) {
         browser.deleteCookies();
         browser.url('/');
+        browser.pause(2000);
         this.setSite();
         let environmentTemp = "";
         switch (countryVal) {
@@ -88,13 +103,13 @@ class Environment extends Page {
 
     openBaseURL() {
         browser.url('/');
-        this.setSite();
         let screenDate = new Date();
         let urlString = screenDate.getTime();
         browser.url('/?a' + urlString + 'a');
         browser.waitUntil(() => browser.getUrl().includes(urlString));
         browser.deleteCookies();
         Navigation.acceptCookiesPrompt();
+        this.setSite();
         this.country();
     }
 
