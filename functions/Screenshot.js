@@ -19,9 +19,9 @@ class Screenshot extends Page {
         mkdirSync("./reports/" + screendate.getFullYear() + "_" + month + "_" + screendate.getDate() + "/");
 
         let screenshotFolder = "./reports/" + screendate.getFullYear() + "_" + month + "_" + screendate.getDate() + "/";
-        let screenshotpath = screenshotFolder + screendate.getTime() + " - " + specname + " - " + platform + ".png";
+        let screenshotpath = screenshotFolder + screendate.getTime() + " - " + platform + ".png";
         if (shotname !== undefined) {
-            screenshotpath = screenshotFolder + shotname + "_" + screendate.getTime() + " - " + specname + " - " + platform + ".png";
+            screenshotpath = screenshotFolder + shotname + "_" + screendate.getTime() + " - " + platform + ".png";
         }
         browser.saveScreenshot(screenshotpath);
     }

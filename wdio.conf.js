@@ -19,15 +19,7 @@ function addValueInObject(object, key, value) {
 exports.config = {
     reporters: [
         'spec'
-        /*,
-        ['junit', {
-            outputDir: './reports/',
-            outputFileFormat: function() {
-                return `testresult.xml`
-            }
-        }]
 
-         */
     ],
     updateJob: false,
     exclude: [],
@@ -45,7 +37,12 @@ exports.config = {
         compilers: ["js:babel-register"],
         timeout: timeout
     },
-
+    services: ["selenium-standalone"],
+    specs: ["Test/**/*.test.js"],
+    logLevel: 'error',
+    maxInstances: 1,
+    baseUrl: "http://the-internet.herokuapp.com/",
+    capabilities: [{"browserName": "chrome"}],
     // Gets executed before all workers get launched.
     onPrepare() {
     },
@@ -68,38 +65,6 @@ exports.config = {
         mkdirSync("./reports/ErrorShots/");
         mkdirSync("./reports/" + dateString + "/");
 
-        //console.dir(capabilities, {depth: null, colors: true});
-        // declared globals
-        global.country = "";
-        global.formcountry = "";
-        global.site = "";
-        global.environment = "";
-        global.envcol = "";
-        global.emailaddress = "";
-        global.customerData = "";
-        global.customerDetails = [];
-        global.giftcard_only = "";
-        global.siteSuffix = "";
-        global.sitePrefix = "";
-        global.referenceNumber = "";
-        global.skuslist = [];
-        global.SHIPNODE_KEY = "";
-        global.PRIME_LINE_NO = "";
-        global.SHIP_ADVICE_NO = "";
-        global.appliedHolds = false;
-        global.shopperGroupID = 3;
-        global.paymentMethod = "";
-        global.OMSquantitiesRecorded = false;
-        global.xmloutput;
-        global.yaml = require('js-yaml');
-
-        // set specname global
-        let specname = String(specs);
-        specname = specname.split("\\");
-        let specnamelength = specname.length - 1;
-        specname = specname[specnamelength];
-        global.specname = specname;
-
         // determine form factor
         let formFactor = 'desktop';
         if (('true' === capabilities["real_mobile"]) || ('false' === capabilities['real_mobile'])) {
@@ -115,7 +80,6 @@ exports.config = {
             platform = capabilities.device;
         }
         global.platform = platform;
-
     },
     afterTest(test) {
         //console.dir(test, {depth: null, colors: true});

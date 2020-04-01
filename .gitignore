@@ -34,3 +34,4 @@ reports
 # Users Environment Variables
 .lock-wscript
 .env
+/Test/PoC/
